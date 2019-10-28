@@ -8,7 +8,7 @@
 <body>
     <div id="content"></div>
     <script>
-        var html_path = '/';
+        var html_path = './';
         var request;
         if (window.XMLHttpRequest) {
             request = new XMLHttpRequest();
@@ -22,7 +22,7 @@
                     document.getElementById('content').innerHTML = val;
                 }
             };
-            request.open("GET", html_path + '/readme.html', true);
+            request.open("GET", html_path + 'readme.html', true);
             request.send();
         } catch (e) {
             console.error(e);
