@@ -6,7 +6,5 @@
         "marked": "^0.7.0",
         "dompurify": "^2.0.7"
     },
-    "scripts": {
-        "save_as_html": "node ./scripts/save_as_html.js"
-    }
+    "scripts": { }
 }

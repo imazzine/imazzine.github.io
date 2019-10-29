@@ -3,7 +3,7 @@ node_js:
   - "12"
 cache: npm
 install:
-  - npm install
+  # - npm install
 script:
   # - npm run lint
   # - npm run test
