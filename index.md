@@ -1,7 +1,7 @@
 ---
 lang: en-US
-title: Imazzine Project Documentation
-excerpt: Imazzine Project Documentation
+title: Imazzine Project
+excerpt: Imazzine Project
 ---
 
 # imazzine.github.io
