@@ -1,0 +1,6 @@
+layout: default
+encoding: utf-8
+url: http://progmsk.github.io
+permalink: pretty
+highlighter: rouge
+markdown: kramdown
