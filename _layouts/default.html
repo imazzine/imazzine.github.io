@@ -8,33 +8,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <style>
-      #imazzine .mdl-layout__header {
-        height: 56px;
-        min-height: 56px;
-        background-color: #fff;
-      }
-      #imazzine .mdl-layout__header-row {
-        height: 56px;
-        padding-left: 71px;
-      }
-      #imazzine .mdl-layout__drawer-button {
-        width: 34px;
-        height: 34px;
-        margin: 11px 9px 11px 28px;
-        background: url(/public/imazzine_logo.png) no-repeat;
-        background-size: 100%;
-        outline: none;
-      }
-      #imazzine .mdl-layout-title {
-        margin: 8px 9px 8px;
-        height: 32px;
-        line-height: 32px;
-        color: #4c4c4c;
-        font-size: 24px;
-      }
-    </style>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style></style>
     <title>
       {% if page.title %}
         {{ page.title | escape }}
@@ -45,30 +20,103 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   </head>
   <body id="imazzine">
-    <div class=" mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
+    <!-- Uses a header that contracts as the page scrolls down. -->
+    <!-- <style>
+      .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+        padding-right: 0;
+      }
+    </style> -->
+    
+    <!-- Layout Block -->
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <!-- Header Block -->
+      <header class="mdl-layout__header mdl-layout__header--waterfall">
+        
+        <!-- Main Header Block (always visible) -->
         <div class="mdl-layout__header-row">
-          <!-- Logo/Menu -->
-          <div role="button" tabindex="0" class="mdl-layout__drawer-button"></div>
-          <!-- Title -->
+          <!-- Title Block -->
           <span class="mdl-layout-title">{{ page.title | escape }}</span>
-          <!-- Add spacer, to align navigation to the right -->
+          <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
         </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">{{ page.title | escape }}</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Link1</a>
-          <a class="mdl-navigation__link" href="">Link2</a>
-          <a class="mdl-navigation__link" href="">Link3</a>
-          <a class="mdl-navigation__link" href="">Link4</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content">
-        <div class="mdl-card">
-            {{ content }}
+
+        <!-- Sub Header Block (not visible on scroll) -->
+        <div class="mdl-layout__header-row">
+          <!-- Spacer Block -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation Block -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+          </nav>
         </div>
+
+      </header>
+
+      <!-- Drawer Menu Block -->
+      <div class="mdl-layout__drawer">
+
+        <!-- Title Block -->
+        <span class="mdl-layout-title">{{ page.title | escape }}</span>
+
+        <!-- Navigation Block -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+
+      </div>
+
+      <!-- Main Block -->
+      <main class="mdl-layout__content">
+
+        <div class="page-content">
+          {{ content }}
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+
       </main>
     </div>
   </body>

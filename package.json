@@ -2,6 +2,11 @@
     "name": "imazzine.github.io",
     "version": "0.0.0",
     "description": "Imazzine Project Documentation",
-    "devDependencies": { },
-    "scripts": { }
+    "devDependencies": {
+        "webpack": "^4.41.2",
+        "webpack-dev-server": "^3.9.0"
+    },
+    "scripts": {
+        "start": "node ./_scripts/start.js"
+    }
 }
