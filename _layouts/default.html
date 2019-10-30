@@ -33,28 +33,68 @@
       <!-- Header Block -->
       <header class="mdl-layout__header mdl-layout__header--waterfall">
         
+        <!-- Logo/Menu -->
+        <div role="button" tabindex="0" class="mdl-layout__drawer-button"></div>
+        <style>
+          #imazzine .mdl-layout__drawer-button {
+            width: 34px;
+            height: 34px;
+            margin: 11px 24px 11px 24px;
+            color: #4c4c4c;
+            background-color: #fff;
+            background: url(/public/imazzine_logo.png) no-repeat;
+            background-size: 100%;
+            outline: none;
+          } 
+        </style>
+        
         <!-- Main Header Block (always visible) -->
-        <div class="mdl-layout__header-row">
+        <div class="mdl-layout__header-row main-header">
           <!-- Title Block -->
           <span class="mdl-layout-title">{{ page.title | escape }}</span>
           <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
         </div>
+        <style>
+          #imazzine .mdl-layout__header-row.main-header {
+            height: 56px;
+            color: #4c4c4c;
+            background-color: #fff;
+          } 
+        </style>
 
         <!-- Sub Header Block (not visible on scroll) -->
-        <div class="mdl-layout__header-row">
-          <!-- Spacer Block -->
-          <div class="mdl-layout-spacer"></div>
-          <!-- Navigation Block -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Blog</a>
+          <a href="#scroll-tab-2" class="mdl-layout__tab">Papers</a>
+          <a href="#scroll-tab-3" class="mdl-layout__tab">About</a>
         </div>
+        <style>
+          #imazzine .mdl-layout__tab-bar-container,
+          #imazzine .mdl-layout__tab-bar-button,
+          #imazzine .mdl-layout__tab-bar {
+            height: 48px;
+            background-color: #4090e2;
+          } 
+          #imazzine .mdl-layout__tab-bar-button .material-icons,
+          #imazzine .mdl-layout__tab-bar .mdl-layout__tab {
+            height: 48px;
+            line-height: 48px;
+          }
+          #imazzine .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
+            background-color: #fff;
+          }
+        </style>
 
       </header>
+      <style>
+        #imazzine .mdl-layout__header {
+          min-height: 56px;
+        }
+        #imazzine .mdl-layout__header.is-compact {
+          max-height: 56px;
+        }
+      </style>
 
       <!-- Drawer Menu Block -->
       <div class="mdl-layout__drawer">
@@ -74,6 +114,17 @@
 
       <!-- Main Block -->
       <main class="mdl-layout__content">
+
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+          <div class="page-content">Blog</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+          <div class="page-content">Papers</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+          <div class="page-content">About</div>
+        </section>
+
 
         <div class="page-content">
           {{ content }}
