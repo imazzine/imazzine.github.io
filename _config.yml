@@ -4,3 +4,6 @@ url: http://progmsk.github.io
 permalink: pretty
 highlighter: rouge
 markdown: kramdown
+collections:
+  notes:
+    output: true

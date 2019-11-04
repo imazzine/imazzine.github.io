@@ -6,13 +6,14 @@ excerpt: Imazzine Project
 
 # imazzine.github.io
 
+## Posts:
 
 {% for post in site.posts %}
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  {{ post.excerpt }}
+  <a href="{{ post.url }}">{{ post.title }}</a>
 {% endfor %}
 
+## Notes:
+
 {% for note in site.notes %}
-  <h2><a href="{{ note.url }}">{{ note.title }}</a></h2>
-  {{ note.excerpt }}
+  <a href="{{ note.url }}">{{ note.title }}</a>
 {% endfor %}
