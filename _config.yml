@@ -7,3 +7,5 @@ markdown: kramdown
 collections:
   notes:
     output: true
+  papers:
+    output: true
