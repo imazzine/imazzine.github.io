@@ -20,12 +20,6 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   </head>
   <body id="imazzine">
-    <!-- Uses a header that contracts as the page scrolls down. -->
-    <!-- <style>
-      .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
-        padding-right: 0;
-      }
-    </style> -->
     
     <!-- Layout Block -->
     <div class="demo-layout-waterfall mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -65,9 +59,9 @@
 
         <!-- Sub Header Block (not visible on scroll) -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-          <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Blog</a>
-          <a href="#scroll-tab-2" class="mdl-layout__tab">Papers</a>
-          <a href="#scroll-tab-3" class="mdl-layout__tab">About</a>
+          <a href="/" class="mdl-layout__tab is-active">Home</a>
+          <a href="/papers" class="mdl-layout__tab">Papers</a>
+          <a href="/notes" class="mdl-layout__tab">Notes</a>
         </div>
         <style>
           #imazzine .mdl-layout__tab-bar-container,
@@ -99,74 +93,26 @@
       <!-- Main Block -->
       <main class="mdl-layout__content">
 
-        <!-- Drawer Menu Block -->
-        <div class="mdl-layout__drawer">
-  
-          <!-- Title Block -->
-          <span class="mdl-layout-title">{{ page.title | escape }}</span>
-  
-          <!-- Navigation Block -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
-  
-        </div>
-
         <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-          <div class="page-content">Blog</div>
+          <div class="page-content">
+            Home content:
+            {{ content }}
+          </div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-          <div class="page-content">Papers</div>
+          <div class="page-content">
+            Papers content:
+            {{ content }}
+          </div>
         </section>
+
         <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-          <div class="page-content">About</div>
+          <div class="page-content">
+            Notes content:
+            {{ content }}
+          </div>
         </section>
-
-
-        <div class="page-content">
-          {{ content }}
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
 
       </main>
     </div>
