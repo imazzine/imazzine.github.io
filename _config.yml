@@ -1,6 +1,10 @@
 layout: default
 encoding: utf-8
-url: http://progmsk.github.io
+title: imazzine.pages
+description: >-
+  Short description of imazine.pages and imazzine.project
+  optimized for search engines here.
+url: https://imazzine.github.io/
 permalink: pretty
 highlighter: rouge
 markdown: kramdown
