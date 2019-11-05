@@ -1,7 +1,7 @@
 ---
 lang: en
-title: Imazzine Project
-excerpt: Imazzine Project
+title: imazzine.pages
+excerpt: imazzine.pages
 ---
 
 # imazzine.github.io
