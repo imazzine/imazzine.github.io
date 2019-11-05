@@ -2,7 +2,7 @@
 layout: default
 lang: en
 categories: [ru]
-title: Статья 2
+title: Statia 2
 excerpt: Статья 2
 ---
 

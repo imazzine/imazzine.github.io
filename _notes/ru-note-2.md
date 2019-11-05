@@ -2,7 +2,7 @@
 layout: default
 lang: en
 categories: [ru]
-title: Заметка 2
+title: Zametka 2
 excerpt: Заметка 2
 ---
 
