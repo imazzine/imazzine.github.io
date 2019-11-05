@@ -1,5 +1,5 @@
 ---
-lang: en
+lang: ru
 title: imazzine.pages
 excerpt: imazzine.pages
 permalink: /ru/
