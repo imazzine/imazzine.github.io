@@ -5,7 +5,7 @@ description: >-
   Short description of imazine.pages and imazzine.project
   optimized for search engines here.
 url: https://imazzine.github.io/
-permalink: pretty
+permalink: /:categories/:lang/:title/
 highlighter: rouge
 markdown: kramdown
 collections:
