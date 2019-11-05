@@ -5,11 +5,12 @@ description: >-
   Short description of imazine.pages and imazzine.project
   optimized for search engines here.
 url: https://imazzine.github.io/
-permalink: /:categories/:lang/:title/
 highlighter: rouge
 markdown: kramdown
 collections:
   notes:
     output: true
+    permalink: /:categories/:lang/:name/
   papers:
     output: true
+    permalink: /:categories/:lang/:name/

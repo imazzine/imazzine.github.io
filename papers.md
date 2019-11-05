@@ -1,5 +1,5 @@
 ---
-lang: en-US
+lang: en
 title: Paper 1
 excerpt: Paper 1
 ---

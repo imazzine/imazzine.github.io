@@ -1,5 +1,5 @@
 ---
-lang: en-US
+lang: en
 title: Imazzine Project
 excerpt: Imazzine Project
 ---
