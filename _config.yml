@@ -8,6 +8,8 @@ url: https://imazzine.github.io/
 highlighter: rouge
 markdown: kramdown
 collections:
+  landing:
+    output: true
   papers:
     output: true
     permalink: /:categories/:name/
