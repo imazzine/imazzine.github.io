@@ -8,9 +8,11 @@ url: https://imazzine.github.io/
 highlighter: rouge
 markdown: kramdown
 collections:
-  notes:
-    output: true
-    permalink: /:collection/:categories/:title/
   papers:
     output: true
-    permalink: /:collection/:categories/:title/
+    permalink: /:categories/:name/
+t:
+  en:
+    table_of_content: 'Table of content'
+  ru:
+    table_of_content: 'Содержание'

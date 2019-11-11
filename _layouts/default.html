@@ -22,10 +22,10 @@
   <body id="imazzine">
     
     <!-- Layout Block -->
-    <div class="demo-layout-waterfall mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
       <!-- Header Block -->
-      <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <header class="mdl-layout__header">
         
         <!-- Logo/Menu -->
         <div role="button" tabindex="0" class="mdl-layout__drawer-button"></div>
@@ -42,19 +42,12 @@
           } 
         </style>
         
-        <!-- Main Header Block (always visible) -->
+        <!-- Main Header Block -->
         <div class="mdl-layout__header-row main-header">
           <!-- Title Block -->
           <span class="mdl-layout-title">{{ page.title | escape }}</span>
           <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
-          <button id="language" class="mdl-button mdl-js-button mdl-js-ripple-effect">
-            English
-          </button>
-          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="language">
-            <li class="mdl-menu__item"><a href="/en">English</a></li>
-            <li class="mdl-menu__item"><a href="/ru">Русский</a></li>
-          </ul>
         </div>
         <style>
           #imazzine .mdl-layout__header-row.main-header {
@@ -63,30 +56,6 @@
             background-color: #fff;
           } 
         </style>
-
-        <!-- Sub Header Block (not visible on scroll) -->
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-          <a href="/" class="mdl-layout__tab">Home</a>
-          <a href="/papers" class="mdl-layout__tab">Papers</a>
-          <a href="/notes" class="mdl-layout__tab">Notes</a>
-        </div>
-        <style>
-          #imazzine .mdl-layout__tab-bar-container,
-          #imazzine .mdl-layout__tab-bar-button,
-          #imazzine .mdl-layout__tab-bar {
-            height: 48px;
-            background-color: #4090e2;
-          } 
-          #imazzine .mdl-layout__tab-bar-button .material-icons,
-          #imazzine .mdl-layout__tab-bar .mdl-layout__tab {
-            height: 48px;
-            line-height: 48px;
-          }
-          #imazzine .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
-            background-color: #fff;
-          }
-        </style>
-
       </header>
       <style>
         #imazzine .mdl-layout__header {
@@ -94,6 +63,36 @@
         }
         #imazzine .mdl-layout__header.is-compact {
           max-height: 56px;
+        }
+      </style>
+
+      <!-- Main Block -->
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          {{ site.t[page.lang].table_of_content | escape }}
+        </span>
+        <nav class="mdl-navigation">
+          {% assign papers = site.papers | where:"lang", page.lang %}
+          {% for paper in papers %}
+            <a class="mdl-navigation__link" href="{{ post.url }}">{{ post.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+      <style>
+        /* #imazzine .mdl-layout__drawer {} */
+        #imazzine .mdl-layout__drawer .mdl-layout-title {
+          height: 56px;
+          min-height: 56px;
+          max-height: 56px;
+          line-height: 56px;
+          padding-left: 24px;
+          border-bottom: 1px solid #d6d6d6;
+        }
+        #imazzine .mdl-layout__drawer .mdl-navigation {
+          padding-top: 0;
+        }
+        #imazzine .mdl-layout__drawer .mdl-navigation__link {
+          padding: 8px 24px;
         }
       </style>
 

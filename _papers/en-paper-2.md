@@ -1,7 +1,8 @@
 ---
 layout: default
 lang: en
-categories: [en]
+categories: [en, paper]
+ref: paper-2
 title: Paper 2
 excerpt: Paper 2
 ---

@@ -1,8 +1,9 @@
 ---
 layout: default
-lang: en
-categories: [ru]
-title: Statia 1
+lang: ru
+categories: [ru, paper]
+ref: paper-1
+title: Статья 1
 excerpt: Статья 1
 ---
 
