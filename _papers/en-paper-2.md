@@ -7,7 +7,7 @@ title: Paper 2
 excerpt: Paper 2
 ---
 
-# Paper 2
+Some text here.
 
 
 ```javascript
