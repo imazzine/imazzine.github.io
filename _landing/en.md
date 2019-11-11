@@ -1,4 +1,5 @@
 ---
+layout: default
 lang: en
 title: imazzine.pages
 excerpt: imazzine.pages

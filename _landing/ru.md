@@ -1,4 +1,5 @@
 ---
+layout: default
 lang: ru
 title: imazzine.pages
 excerpt: imazzine.pages

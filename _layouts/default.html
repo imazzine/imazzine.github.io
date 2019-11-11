@@ -11,7 +11,7 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <style></style>
     <title>
-        {{ site.title | escape }}
+        {{ page.title | escape }}
     </title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   </head>
@@ -44,13 +44,33 @@
           <span class="mdl-layout-title">{{ page.title | escape }}</span>
           <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
+          <!-- Change language block -->
+          {% if page.lang == 'ru' %}
+            {% assign op_lang = 'en' %}
+          {% else %}
+            {% assign op_lang = 'ru' %}
+          {% endif %}
+          {% assign ref_papers = site.papers | where:"ref", page.ref %}
+          {% assign op_papers = ref_papers | where:"lang", op_lang %}
+          <nav class="mdl-navigation">
+            {% for paper in op_papers %}
+              <a class="mdl-navigation__link" href="{{ paper.url }}">{{ op_lang }}</a>
+            {% endfor %}
+          </nav>
         </div>
         <style>
           #imazzine .mdl-layout__header-row.main-header {
             height: 56px;
             color: #4c4c4c;
             background-color: #fff;
-          } 
+          }
+          #imazzine .mdl-navigation {
+            height: 56px;
+          }
+          #imazzine .mdl-navigation .mdl-navigation__link {
+            height: 56px;
+            color: #4c4c4c;
+          }
         </style>
       </header>
       <style>
