@@ -14,9 +14,6 @@ body#imazzine {
     background-color: #e8eaed;
     min-width: initial;
 }
-#imazzine .highlighter-rouge {
-    font-size: 14px;
-}
 #imazzine .mdl-layout__drawer-button {
     width: 34px;
     height: 34px;
@@ -61,7 +58,12 @@ body#imazzine {
 #imazzine .mdl-layout__drawer .mdl-navigation__link {
     padding: 8px 24px;
 }
+#imazzine .page-content {
+    margin: 8px auto;
+    padding: 40px;
+}
 #imazzine .highlighter-rouge {
+    font-size: 14px;
     margin-left: -40px;
     margin-right: -40px;
     background-color: #eee;
@@ -72,13 +74,15 @@ body#imazzine {
 #imazzine .highlight {
     background-color: inherit;
 }
-#imazzine .page-content {
-    margin: 8px auto;
-    padding: 40px;
-}
 @media (max-width: 479px) {
     #imazzine .page-content {
         padding: 16px;
+    }
+    #imazzine .highlighter-rouge {
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 @media (max-width: 839px) and (min-width: 480px) {}
