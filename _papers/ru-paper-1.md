@@ -7,7 +7,7 @@ title: Статья 1
 excerpt: Статья 1
 ---
 
-## MENUS
+###### MENUS
 
 Lists of clickable actions.
 
@@ -40,13 +40,13 @@ Lists of clickable actions.
 </ul>
 ```
 
-## INTRODUCTION
+###### INTRODUCTION
 
 The Material Design Lite (MDL) *menu* component is a user interface element that allows users to select one of a number of options. The selection typically results in an action initiation, a setting change, or other observable effect. Menu options are always presented in sets of two or more, and options may be programmatically enabled or disabled as required. The menu appears when the user is asked to choose among a series of options, and is usually dismissed after the choice is made.
 
 Menus are an established but non-standardized feature in user interfaces, and allow users to make choices that direct the activity, progress, or characteristics of software. Their design and use is an important factor in the overall user experience. See the menu component's Material Design specifications page for details.
 
-## TO INCLUDE AN MDL MENU COMPONENT:
+###### TO INCLUDE AN MDL MENU COMPONENT:
 
 > *Note:* The menu requires a non-static positioned parent element. Positioning options may not work properly if the menu is inside of a statically positioned node.
 
@@ -65,7 +65,7 @@ Menus are an established but non-standardized feature in user interfaces, and al
 </ul>
  ```
 
- ## EXAMPLES
+ ###### EXAMPLES
 
 1. Javascript:
 
