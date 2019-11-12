@@ -66,4 +66,12 @@ body#imazzine {
 }
 #imazzine .page-content {
     margin: 8px auto;
+    padding: 40px;
 }
+@media (max-width: 479px) {
+    #imazzine .page-content {
+        padding: 16px;
+    }
+}
+@media (max-width: 839px) and (min-width: 480px) {}
+@media (min-width: 840px) {}
