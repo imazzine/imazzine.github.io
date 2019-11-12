@@ -44,7 +44,7 @@
           </nav>
         </div>
       </header>
-      <!-- Main Block -->
+      <!-- Drawer Block -->
       <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">
           {{ site.t[page.lang].table_of_content | escape }}
@@ -56,13 +56,9 @@
           {% endfor %}
         </nav>
       </div>
-      <style>
-        
-      </style>
-
       <!-- Main Block -->
-      <main class="mdl-layout__content">
-        <div class="page-content">
+      <main class="mdl-layout__content mdl-grid">
+        <div class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
           {{content}}
         </div>
       </main>
