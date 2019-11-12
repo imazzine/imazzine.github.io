@@ -62,3 +62,6 @@ body#imazzine {
 #imazzine .mdl-layout__drawer .mdl-navigation__link {
     padding: 8px 24px;
 }
+#imazzine .highlight {
+    background-color: inherit;
+}
