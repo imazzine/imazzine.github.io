@@ -1,0 +1,64 @@
+body#imazzine {
+    margin: 0;
+    font-family: "Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #4c4c4c;
+    background-color: #FCFCFC;
+}
+#imazzine main.mdl-layout__content {
+    max-width: initial;
+    margin-left: initial;
+    margin-right: initial;
+    background-color: #e8eaed;
+    min-width: initial;
+    padding: 0 24px;
+}
+#imazzine .highlighter-rouge {
+    font-size: 14px;
+}
+#imazzine .mdl-layout__drawer-button {
+    width: 34px;
+    height: 34px;
+    margin: 11px 24px 11px 24px;
+    color: #4c4c4c;
+    background-color: #fff;
+    background: url(/public/imazzine_logo.png) no-repeat;
+    background-size: 100%;
+    outline: none;
+} 
+#imazzine .mdl-layout__header-row.main-header {
+    height: 56px;
+    color: #4c4c4c;
+    background-color: #fff;
+}
+#imazzine .mdl-layout__header-row .mdl-navigation {
+    height: 56px;
+}
+#imazzine .mdl-layout__header-row .mdl-navigation .mdl-navigation__link {
+    height: 56px;
+    color: #4c4c4c;
+}
+#imazzine .mdl-layout__header {
+    min-height: 56px;
+    max-width: initial;
+}
+#imazzine .mdl-layout__header.is-compact {
+    max-height: 56px;
+}
+/* #imazzine .mdl-layout__drawer {} */
+#imazzine .mdl-layout__drawer .mdl-layout-title {
+    height: 56px;
+    min-height: 56px;
+    max-height: 56px;
+    line-height: 56px;
+    padding-left: 24px;
+    border-bottom: 1px solid #d6d6d6;
+}
+#imazzine .mdl-layout__drawer .mdl-navigation {
+    padding-top: 0;
+}
+#imazzine .mdl-layout__drawer .mdl-navigation__link {
+    padding: 8px 24px;
+}
