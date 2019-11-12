@@ -29,15 +29,20 @@
           <span class="mdl-layout-title">{{ page.title | escape }}</span>
           <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
-          <!-- Change language block -->
           {% assign ref_papers = site.papers | where:"ref", page.ref %}
           {% assign op_papers = ref_papers | where_exp: "paper","paper.lang != page.lang" %}
           {% if op_papers.size > 0 %}
-            <nav class="mdl-navigation">
+            <!-- Change language block -->
+            <button id="language-select" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+              {{ page.lang }}
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="language-select">
               {% for paper in op_papers %}
-                <a class="mdl-navigation__link" href="{{ paper.url }}">{{ paper.lang }}</a>
+                <li class="mdl-menu__item">
+                  <a href="{{ paper.url }}">{{ paper.lang }}: {{ paper.title }}</a>
+                </li>
               {% endfor %}
-            </nav>
+            </ul>
           {% endif %}
         </div>
       </header>
