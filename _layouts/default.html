@@ -30,18 +30,15 @@
           <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
           <!-- Change language block -->
-          {% if page.lang == 'ru' %}
-            {% assign op_lang = 'en' %}
-          {% else %}
-            {% assign op_lang = 'ru' %}
-          {% endif %}
           {% assign ref_papers = site.papers | where:"ref", page.ref %}
-          {% assign op_papers = ref_papers | where:"lang", op_lang %}
-          <nav class="mdl-navigation">
-            {% for paper in op_papers %}
-              <a class="mdl-navigation__link" href="{{ paper.url }}">{{ op_lang }}</a>
-            {% endfor %}
-          </nav>
+          {% assign op_papers = ref_papers | where_exp: "paper","paper.lang != page.lang" %}
+          {% if op_papers.size > 0 %}
+            <nav class="mdl-navigation">
+              {% for paper in op_papers %}
+                <a class="mdl-navigation__link" href="{{ paper.url }}">{{ paper.lang }}</a>
+              {% endfor %}
+            </nav>
+          {% endif %}
         </div>
       </header>
       <!-- Drawer Block -->
