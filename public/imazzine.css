@@ -62,7 +62,7 @@ body#imazzine {
     margin: 8px auto;
     padding: 40px;
 }
-#imazzine .highlighter-rouge {
+#imazzine div.highlighter-rouge {
     font-size: 14px;
     margin-left: -40px;
     margin-right: -40px;
@@ -78,7 +78,7 @@ body#imazzine {
     #imazzine .page-content {
         padding: 16px;
     }
-    #imazzine .highlighter-rouge {
+    #imazzine div.highlighter-rouge {
         margin-left: -16px;
         margin-right: -16px;
         padding-left: 16px;
