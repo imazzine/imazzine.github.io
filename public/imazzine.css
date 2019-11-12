@@ -64,3 +64,6 @@ body#imazzine {
 #imazzine .highlight {
     background-color: inherit;
 }
+#imazzine .page-content {
+    margin: 8px auto;
+}
