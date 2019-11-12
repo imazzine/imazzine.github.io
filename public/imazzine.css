@@ -61,9 +61,16 @@ body#imazzine {
 #imazzine .mdl-layout__drawer .mdl-navigation__link {
     padding: 8px 24px;
 }
+#imazzine .highlighter-rouge {
+    margin-left: -40px;
+    margin-right: -40px;
+    background-color: #eee;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow-x: auto;
+}
 #imazzine .highlight {
     background-color: inherit;
-    overflow-x: auto;
 }
 #imazzine .page-content {
     margin: 8px auto;
