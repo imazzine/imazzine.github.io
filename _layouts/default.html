@@ -33,13 +33,13 @@
           {% assign op_papers = ref_papers | where_exp: "paper","paper.lang != page.lang" %}
           {% if op_papers.size > 0 %}
             <!-- Change language block -->
-            <button id="language-select" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+            <button id="language-select" class="mdl-button mdl-js-button mdl-js-ripple-effect">
               {{ page.lang }}
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="language-select">
               {% for paper in op_papers %}
                 <li class="mdl-menu__item">
-                  <a href="{{ paper.url }}">{{ paper.lang }}: {{ paper.title }}</a>
+                  <a href="{{ paper.url }}">{{ paper.title }}</a>
                 </li>
               {% endfor %}
             </ul>

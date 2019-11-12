@@ -3,7 +3,7 @@ layout: default
 lang: ru
 categories: [ru, paper]
 ref: paper-2
-title: Статья 2
+title: Статья 2. Лорем ипсум долор сит амет
 excerpt: Статья 2
 ---
 

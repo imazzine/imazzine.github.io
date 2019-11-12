@@ -3,7 +3,7 @@ layout: default
 lang: en
 categories: [en, paper]
 ref: paper-1
-title: Paper 1
+title: Paper 1. Lorem ipsum dolor sit amet
 excerpt: Paper 1
 ---
 
