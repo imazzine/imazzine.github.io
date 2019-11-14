@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://rawgit.com/richleland/pygments-css/master/perldoc.css">
     <link rel="stylesheet" href="/public/imazzine.css">
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://unpkg.com/cytoscape@3.12.0/dist/cytoscape.min.js"></script>
     <title>
         {{ page.title | escape }}
     </title>
@@ -63,6 +64,78 @@
         <div class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--9-col">
           {{content}}
         </div>
+        <div id="cytoblock" class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col"></div>
+        <script>
+          var cy = cytoscape({
+            container: document.getElementById('cytoblock'),
+
+            elements: [
+              {
+                classes: ['network'],
+                data: {
+                  id: 'Internet',
+                },
+              },
+              {
+                data: {
+                  id: 'a',
+                  parent: 'Internet'
+                }
+              },
+              {
+                data: {
+                  id: 'b',
+                  parent: 'Internet'
+                }
+              },
+              {
+                data: {
+                  id: 'ab',
+                  source: 'a',
+                  target: 'b'
+                }
+              }
+            ],
+
+            style: [
+              {
+                selector: 'node.network',
+                style: {
+                  'border-style': 'dotted',
+                  'border-width': 1,
+                  'border-color': '#6ab9ff',
+                  'background-color': '#e1f1ff',
+                  'label': 'data(id)',
+                },
+              },
+
+              // {
+              //   selector: 'node',
+              //   style: {
+              //     'background-color': '#eee',
+              //     'label': 'data(id)'
+              //   }
+              // },
+
+              {
+                selector: 'edge',
+                style: {
+                  'curve-style': 'bezier',
+                  'width': 1,
+                  'line-color': '#f00',
+                  'target-arrow-color': '#f00',
+                  'target-arrow-shape': 'diamond',
+                  'target-arrow-fill': 'hollow',
+                }
+              }
+            ],
+
+            layout: {
+              name: 'grid',
+              rows: 1
+            }
+          });
+        </script>
       </main>
     </div>
   </body>
