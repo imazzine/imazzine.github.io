@@ -13,7 +13,7 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://unpkg.com/cytoscape@3.12.0/dist/cytoscape.min.js"></script>
     <title>
-        {{ page.title | escape }}
+      {{ page.title | escape }}
     </title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   </head>
@@ -27,7 +27,9 @@
         <!-- Main Header Block -->
         <div class="mdl-layout__header-row main-header">
           <!-- Title Block -->
-          <span class="mdl-layout-title">{{ page.title | escape }}</span>
+          <span class="mdl-layout-title">
+            {{ page.title | escape }}
+          </span>
           <!-- Spacer Block -->
           <div class="mdl-layout-spacer"></div>
           {% assign ref_papers = site.papers | where:"ref", page.ref %}
@@ -68,24 +70,32 @@
         <script>
           var cy = cytoscape({
             container: document.getElementById('cytoblock'),
-
             elements: [
               {
-                classes: ['network'],
+                classes: [
+                  'network'
+                ],
                 data: {
-                  id: 'Internet',
+                  id: 'internet',
+                  name: 'Internet'
                 },
               },
               {
+                classes: [
+                  'resource'
+                ],
                 data: {
                   id: 'a',
-                  parent: 'Internet'
+                  parent: 'internet'
                 }
               },
               {
+                classes: [
+                  'resource'
+                ],
                 data: {
                   id: 'b',
-                  parent: 'Internet'
+                  parent: 'internet'
                 }
               },
               {
@@ -96,27 +106,36 @@
                 }
               }
             ],
-
+            layout: {
+              name: 'grid',
+              rows: 1
+            },
             style: [
               {
                 selector: 'node.network',
                 style: {
-                  'border-style': 'dotted',
+                  'label': 'data(name)',
                   'border-width': 1,
+                  'border-style': 'dotted',
                   'border-color': '#6ab9ff',
-                  'background-color': '#e1f1ff',
-                  'label': 'data(id)',
+                  'background-color': '#e1f1ff'
                 },
               },
-
-              // {
-              //   selector: 'node',
-              //   style: {
-              //     'background-color': '#eee',
-              //     'label': 'data(id)'
-              //   }
-              // },
-
+              {
+                selector: 'node.resource',
+                style: {
+                  'label': 'data(id)',
+                  'shape': 'rectangle',
+                  'width': 34,
+                  'height': 34,
+                  'border-width': 1,
+                  'border-style': 'solid',
+                  'border-color': '#6ab9ff',
+                  'background-fit': 'contain',
+                  'background-color': '#fff',
+                  'background-image': '/public/imazzine_logo.png'
+                }
+              },
               {
                 selector: 'edge',
                 style: {
@@ -125,15 +144,10 @@
                   'line-color': '#f00',
                   'target-arrow-color': '#f00',
                   'target-arrow-shape': 'diamond',
-                  'target-arrow-fill': 'hollow',
+                  'target-arrow-fill': 'hollow'
                 }
               }
-            ],
-
-            layout: {
-              name: 'grid',
-              rows: 1
-            }
+            ]
           });
         </script>
       </main>
