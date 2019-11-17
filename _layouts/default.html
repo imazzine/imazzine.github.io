@@ -63,16 +63,18 @@
       </div>
       <!-- Main Block -->
       <main class="mdl-layout__content mdl-grid">
-        <div class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--9-col">
+        <div class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
           {{content}}
         </div>
-        <div id="cytoblock" class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col"></div>
+        <div id="cytoblock" class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col"></div>
         <script>
           var cy = cytoscape({
             container: document.getElementById('cytoblock'),
             elements: [
+              // Network resources.
               {
                 classes: [
+                  'resource',
                   'network'
                 ],
                 data: {
@@ -82,72 +84,246 @@
               },
               {
                 classes: [
-                  'resource'
+                  'resource',
+                  'network'
                 ],
                 data: {
-                  id: 'a',
-                  parent: 'internet'
+                  id: 'intranet',
+                  name: 'Intranet'
+                },
+              },
+              // Network interfaces.
+              {
+                classes: [
+                  'interface',
+                  'network'
+                ],
+                data: {
+                  id: 'https',
+                  name: 'HTTP(S)'
                 }
               },
               {
                 classes: [
-                  'resource'
+                  'interface',
+                  'network'
                 ],
                 data: {
-                  id: 'b',
-                  parent: 'internet'
+                  id: 'wss',
+                  name: 'WS(S)'
                 }
               },
               {
+                classes: [
+                  'interface',
+                  'network'
+                ],
                 data: {
-                  id: 'ab',
-                  source: 'a',
-                  target: 'b'
+                  id: 'tcp',
+                  name: 'TCP'
                 }
-              }
+              },
+              {
+                classes: [
+                  'interface',
+                  'network'
+                ],
+                data: {
+                  id: 'ip',
+                  name: 'IP'
+                }
+              },
+              {
+                classes: [
+                  'interface',
+                  'network'
+                ],
+                data: {
+                  id: 'ethernet',
+                  name: 'Ethernet'
+                }
+              },
+              // Network resources to interfaces
+              // relations.
+              {
+                classes: [
+                  'use',
+                  'network'
+                ],
+                data: {
+                  id: 'internet-(ethernet',
+                  source: 'internet',
+                  target: 'ethernet'
+                }
+              },
+              {
+                classes: [
+                  'use',
+                  'network'
+                ],
+                data: {
+                  id: 'intranet-(ethernet',
+                  source: 'intranet',
+                  target: 'ethernet'
+                }
+              },
+              {
+                classes: [
+                  'use',
+                  'network'
+                ],
+                data: {
+                  id: 'ip-(ethernet',
+                  source: 'ip',
+                  target: 'ethernet'
+                }
+              },
+              {
+                classes: [
+                  'use',
+                  'network'
+                ],
+                data: {
+                  id: 'tcp-(ip',
+                  source: 'tcp',
+                  target: 'ip'
+                }
+              },
+              {
+                classes: [
+                  'use',
+                  'network'
+                ],
+                data: {
+                  id: 'https-(tcp',
+                  source: 'https',
+                  target: 'tcp'
+                }
+              },
+              {
+                classes: [
+                  'use',
+                  'network'
+                ],
+                data: {
+                  id: 'wss-(tcp',
+                  source: 'wss',
+                  target: 'tcp'
+                }
+              },
+              // {
+              //   classes: [
+              //     'provide',
+              //     'network'
+              //   ],
+              //   data: {
+              //     id: 'internet->https',
+              //     source: 'internet',
+              //     target: 'https'
+              //   }
+              // },
+              // {
+              //   classes: [
+              //     'provide',
+              //     'network'
+              //   ],
+              //   data: {
+              //     id: 'internet->wss',
+              //     source: 'internet',
+              //     target: 'wss'
+              //   }
+              // },
+              // {
+              //   classes: [
+              //     'provide',
+              //     'network'
+              //   ],
+              //   data: {
+              //     id: 'intranet->https',
+              //     source: 'intranet',
+              //     target: 'https'
+              //   }
+              // },
+              // {
+              //   classes: [
+              //     'provide',
+              //     'network'
+              //   ],
+              //   data: {
+              //     id: 'intranet->wss',
+              //     source: 'intranet',
+              //     target: 'wss'
+              //   }
+              // }
             ],
-            layout: {
-              name: 'grid',
-              rows: 1
-            },
             style: [
               {
-                selector: 'node.network',
+                selector: '.network',
                 style: {
-                  'label': 'data(name)',
-                  'border-width': 1,
-                  'border-style': 'dotted',
                   'border-color': '#6ab9ff',
+                  'line-color': '#6ab9ff',
+                  'target-arrow-color': '#6ab9ff',
                   'background-color': '#e1f1ff'
                 },
               },
               {
                 selector: 'node.resource',
                 style: {
-                  'label': 'data(id)',
-                  'shape': 'rectangle',
-                  'width': 34,
-                  'height': 34,
+                  'label': 'data(name)',
+                  'shape': 'barrel',
                   'border-width': 1,
+                  'border-style': 'solid'
+                },
+              },
+              {
+                selector: 'node.interface',
+                style: {
+                  'label': 'data(name)',
+                  'shape': 'ellipse',
+                  'width': 16,
+                  'height': 16,
+                  'border-width': 2,
                   'border-style': 'solid',
-                  'border-color': '#6ab9ff',
-                  'background-fit': 'contain',
-                  'background-color': '#fff',
-                  'background-image': '/public/imazzine_logo.png'
+                  'background-color': '#fff'
                 }
               },
               {
-                selector: 'edge',
+                selector: 'node#internet',
+                style: {
+                  'width': 128,
+                  'height': 128,
+                  'background-image': '/public/internet.png',
+                  'background-fit': 'contain'
+                }
+              },
+              {
+                selector: 'node#intranet',
+                style: {
+                  'width': 128,
+                  'height': 128,
+                  'background-image': '/public/intranet.png',
+                  'background-fit': 'contain'
+                }
+              },
+              {
+                selector: 'edge.use',
                 style: {
                   'curve-style': 'bezier',
-                  'width': 1,
-                  'line-color': '#f00',
-                  'target-arrow-color': '#f00',
-                  'target-arrow-shape': 'diamond',
-                  'target-arrow-fill': 'hollow'
+                  'target-arrow-shape': 'tee',
+                  'width': 1
+                }
+              },
+              {
+                selector: 'edge.provide',
+                style: {
+                  'curve-style': 'bezier',
+                  'width': 1
                 }
               }
-            ]
+            ],
+            layout: {
+              name: 'cose'
+            }
           });
         </script>
       </main>
