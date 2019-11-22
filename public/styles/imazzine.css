@@ -20,7 +20,7 @@ body#imazzine {
     margin: 11px 24px 11px 24px;
     color: #4c4c4c;
     background-color: #fff;
-    background: url(/public/imazzine_logo.png) no-repeat;
+    background: url(/public/images/imazzine_logo.png) no-repeat;
     background-size: 100%;
     outline: none;
 } 

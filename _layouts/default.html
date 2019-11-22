@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://rawgit.com/richleland/pygments-css/master/perldoc.css">
-    <link rel="stylesheet" href="/public/imazzine.css">
+    <link rel="stylesheet" href="/public/styles/imazzine.css">
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <!-- <script src="https://unpkg.com/cytoscape@3.12.0/dist/cytoscape.min.js"></script> -->
-    <script src="/public/cytoscape.umd.js"></script>
+    <script src="https://unpkg.com/cytoscape@3.12.0/dist/cytoscape.min.js"></script>
     <title>
       {{ page.title | escape }}
     </title>
@@ -212,50 +211,6 @@
                   target: 'tcp'
                 }
               },
-              // {
-              //   classes: [
-              //     'provide',
-              //     'network'
-              //   ],
-              //   data: {
-              //     id: 'internet->https',
-              //     source: 'internet',
-              //     target: 'https'
-              //   }
-              // },
-              // {
-              //   classes: [
-              //     'provide',
-              //     'network'
-              //   ],
-              //   data: {
-              //     id: 'internet->wss',
-              //     source: 'internet',
-              //     target: 'wss'
-              //   }
-              // },
-              // {
-              //   classes: [
-              //     'provide',
-              //     'network'
-              //   ],
-              //   data: {
-              //     id: 'intranet->https',
-              //     source: 'intranet',
-              //     target: 'https'
-              //   }
-              // },
-              // {
-              //   classes: [
-              //     'provide',
-              //     'network'
-              //   ],
-              //   data: {
-              //     id: 'intranet->wss',
-              //     source: 'intranet',
-              //     target: 'wss'
-              //   }
-              // }
             ],
             style: [
               {
@@ -271,9 +226,16 @@
                 selector: 'node.resource',
                 style: {
                   'label': 'data(name)',
-                  'shape': 'some-stuff',
+                  'width': 48,
+                  'height': 48,
                   'border-width': 1,
-                  'border-style': 'solid'
+                  'border-style': 'solid',
+                  'shape': 'rectangle',
+                  'background-fit': 'none',
+                  'background-repeat': 'no-repeat',
+                  'background-width': '50%',
+                  'background-height': '50%',
+                  'background-clip': 'node',
                 },
               },
               {
@@ -291,19 +253,13 @@
               {
                 selector: 'node#internet',
                 style: {
-                  'width': 128,
-                  'height': 128,
-                  'background-image': '/public/internet.png',
-                  'background-fit': 'contain'
+                  'background-image': '/public/images/001-cloud.png'
                 }
               },
               {
                 selector: 'node#intranet',
                 style: {
-                  'width': 128,
-                  'height': 128,
-                  'background-image': '/public/intranet.png',
-                  'background-fit': 'contain'
+                  'background-image': '/public/images/002-network.png'
                 }
               },
               {
