@@ -1,11 +1,32 @@
 [
   {
-    "selector": ".network",
+    "selector": "node.network",
     "style": {
+      "label": "data(title)",
+      "width": 32,
+      "height": 32,
+      "border-width": 1,
+      "border-style": "solid",
       "border-color": "#6ab9ff",
-      "line-color": "#6ab9ff",
-      "target-arrow-color": "#6ab9ff",
-      "background-color": "#e1f1ff"
+      "background-color": "#e1f1ff",
+      "color": "#457fb3",
+      "text-halign": "center",
+      "text-valign": "bottom"
+    }
+  },
+  {
+    "selector": "edge.network",
+    "style": {
+      "width": 1,
+      "line-color": "#6ab9ff"
+    }
+  },
+  {
+    "selector": "edge.network.network-2-network",
+    "style": {
+      "curve-style": "bezier",
+      "target-arrow-shape": "vee",
+      "target-arrow-color": "#6ab9ff"
     }
   }
 ]

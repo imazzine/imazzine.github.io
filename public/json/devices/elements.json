@@ -13,18 +13,18 @@
         "network"
       ],
       "data": {
-        "id": "lan",
-        "title": "Private network"
+        "id": "intranet",
+        "title": "Intranet"
       }
     },
     {
       "classes": [
-        "use",
-        "network"
+        "network",
+        "network-2-network"
       ],
       "data": {
-        "id": "lan *- internet",
-        "source": "lan",
+        "id": "intranet-2-internet",
+        "source": "intranet",
         "target": "internet"
       }
     }
