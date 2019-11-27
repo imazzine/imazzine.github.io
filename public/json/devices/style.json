@@ -1,0 +1,11 @@
+[
+  {
+    "selector": ".network",
+    "style": {
+      "border-color": "#6ab9ff",
+      "line-color": "#6ab9ff",
+      "target-arrow-color": "#6ab9ff",
+      "background-color": "#e1f1ff"
+    }
+  }
+]

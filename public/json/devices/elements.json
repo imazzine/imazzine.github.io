@@ -1,0 +1,31 @@
+[
+    {
+      "classes": [
+        "network"
+      ],
+      "data": {
+        "id": "internet",
+        "title": "Internet"
+      }
+    },
+    {
+      "classes": [
+        "network"
+      ],
+      "data": {
+        "id": "lan",
+        "title": "Private network"
+      }
+    },
+    {
+      "classes": [
+        "use",
+        "network"
+      ],
+      "data": {
+        "id": "lan *- internet",
+        "source": "lan",
+        "target": "internet"
+      }
+    }
+  ]
