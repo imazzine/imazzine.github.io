@@ -13,19 +13,137 @@
         "network"
       ],
       "data": {
-        "id": "intranet",
-        "title": "Intranet"
+        "id": "home",
+        "title": "Home"
+      }
+    },
+    {
+      "classes": [
+        "network"
+      ],
+      "data": {
+        "id": "work",
+        "title": "Work"
+      }
+    },
+    {
+      "classes": [
+        "network"
+      ],
+      "data": {
+        "id": "vpn",
+        "title": "VPN"
+      }
+    },
+
+
+
+
+
+    {
+      "classes": [
+        "network",
+        "access"
+      ],
+      "data": {
+        "id": "(home) --o (internet)",
+        "source": "home",
+        "target": "internet"
       }
     },
     {
       "classes": [
         "network",
-        "network-2-network"
+        "access"
       ],
       "data": {
-        "id": "intranet-2-internet",
-        "source": "intranet",
+        "id": "(work) --o (internet)",
+        "source": "work",
         "target": "internet"
+      }
+    },
+    {
+      "classes": [
+        "network",
+        "access"
+      ],
+      "data": {
+        "id": "(vpn) --o (internet)",
+        "source": "vpn",
+        "target": "internet"
+      }
+    },
+
+
+
+
+
+    {
+      "classes": [
+        "network",
+        "device"
+      ],
+      "data": {
+        "id": "homebook",
+        "title": "Laptop"
+      }
+    },
+    {
+      "classes": [
+        "network",
+        "device"
+      ],
+      "data": {
+        "id": "workstation",
+        "title": "Workstation"
+      }
+    },
+
+
+
+
+    {
+      "classes": [
+        "network",
+        "connection"
+      ],
+      "data": {
+        "id": "(homebook) --o (home)",
+        "source": "homebook",
+        "target": "home"
+      }
+    },
+    {
+      "classes": [
+        "network",
+        "connection"
+      ],
+      "data": {
+        "id": "(workstation) --o (work)",
+        "source": "workstation",
+        "target": "work"
+      }
+    },
+    {
+      "classes": [
+        "network",
+        "connection"
+      ],
+      "data": {
+        "id": "(homebook) --o (vpn)",
+        "source": "homebook",
+        "target": "vpn"
+      }
+    },
+    {
+      "classes": [
+        "network",
+        "connection"
+      ],
+      "data": {
+        "id": "(workstation) --o (vpn)",
+        "source": "workstation",
+        "target": "vpn"
       }
     }
   ]
