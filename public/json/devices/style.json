@@ -26,6 +26,14 @@
     }
   },
   {
+    "selector": "node.network.resource",
+    "style": {
+      "shape": "round-hexagon",
+      "width": 32,
+      "height": 32
+    }
+  },
+  {
     "selector": "edge.network",
     "style": {
       "width": 1,
@@ -46,6 +54,13 @@
     "style": {
       "target-arrow-shape": "diamond",
       "target-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.network.resource",
+    "style": {
+      "target-arrow-shape": "vee",
+      "target-arrow-fill": "filled"
     }
   }
 ]

@@ -145,5 +145,47 @@
         "source": "workstation",
         "target": "vpn"
       }
+    },
+
+
+
+
+    {
+      "classes": [
+        "network",
+        "resource"
+      ],
+      "data": {
+        "id": "ram",
+        "title": "RAM"
+      }
+    },
+
+
+
+
+    {
+      "classes": [
+        "network",
+        "resource",
+        "connection"
+      ],
+      "data": {
+        "id": "(workstation) --> (ram)",
+        "source": "workstation",
+        "target": "ram"
+      }
+    },
+    {
+      "classes": [
+        "network",
+        "resource",
+        "connection"
+      ],
+      "data": {
+        "id": "(homebook) --> (ram)",
+        "source": "homebook",
+        "target": "ram"
+      }
     }
   ]
