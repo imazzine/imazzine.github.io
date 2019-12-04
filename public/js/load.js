@@ -8,7 +8,7 @@ window['@imazzine'].load = function(name) {
     })
     .then((res) => {
       graphObject.style = res.data;
-      return axios.get('/public/json/' + name + '/elements.json');
+      return axios.get('/public/json/graph.json');
     })
     .then((res) => {
       graphObject.elements = res.data;

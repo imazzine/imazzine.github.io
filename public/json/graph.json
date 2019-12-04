@@ -1,0 +1,133 @@
+[
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Laptop",
+      "description": "Developer's laptop.",
+      "id": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Workstation",
+      "description": "Developer's workstation.",
+      "id": "devices-workstation"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Home",
+      "description": "Developer's home network.",
+      "id": "networks-home"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Internet",
+      "description": "Global network.",
+      "id": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "VPN",
+      "description": "Virtual private network.",
+      "id": "networks-vpn"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Work",
+      "description": "Developer's work network.",
+      "id": "networks-work"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-devices"
+    ],
+    "data": {
+      "id": "networks-home-2-devices-laptop",
+      "source": "networks-home",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-devices"
+    ],
+    "data": {
+      "id": "networks-vpn-2-devices-laptop",
+      "source": "networks-vpn",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-devices"
+    ],
+    "data": {
+      "id": "networks-vpn-2-devices-workstation",
+      "source": "networks-vpn",
+      "target": "devices-workstation"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-devices"
+    ],
+    "data": {
+      "id": "networks-work-2-devices-workstation",
+      "source": "networks-work",
+      "target": "devices-workstation"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-networks"
+    ],
+    "data": {
+      "id": "networks-home-2-networks-internet",
+      "source": "networks-home",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-networks"
+    ],
+    "data": {
+      "id": "networks-vpn-2-networks-internet",
+      "source": "networks-vpn",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-2-networks"
+    ],
+    "data": {
+      "tmp": true,
+      "id": "networks-work-2-networks-internet",
+      "source": "networks-work",
+      "target": "networks-internet"
+    }
+  }
+]
