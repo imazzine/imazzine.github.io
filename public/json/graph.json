@@ -5,7 +5,7 @@
     ],
     "data": {
       "name": "Laptop",
-      "description": "Developer's laptop.",
+      "description": "User's laptop.\n",
       "id": "devices-laptop"
     }
   },
@@ -14,8 +14,18 @@
       "devices"
     ],
     "data": {
+      "name": "Mobile",
+      "description": "User's phone or tablet.\n",
+      "id": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
       "name": "Workstation",
-      "description": "Developer's workstation.",
+      "description": "User's workstation.\n",
       "id": "devices-workstation"
     }
   },
@@ -25,7 +35,7 @@
     ],
     "data": {
       "name": "Home",
-      "description": "Developer's home network.",
+      "description": "User's home network.\n",
       "id": "networks-home"
     }
   },
@@ -35,7 +45,7 @@
     ],
     "data": {
       "name": "Internet",
-      "description": "Global network.",
+      "description": "Global network.\n",
       "id": "networks-internet"
     }
   },
@@ -44,8 +54,18 @@
       "networks"
     ],
     "data": {
+      "name": "Public",
+      "description": "Public network.\n",
+      "id": "networks-public"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
       "name": "VPN",
-      "description": "Virtual private network.",
+      "description": "Virtual private network.\n",
       "id": "networks-vpn"
     }
   },
@@ -55,77 +75,174 @@
     ],
     "data": {
       "name": "Work",
-      "description": "Developer's work network.",
+      "description": "User's work network.\n",
       "id": "networks-work"
     }
   },
   {
     "classes": [
-      "networks-2-devices"
+      "networks-devices"
     ],
     "data": {
-      "id": "networks-home-2-devices-laptop",
+      "name": null,
+      "description": "User's laptop connected to home network.\n",
+      "id": "networks-home_devices-laptop",
       "source": "networks-home",
       "target": "devices-laptop"
     }
   },
   {
     "classes": [
-      "networks-2-devices"
+      "networks-devices"
     ],
     "data": {
-      "id": "networks-vpn-2-devices-laptop",
+      "name": null,
+      "description": "User's phone/tablet connected to Home network.\n",
+      "id": "networks-home_devices-mobile",
+      "source": "networks-home",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop connected to public network.\n",
+      "id": "networks-public_devices-laptop",
+      "source": "networks-public",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's phone/tablet connected to public network.\n",
+      "id": "networks-public_devices-mobile",
+      "source": "networks-public",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop connected to vpn network.\n",
+      "id": "networks-vpn_devices-laptop",
       "source": "networks-vpn",
       "target": "devices-laptop"
     }
   },
   {
     "classes": [
-      "networks-2-devices"
+      "networks-devices"
     ],
     "data": {
-      "id": "networks-vpn-2-devices-workstation",
+      "name": null,
+      "description": "User's phone/tablet connected to VPN network.\n",
+      "id": "networks-vpn_devices-mobile",
+      "source": "networks-vpn",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation connected to vpn network.\n",
+      "id": "networks-vpn_devices-workstation",
       "source": "networks-vpn",
       "target": "devices-workstation"
     }
   },
   {
     "classes": [
-      "networks-2-devices"
+      "networks-devices"
     ],
     "data": {
-      "id": "networks-work-2-devices-workstation",
+      "name": null,
+      "description": "User's laptop connected to work network.\n",
+      "id": "networks-work_devices-laptop",
+      "source": "networks-work",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's phone/tablet connected to Work network.\n",
+      "id": "networks-work_devices-mobile",
+      "source": "networks-work",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation connected to work network.\n",
+      "id": "networks-work_devices-workstation",
       "source": "networks-work",
       "target": "devices-workstation"
     }
   },
   {
     "classes": [
-      "networks-2-networks"
+      "networks-networks"
     ],
     "data": {
-      "id": "networks-home-2-networks-internet",
+      "name": null,
+      "description": "Home network is a part of the Internet.\n",
+      "id": "networks-home_networks-internet",
       "source": "networks-home",
       "target": "networks-internet"
     }
   },
   {
     "classes": [
-      "networks-2-networks"
+      "networks-networks"
     ],
     "data": {
-      "id": "networks-vpn-2-networks-internet",
+      "name": null,
+      "description": "Public network is a part of the Internet.\n",
+      "id": "networks-public_networks-internet",
+      "source": "networks-public",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "VPN network is a part of the Internet.\n",
+      "id": "networks-vpn_networks-internet",
       "source": "networks-vpn",
       "target": "networks-internet"
     }
   },
   {
     "classes": [
-      "networks-2-networks"
+      "networks-networks"
     ],
     "data": {
-      "tmp": true,
-      "id": "networks-work-2-networks-internet",
+      "name": null,
+      "description": "Work network is a part of the Internet.\n",
+      "id": "networks-work_networks-internet",
       "source": "networks-work",
       "target": "networks-internet"
     }

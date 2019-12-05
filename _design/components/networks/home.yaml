@@ -1,4 +1,5 @@
 %YAML 1.2
 ---
 name: Home
-description: Developer's home network.
+description: >
+  User's home network.

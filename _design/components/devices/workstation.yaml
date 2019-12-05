@@ -1,4 +1,5 @@
 %YAML 1.2
 ---
 name: Workstation
-description: Developer's workstation.
+description: >
+  User's workstation.

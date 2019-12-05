@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('yaml');
 const graph_name = '_design';
+const style_name = '_styles';
 const edges_name = 'relations';
 const vertices_name = 'components';
 /**
@@ -85,9 +86,15 @@ function getFileNameNoExt(fullName) {
 };
 
 function getCategoryName(dir, for_edges) {
-    let tmp = dir.split(graph_name + path.sep + (for_edges?edges_name:vertices_name) + path.sep);
+    let tmp = dir.split(
+        graph_name +
+        path.sep +
+        (for_edges?edges_name:vertices_name) +
+        path.sep
+    );
     tmp = for_edges
-        ? tmp[tmp.length-1].split(path.sep)[tmp[tmp.length-1].split(path.sep).length - 1]
+        ? tmp[tmp.length-1].split(path.sep)[
+            tmp[tmp.length-1].split(path.sep).length - 1]
         : tmp[tmp.length-1].split(path.sep);
     return for_edges
         ? tmp
@@ -100,23 +107,56 @@ function getVerticeId(pth) {
 
 function getVertices() {
     const verts = [];
+    const styles = [];
     getDirectories(path.resolve(__dirname, `../${graph_name}/${vertices_name}`))
         .forEach((dir) => {
             getFiles(dir).forEach((file) => {
                 const id = getVerticeId(file);
                 let v = {
-                    classes: getCategoryName(dir).split('.'),
+                    classes: [getCategoryName(dir)],
                     data: yaml.parse(fs.readFileSync(file, 'utf8'))
                 };
                 v.data.id = getVerticeId(file);
                 verts.push(v);
             });
+            let stylesDir = path.resolve(
+                __dirname,
+                `../${style_name}/${vertices_name}/${
+                    dir.split(path.sep)[dir.split(path.sep).length-1]
+                }`
+            );
+            if (isDirectoryExist(stylesDir)) {
+                getFiles(stylesDir).forEach((file) => {
+                    let selector = getCategoryName(dir);
+                    if (getFileNameNoExt(file) === 'defaults') {
+                        selector = `node.${selector}`;
+                    } else if (getFileNameNoExt(file) === 'selected') {
+                        selector = `node.${selector}:selected`;
+                    } else {
+                        selector = `node#${
+                            getCategoryName(dir)
+                        }-${
+                            getFileNameNoExt(file)
+                        }.${
+                            selector
+                        }`;
+                    }
+                    styles.push({
+                        selector: selector,
+                        style: yaml.parse(fs.readFileSync(file, 'utf8')) || {}
+                    });
+                });
+            }
         });
-    return verts;
+    return {
+        vertices: verts,
+        styles: styles
+    };
 }
 
 function getEdges() {
     const edges = [];
+    const styles = [];
     getDirectories(path.resolve(__dirname, `../${graph_name}/${edges_name}`))
         .forEach((dir) => {
             let source = getCategoryName(dir, true);
@@ -133,9 +173,9 @@ function getEdges() {
                         `../${graph_name}/${vertices_name}/${target}/${names[1]}.yaml`
                     );
                     if (isFileExist(sourceFile) && isFileExist(targetFile)) {
-                        let id = `${getVerticeId(sourceFile)}-2-${getVerticeId(targetFile)}`;
+                        let id = `${getVerticeId(sourceFile)}_${getVerticeId(targetFile)}`;
                         let e = {
-                            classes: [`${source}-2-${target}`],
+                            classes: [`${source}-${target}`],
                             data: yaml.parse(fs.readFileSync(file, 'utf8')) || {}
                         };
                         e.data.id = id;
@@ -150,5 +190,9 @@ function getEdges() {
 }
 fs.writeFileSync(
     path.resolve(__dirname, '../public/json/graph.json'),
-    JSON.stringify(getVertices().concat(getEdges()), ' ', 2)
+    JSON.stringify(getVertices().vertices.concat(getEdges()), ' ', 2)
+);
+fs.writeFileSync(
+    path.resolve(__dirname, '../public/json/styles.json'),
+    JSON.stringify(getVertices().styles, ' ', 2)
 );

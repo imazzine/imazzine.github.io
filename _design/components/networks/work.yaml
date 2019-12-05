@@ -1,4 +1,5 @@
 %YAML 1.2
 ---
 name: Work
-description: Developer's work network.
+description: >
+  User's work network.

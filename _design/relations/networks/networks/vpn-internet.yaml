@@ -1,2 +1,5 @@
 %YAML 1.2
 ---
+name:
+description: >
+  VPN network have an access to Internet resources.

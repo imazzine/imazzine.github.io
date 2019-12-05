@@ -1,0 +1,71 @@
+[
+  {
+    "selector": "node.devices",
+    "style": {
+      "label": "data(name)",
+      "shape": "rectangle",
+      "width": 24,
+      "height": 24,
+      "border-width": 1,
+      "color": "#6ab9ff",
+      "border-style": "solid",
+      "border-color": "#6ab9ff",
+      "background-color": "#e1f1ff",
+      "font-weight": "normal",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "top",
+      "text-margin-y": -5
+    }
+  },
+  {
+    "selector": "node.devices:selected",
+    "style": {
+      "color": "#3e8dd6",
+      "border-color": "#3e8dd6",
+      "background-color": "#6ab9ff",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "node.networks",
+    "style": {
+      "label": "data(name)",
+      "shape": "hexagon",
+      "width": 28,
+      "height": 24,
+      "border-width": 1,
+      "color": "#6ab9ff",
+      "border-style": "solid",
+      "border-color": "#6ab9ff",
+      "background-color": "#e1f1ff",
+      "font-weight": "normal",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "bottom",
+      "text-margin-y": 5
+    }
+  },
+  {
+    "selector": "node#networks-internet.networks",
+    "style": {
+      "width": 36,
+      "height": 32
+    }
+  },
+  {
+    "selector": "node.networks:selected",
+    "style": {
+      "color": "#3e8dd6",
+      "border-color": "#3e8dd6",
+      "background-color": "#6ab9ff",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  }
+]

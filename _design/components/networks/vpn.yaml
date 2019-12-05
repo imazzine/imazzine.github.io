@@ -1,4 +1,5 @@
 %YAML 1.2
 ---
 name: VPN
-description: Virtual private network.
+description: >
+  Virtual private network.

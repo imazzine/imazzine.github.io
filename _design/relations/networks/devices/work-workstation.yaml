@@ -1,2 +1,5 @@
 %YAML 1.2
 ---
+name:
+description: >
+  User's workstation connected to work network.

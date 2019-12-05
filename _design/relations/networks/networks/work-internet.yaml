@@ -1,3 +1,5 @@
 %YAML 1.2
 ---
-tmp: true
+name:
+description: >
+  Work network have an access to Internet resources.

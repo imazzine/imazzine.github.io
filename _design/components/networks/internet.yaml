@@ -1,4 +1,5 @@
 %YAML 1.2
 ---
 name: Internet
-description: Global network.
+description: >
+  Global network.

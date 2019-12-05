@@ -1,4 +1,5 @@
 %YAML 1.2
 ---
 name: Laptop
-description: Developer's laptop.
+description: >
+  User's laptop.

@@ -4,7 +4,7 @@ window['@imazzine'].load = function(name) {
   return window.axios.get('/public/json/' + name + '/layout.json')
     .then((res) => {
       graphObject.layout = res.data;
-      return axios.get('/public/json/' + name + '/style.json');
+      return axios.get('/public/json/styles.json');
     })
     .then((res) => {
       graphObject.style = res.data;

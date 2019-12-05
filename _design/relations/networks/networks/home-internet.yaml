@@ -1,2 +1,5 @@
 %YAML 1.2
 ---
+name:
+description: >
+  Home network have an access to Internet resources.
