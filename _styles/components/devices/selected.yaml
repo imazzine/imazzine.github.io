@@ -1,9 +1,4 @@
 %YAML 1.2
 ---
-color: '#3e8dd6'
-border-color: '#3e8dd6'
-background-color: '#6ab9ff'
-text-background-color: '#ffffff'
-text-background-opacity: 0.85
-text-background-padding: 3
-text-background-shape: 'round-rectangle'
+color: '#ffffff'
+background-color: '#297fb9'

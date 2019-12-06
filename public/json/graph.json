@@ -86,6 +86,9 @@
     "data": {
       "name": null,
       "description": "User's laptop connected to home network.\n",
+      "relation": {
+        "target_quantity": "0..*"
+      },
       "id": "networks-home_devices-laptop",
       "source": "networks-home",
       "target": "devices-laptop"
@@ -205,7 +208,7 @@
     ],
     "data": {
       "name": null,
-      "description": "Home network is a part of the Internet.\n",
+      "description": "Home network have an access to Internet resources.\n",
       "id": "networks-home_networks-internet",
       "source": "networks-home",
       "target": "networks-internet"
@@ -217,7 +220,7 @@
     ],
     "data": {
       "name": null,
-      "description": "Public network is a part of the Internet.\n",
+      "description": "Public network have an access to Internet resources.\n",
       "id": "networks-public_networks-internet",
       "source": "networks-public",
       "target": "networks-internet"
@@ -229,7 +232,7 @@
     ],
     "data": {
       "name": null,
-      "description": "VPN network is a part of the Internet.\n",
+      "description": "VPN network have an access to Internet resources.\n",
       "id": "networks-vpn_networks-internet",
       "source": "networks-vpn",
       "target": "networks-internet"
@@ -241,7 +244,7 @@
     ],
     "data": {
       "name": null,
-      "description": "Work network is a part of the Internet.\n",
+      "description": "Work network have an access to Internet resources.\n",
       "id": "networks-work_networks-internet",
       "source": "networks-work",
       "target": "networks-internet"

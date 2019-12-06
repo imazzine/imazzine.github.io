@@ -184,15 +184,50 @@ function getEdges() {
                         edges.push(e);
                     }
                 });
+                let stylesDir = path.resolve(
+                    __dirname, `../${style_name}/${edges_name}/${source}/${target}`
+                );
+                if (isDirectoryExist(stylesDir)) {
+                    getFiles(stylesDir).forEach((file) => {
+                        let selector = `${source}-${target}`;
+                        if (getFileNameNoExt(file) === 'defaults') {
+                            selector = `edge.${selector}`;
+                        } else if (getFileNameNoExt(file) === 'selected') {
+                            selector = `edge.${selector}:selected`;
+                        } else {
+                            let id;
+                            let names = getFileNameNoExt(file).split('-');
+                            let sourceFile = path.resolve(
+                                __dirname,
+                                `../${graph_name}/${vertices_name}/${source}/${names[0]}.yaml`
+                            );
+                            let targetFile = path.resolve(
+                                __dirname,
+                                `../${graph_name}/${vertices_name}/${target}/${names[1]}.yaml`
+                            );
+                            if (isFileExist(sourceFile) && isFileExist(targetFile)) {
+                                id = `${getVerticeId(sourceFile)}_${getVerticeId(targetFile)}`;
+                            }
+                            selector = `edge#${id}.${selector}`;
+                        }
+                        styles.push({
+                            selector: selector,
+                            style: yaml.parse(fs.readFileSync(file, 'utf8')) || {}
+                        });
+                    });
+                }
             });
         });
-    return edges;
+    return {
+        edges: edges,
+        styles: styles
+    };
 }
 fs.writeFileSync(
     path.resolve(__dirname, '../public/json/graph.json'),
-    JSON.stringify(getVertices().vertices.concat(getEdges()), ' ', 2)
+    JSON.stringify(getVertices().vertices.concat(getEdges().edges), ' ', 2)
 );
 fs.writeFileSync(
     path.resolve(__dirname, '../public/json/styles.json'),
-    JSON.stringify(getVertices().styles, ' ', 2)
+    JSON.stringify(getVertices().styles.concat(getEdges().styles), ' ', 2)
 );

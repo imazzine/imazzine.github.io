@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+target-label: 'data(relation.target_quantity)'
+width: 1
+line-color: '#3497db'
+curve-style: 'bezier'
+source-arrow-color: '#3497db'
+source-arrow-shape: 'diamond'
+source-arrow-fill: 'hollow'
+color: '#3497db'
+font-weight: 'normal'
+font-size: 12
+text-halign: 'center'
+text-valign: 'center'
+target-text-offset: 25
