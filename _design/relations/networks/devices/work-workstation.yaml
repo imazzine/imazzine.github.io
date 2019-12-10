@@ -3,3 +3,5 @@
 name:
 description: >
   User's workstation connected to work network.
+source_quantity_relation: '1'
+target_quantity_relation: '0..*'

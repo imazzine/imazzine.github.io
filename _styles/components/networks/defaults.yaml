@@ -8,6 +8,6 @@ font-size: 12
 font-weight: 'normal'
 text-halign: 'center'
 text-valign: 'bottom'
-text-margin-y: 5
+text-margin-y: 15
 color: '#3497db'
 background-color: '#3497db'

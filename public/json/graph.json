@@ -81,14 +81,53 @@
   },
   {
     "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "bridge",
+      "description": "React Native bridge process.\n",
+      "id": "processes-bridge"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "browser",
+      "description": "Browser process.\n",
+      "id": "processes-browser"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "node",
+      "description": "Node.js process.\n",
+      "id": "processes-nodejs"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "webview",
+      "description": "Webview process.\n",
+      "id": "processes-webview"
+    }
+  },
+  {
+    "classes": [
       "networks-devices"
     ],
     "data": {
       "name": null,
       "description": "User's laptop connected to home network.\n",
-      "relation": {
-        "target_quantity": "0..*"
-      },
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
       "id": "networks-home_devices-laptop",
       "source": "networks-home",
       "target": "devices-laptop"
@@ -101,6 +140,8 @@
     "data": {
       "name": null,
       "description": "User's phone/tablet connected to Home network.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
       "id": "networks-home_devices-mobile",
       "source": "networks-home",
       "target": "devices-mobile"
@@ -113,6 +154,8 @@
     "data": {
       "name": null,
       "description": "User's laptop connected to public network.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
       "id": "networks-public_devices-laptop",
       "source": "networks-public",
       "target": "devices-laptop"
@@ -125,6 +168,8 @@
     "data": {
       "name": null,
       "description": "User's phone/tablet connected to public network.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
       "id": "networks-public_devices-mobile",
       "source": "networks-public",
       "target": "devices-mobile"
@@ -137,6 +182,8 @@
     "data": {
       "name": null,
       "description": "User's laptop connected to vpn network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
       "id": "networks-vpn_devices-laptop",
       "source": "networks-vpn",
       "target": "devices-laptop"
@@ -149,6 +196,8 @@
     "data": {
       "name": null,
       "description": "User's phone/tablet connected to VPN network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
       "id": "networks-vpn_devices-mobile",
       "source": "networks-vpn",
       "target": "devices-mobile"
@@ -161,6 +210,8 @@
     "data": {
       "name": null,
       "description": "User's workstation connected to vpn network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
       "id": "networks-vpn_devices-workstation",
       "source": "networks-vpn",
       "target": "devices-workstation"
@@ -172,31 +223,9 @@
     ],
     "data": {
       "name": null,
-      "description": "User's laptop connected to work network.\n",
-      "id": "networks-work_devices-laptop",
-      "source": "networks-work",
-      "target": "devices-laptop"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's phone/tablet connected to Work network.\n",
-      "id": "networks-work_devices-mobile",
-      "source": "networks-work",
-      "target": "devices-mobile"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
       "description": "User's workstation connected to work network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
       "id": "networks-work_devices-workstation",
       "source": "networks-work",
       "target": "devices-workstation"
@@ -209,6 +238,8 @@
     "data": {
       "name": null,
       "description": "Home network have an access to Internet resources.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "1",
       "id": "networks-home_networks-internet",
       "source": "networks-home",
       "target": "networks-internet"
@@ -221,6 +252,8 @@
     "data": {
       "name": null,
       "description": "Public network have an access to Internet resources.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "1",
       "id": "networks-public_networks-internet",
       "source": "networks-public",
       "target": "networks-internet"
@@ -233,6 +266,8 @@
     "data": {
       "name": null,
       "description": "VPN network have an access to Internet resources.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
       "id": "networks-vpn_networks-internet",
       "source": "networks-vpn",
       "target": "networks-internet"
@@ -245,6 +280,8 @@
     "data": {
       "name": null,
       "description": "Work network have an access to Internet resources.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
       "id": "networks-work_networks-internet",
       "source": "networks-work",
       "target": "networks-internet"

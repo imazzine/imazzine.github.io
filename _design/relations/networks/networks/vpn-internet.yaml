@@ -3,3 +3,5 @@
 name:
 description: >
   VPN network have an access to Internet resources.
+source_quantity_relation: '1'
+target_quantity_relation: '1'

@@ -1,5 +1,13 @@
 %YAML 1.2
 ---
+source-label: 'data(source_quantity_relation)'
+target-label: 'data(target_quantity_relation)'
+font-size: 12
+text-halign: 'center'
+text-valign: 'center'
+source-text-offset: 35
+target-text-offset: 35
+font-weight: 'bold'
 width: 2
 color: '#297fb9'
 line-color: '#297fb9'

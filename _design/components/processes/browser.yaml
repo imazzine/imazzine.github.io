@@ -1,0 +1,5 @@
+%YAML 1.2
+---
+name: browser
+description: >
+  Browser process.
