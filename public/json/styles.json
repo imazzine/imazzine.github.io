@@ -71,27 +71,64 @@
     "style": {
       "label": "data(name)",
       "shape": "tag",
-      "width": 56,
+      "width": 36,
       "height": 24,
       "border-width": 0,
-      "color": "#ffffff",
+      "color": "#45bc9b",
       "border-style": "solid",
-      "background-color": "#3497db",
+      "background-color": "#45bc9b",
       "font-size": 12,
       "text-halign": "center",
-      "text-valign": "center"
+      "text-valign": "top",
+      "text-margin-y": -5
     }
   },
   {
     "selector": "node.processes:selected",
     "style": {
       "font-weight": "bold",
-      "color": "#ffffff",
+      "color": "#38a086",
       "border-width": 2,
       "border-style": "solid",
-      "border-color": "#297fb9",
+      "border-color": "#38a086",
       "border-opacity": 1,
-      "background-color": "#3497db"
+      "background-color": "#45bc9b",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.devices-processes",
+    "style": {
+      "width": 1,
+      "line-color": "#45bc9b",
+      "curve-style": "bezier",
+      "source-arrow-color": "#45bc9b",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.devices-processes:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 35,
+      "target-text-offset": 35,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#38a086",
+      "line-color": "#38a086",
+      "source-arrow-color": "#38a086",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
     }
   },
   {

@@ -2,12 +2,13 @@
 ---
 label: data(name)
 shape: 'tag'
-width: 56
+width: 36
 height: 24
 border-width: 0
-color: '#ffffff'
+color: '#45bc9b'
 border-style: 'solid'
-background-color: '#3497db'
+background-color: '#45bc9b'
 font-size: 12
 text-halign: 'center'
-text-valign: 'center'
+text-valign: 'top'
+text-margin-y: -5

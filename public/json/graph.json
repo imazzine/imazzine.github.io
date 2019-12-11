@@ -121,6 +121,104 @@
   },
   {
     "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop could host Browser proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-laptop_processes-browser",
+      "source": "devices-laptop",
+      "target": "processes-browser"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop could host Node.js proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-laptop_processes-nodejs",
+      "source": "devices-laptop",
+      "target": "processes-nodejs"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's mobile could host React Native Bridge proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-mobile_processes-bridge",
+      "source": "devices-mobile",
+      "target": "processes-bridge"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's mobile could host Browser proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-mobile_processes-browser",
+      "source": "devices-mobile",
+      "target": "processes-browser"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's mobile could host Webview proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-mobile_processes-webview",
+      "source": "devices-mobile",
+      "target": "processes-webview"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation could host Browser proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-workstation_processes-browser",
+      "source": "devices-workstation",
+      "target": "processes-browser"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation could host Node.js proccess.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "0..*",
+      "id": "devices-workstation_processes-nodejs",
+      "source": "devices-workstation",
+      "target": "processes-nodejs"
+    }
+  },
+  {
+    "classes": [
       "networks-devices"
     ],
     "data": {
