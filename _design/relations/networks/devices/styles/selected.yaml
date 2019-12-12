@@ -2,11 +2,11 @@
 ---
 source-label: 'data(source_quantity_relation)'
 target-label: 'data(target_quantity_relation)'
-font-size: 12
+font-size: 10
 text-halign: 'center'
 text-valign: 'center'
-source-text-offset: 35
-target-text-offset: 35
+source-text-offset: 8
+target-text-offset: 8
 font-weight: 'bold'
 width: 2
 color: '#297fb9'

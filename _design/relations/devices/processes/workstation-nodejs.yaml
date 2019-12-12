@@ -3,5 +3,5 @@
 name:
 description: >
   User's workstation could host Node.js proccess.
-source_quantity_relation: '0..*'
+source_quantity_relation: '1'
 target_quantity_relation: '0..*'

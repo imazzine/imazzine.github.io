@@ -1,0 +1,5 @@
+%YAML 1.2
+---
+name: worker2
+description: >
+  Worker Threads based thread.

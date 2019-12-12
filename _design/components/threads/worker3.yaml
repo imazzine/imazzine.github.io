@@ -1,0 +1,5 @@
+%YAML 1.2
+---
+name: worker3
+description: >
+  Web Workers based thread.

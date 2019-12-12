@@ -121,12 +121,42 @@
   },
   {
     "classes": [
+      "storages"
+    ],
+    "data": {
+      "name": "RAM",
+      "description": "Device Random Access Memory.\n",
+      "id": "storages-ram"
+    }
+  },
+  {
+    "classes": [
       "threads"
     ],
     "data": {
-      "name": "worker",
+      "name": "worker1",
       "description": "Web Workers based thread.\n",
-      "id": "threads-worker"
+      "id": "threads-worker1"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "worker2",
+      "description": "Worker Threads based thread.\n",
+      "id": "threads-worker2"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "worker3",
+      "description": "Web Workers based thread.\n",
+      "id": "threads-worker3"
     }
   },
   {
@@ -136,7 +166,7 @@
     "data": {
       "name": null,
       "description": "User's laptop could host Browser proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-laptop_processes-browser",
       "source": "devices-laptop",
@@ -150,7 +180,7 @@
     "data": {
       "name": null,
       "description": "User's laptop could host Node.js proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-laptop_processes-nodejs",
       "source": "devices-laptop",
@@ -164,7 +194,7 @@
     "data": {
       "name": null,
       "description": "User's mobile could host React Native Bridge proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-mobile_processes-bridge",
       "source": "devices-mobile",
@@ -178,7 +208,7 @@
     "data": {
       "name": null,
       "description": "User's mobile could host Browser proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-mobile_processes-browser",
       "source": "devices-mobile",
@@ -192,7 +222,7 @@
     "data": {
       "name": null,
       "description": "User's mobile could host Webview proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-mobile_processes-webview",
       "source": "devices-mobile",
@@ -206,7 +236,7 @@
     "data": {
       "name": null,
       "description": "User's workstation could host Browser proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-workstation_processes-browser",
       "source": "devices-workstation",
@@ -220,11 +250,53 @@
     "data": {
       "name": null,
       "description": "User's workstation could host Node.js proccess.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "devices-workstation_processes-nodejs",
       "source": "devices-workstation",
       "target": "processes-nodejs"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-laptop_storages-ram",
+      "source": "devices-laptop",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's mobile RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-mobile_storages-ram",
+      "source": "devices-mobile",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-workstation_storages-ram",
+      "source": "devices-workstation",
+      "target": "storages-ram"
     }
   },
   {
@@ -234,7 +306,7 @@
     "data": {
       "name": null,
       "description": "User's laptop connected to home network.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "networks-home_devices-laptop",
       "source": "networks-home",
@@ -248,7 +320,7 @@
     "data": {
       "name": null,
       "description": "User's phone/tablet connected to Home network.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "networks-home_devices-mobile",
       "source": "networks-home",
@@ -262,7 +334,7 @@
     "data": {
       "name": null,
       "description": "User's laptop connected to public network.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "networks-public_devices-laptop",
       "source": "networks-public",
@@ -276,7 +348,7 @@
     "data": {
       "name": null,
       "description": "User's phone/tablet connected to public network.\n",
-      "source_quantity_relation": "0..*",
+      "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
       "id": "networks-public_devices-mobile",
       "source": "networks-public",
@@ -404,9 +476,9 @@
       "description": "Browsers process could host Web Workers threads.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "processes-browser_threads-worker",
+      "id": "processes-browser_threads-worker1",
       "source": "processes-browser",
-      "target": "threads-worker"
+      "target": "threads-worker1"
     }
   },
   {
@@ -418,9 +490,9 @@
       "description": "Node.js process could host Web Workers threads.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "processes-nodejs_threads-worker",
+      "id": "processes-nodejs_threads-worker2",
       "source": "processes-nodejs",
-      "target": "threads-worker"
+      "target": "threads-worker2"
     }
   },
   {
@@ -432,9 +504,9 @@
       "description": "Webview component could host Web Workers threads.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "processes-webview_threads-worker",
+      "id": "processes-webview_threads-worker3",
       "source": "processes-webview",
-      "target": "threads-worker"
+      "target": "threads-worker3"
     }
   }
 ]

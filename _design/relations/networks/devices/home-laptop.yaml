@@ -3,5 +3,5 @@
 name:
 description: >
   User's laptop connected to home network.
-source_quantity_relation: '0..*'
+source_quantity_relation: '1'
 target_quantity_relation: '0..*'

@@ -9,9 +9,9 @@ source-text-offset: 8
 target-text-offset: 8
 font-weight: 'bold'
 width: 2
-color: '#4eae61'
-line-color: '#4eae61'
-source-arrow-color: '#4eae61'
+color: '#f29d39'
+line-color: '#f29d39'
+source-arrow-color: '#f29d39'
 text-background-color: '#ffffff'
 text-background-opacity: 0.85
 text-background-padding: 3

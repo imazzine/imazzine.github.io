@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+label: data(name)
+shape: 'polygon'
+width: 36
+height: 36
+color: '#f29d39'
+border-opacity: 1
+border-width: 1
+border-style: 'solid'
+border-color: '#f29d39'
+background-color: '#f1c643'
+font-size: 12
+text-halign: 'center'
+text-valign: 'top'
+text-margin-y: -18
+shape-polygon-points: [1.00, -0.70, 0.90, -0.84, 0.50, -0.95, 0.00, -1.00, -0.50, -0.95, -0.90, -0.84, -1.00, -0.70, -0.90, -0.56, -0.50, -0.45, 0.00, -0.40, 0.50, -0.45, 0.90, -0.56, 1.00, -0.70, 1.00, 0.70, 0.90, 0.84, 0.50, 0.95, 0.00, 1.00, -0.50, 0.95, -0.90, 0.84, -1.00, 0.70, -1.00, -0.70, -0.90, -0.56, -0.50, -0.45, 0.00, -0.40, 0.50, -0.45, 0.90, -0.56, 1.00, -0.70]
