@@ -100,6 +100,40 @@
     }
   },
   {
+    "selector": "node.threads",
+    "style": {
+      "label": "data(name)",
+      "shape": "tag",
+      "width": 36,
+      "height": 24,
+      "border-width": 1,
+      "color": "#45bc9b",
+      "border-style": "solid",
+      "border-color": "#45bc9b",
+      "background-color": "#ffffff",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "top",
+      "text-margin-y": -5
+    }
+  },
+  {
+    "selector": "node.threads:selected",
+    "style": {
+      "font-weight": "bold",
+      "color": "#38a086",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#38a086",
+      "border-opacity": 1,
+      "background-color": "#ffffff",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
     "selector": "edge.devices-processes",
     "style": {
       "width": 1,
@@ -189,6 +223,38 @@
       "color": "#297fb9",
       "line-color": "#297fb9",
       "source-arrow-color": "#297fb9",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.processes-threads",
+    "style": {
+      "width": 1,
+      "line-color": "#45bc9b",
+      "curve-style": "bezier",
+      "source-arrow-color": "#45bc9b",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.processes-threads:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 35,
+      "target-text-offset": 35,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#38a086",
+      "line-color": "#38a086",
+      "source-arrow-color": "#38a086",
       "text-background-color": "#ffffff",
       "text-background-opacity": 0.85,
       "text-background-padding": 3,

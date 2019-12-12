@@ -121,6 +121,16 @@
   },
   {
     "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "worker",
+      "description": "Web Workers based thread.\n",
+      "id": "threads-worker"
+    }
+  },
+  {
+    "classes": [
       "devices-processes"
     ],
     "data": {
@@ -383,6 +393,48 @@
       "id": "networks-work_networks-internet",
       "source": "networks-work",
       "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "Browsers process could host Web Workers threads.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-browser_threads-worker",
+      "source": "processes-browser",
+      "target": "threads-worker"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "Node.js process could host Web Workers threads.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-nodejs_threads-worker",
+      "source": "processes-nodejs",
+      "target": "threads-worker"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "Webview component could host Web Workers threads.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-webview_threads-worker",
+      "source": "processes-webview",
+      "target": "threads-worker"
     }
   }
 ]

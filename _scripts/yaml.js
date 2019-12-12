@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('yaml');
 const graph_name = '_design';
-const style_name = '_styles';
+const style_name = 'styles';
 const edges_name = 'relations';
 const vertices_name = 'components';
 /**
@@ -111,7 +111,6 @@ function getVertices() {
     getDirectories(path.resolve(__dirname, `../${graph_name}/${vertices_name}`))
         .forEach((dir) => {
             getFiles(dir).forEach((file) => {
-                const id = getVerticeId(file);
                 let v = {
                     classes: [getCategoryName(dir)],
                     data: yaml.parse(fs.readFileSync(file, 'utf8'))
@@ -119,12 +118,7 @@ function getVertices() {
                 v.data.id = getVerticeId(file);
                 verts.push(v);
             });
-            let stylesDir = path.resolve(
-                __dirname,
-                `../${style_name}/${vertices_name}/${
-                    dir.split(path.sep)[dir.split(path.sep).length-1]
-                }`
-            );
+            let stylesDir = path.resolve(dir, `./${style_name}`);
             if (isDirectoryExist(stylesDir)) {
                 getFiles(stylesDir).forEach((file) => {
                     let selector = getCategoryName(dir);
@@ -163,6 +157,10 @@ function getEdges() {
             getDirectories(dir).forEach((sub) => {
                 let target = getCategoryName(sub, true);
                 getFiles(sub).forEach((file) => {
+                    if (!~getFileNameNoExt(file).indexOf('-')
+                        && getFileNameNoExt(file).split('-').length !== 2) {
+                        throw new TypeError(`File name doesn't mucth to file name convention: ${file}`);
+                    }
                     let names = getFileNameNoExt(file).split('-');
                     let sourceFile = path.resolve(
                         __dirname,
@@ -172,7 +170,9 @@ function getEdges() {
                         __dirname,
                         `../${graph_name}/${vertices_name}/${target}/${names[1]}.yaml`
                     );
-                    if (isFileExist(sourceFile) && isFileExist(targetFile)) {
+                    if (!isFileExist(sourceFile) || !isFileExist(targetFile)) {
+                        throw new TypeError(`Missed components for relation: ${file}`);
+                    } else {
                         let id = `${getVerticeId(sourceFile)}_${getVerticeId(targetFile)}`;
                         let e = {
                             classes: [`${source}-${target}`],
@@ -184,9 +184,7 @@ function getEdges() {
                         edges.push(e);
                     }
                 });
-                let stylesDir = path.resolve(
-                    __dirname, `../${style_name}/${edges_name}/${source}/${target}`
-                );
+                let stylesDir = path.resolve(sub, `./${style_name}`);
                 if (isDirectoryExist(stylesDir)) {
                     getFiles(stylesDir).forEach((file) => {
                         let selector = `${source}-${target}`;
@@ -195,6 +193,10 @@ function getEdges() {
                         } else if (getFileNameNoExt(file) === 'selected') {
                             selector = `edge.${selector}:selected`;
                         } else {
+                            if (!~getFileNameNoExt(file).indexOf('-')
+                                && getFileNameNoExt(file).split('-').length !== 2) {
+                                throw new TypeError(`File name doesn't mucth to file name convention: ${file}`);
+                            }
                             let id;
                             let names = getFileNameNoExt(file).split('-');
                             let sourceFile = path.resolve(
@@ -205,7 +207,9 @@ function getEdges() {
                                 __dirname,
                                 `../${graph_name}/${vertices_name}/${target}/${names[1]}.yaml`
                             );
-                            if (isFileExist(sourceFile) && isFileExist(targetFile)) {
+                            if (!isFileExist(sourceFile) || !isFileExist(targetFile)) {
+                                throw new TypeError(`Missed components for relation: ${file}`);
+                            } else {
                                 id = `${getVerticeId(sourceFile)}_${getVerticeId(targetFile)}`;
                             }
                             selector = `edge#${id}.${selector}`;

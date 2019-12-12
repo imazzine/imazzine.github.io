@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+label: data(name)
+shape: 'tag'
+width: 36
+height: 24
+border-width: 1
+color: '#45bc9b'
+border-style: 'solid'
+border-color: '#45bc9b'
+background-color: '#ffffff'
+font-size: 12
+text-halign: 'center'
+text-valign: 'top'
+text-margin-y: -5
