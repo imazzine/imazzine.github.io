@@ -121,11 +121,21 @@
   },
   {
     "classes": [
+      "queues"
+    ],
+    "data": {
+      "name": "RabbitMQ",
+      "description": "RabbitMQ instance.\n",
+      "id": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
       "storages"
     ],
     "data": {
       "name": "RAM",
-      "description": "Device Random Access Memory.\n",
+      "description": "Random Access Memory.\n",
       "id": "storages-ram"
     }
   },
@@ -255,6 +265,34 @@
       "id": "devices-workstation_processes-nodejs",
       "source": "devices-workstation",
       "target": "processes-nodejs"
+    }
+  },
+  {
+    "classes": [
+      "devices-queues"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop RabbitMQ instance.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-laptop_queues-rabbitmq",
+      "source": "devices-laptop",
+      "target": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
+      "devices-queues"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation RabbitMQ instance..\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-workstation_queues-rabbitmq",
+      "source": "devices-workstation",
+      "target": "queues-rabbitmq"
     }
   },
   {
