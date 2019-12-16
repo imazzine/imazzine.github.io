@@ -1,7 +1,7 @@
 {
     "name": "imazzine.github.io",
     "version": "0.0.0",
-    "description": "Imazzine Project Documentation",
+    "description": "Imazzine Project Documentation.",
     "devDependencies": {
         "webpack": "^4.41.2",
         "webpack-dev-server": "^3.9.0",
