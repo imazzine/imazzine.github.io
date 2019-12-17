@@ -79,36 +79,48 @@ function getFiles(pth) {
  * @return {string}
  */
 function getFileNameNoExt(fullName) {
-    let tmp = fullName.split(path.sep);
-    tmp = tmp[tmp.length-1].split('.');
+    const filename = path.basename(fullName);
+    tmp = filename.split('.');
     tmp.pop();
-    return tmp.join('-');
+    return tmp.join('.');
 };
 
+/**
+ * Returns base item selector (class name).
+ * @param {string} dir 
+ * @param {boolean?} for_edges
+ * @returns {string}
+ */
 function getCategoryName(dir, for_edges) {
-    let tmp = dir.split(
-        graph_name +
-        path.sep +
-        (for_edges?edges_name:vertices_name) +
-        path.sep
-    );
-    tmp = for_edges
-        ? tmp[tmp.length-1].split(path.sep)[
-            tmp[tmp.length-1].split(path.sep).length - 1]
-        : tmp[tmp.length-1].split(path.sep);
-    return for_edges
-        ? tmp
-        : tmp.join('-');
+    if (fs.lstatSync(dir).isFile()) {
+        dir = path.dirname(dir);
+    }
+    if (!for_edges) {
+        return dir.split(path.sep).pop();
+    } else {
+        const pieces = dir.split(path.sep);
+        return `${pieces[pieces.length-2]}-${pieces[pieces.length-1]}`;
+    }
 }
 
+/**
+ * Returns vertice id by its file path.
+ * @param {string} pth 
+ * @returns {string}
+ */
 function getVerticeId(pth) {
-    return getFileNameNoExt(getCategoryName(pth));
+    return `${getCategoryName(pth)}-${getFileNameNoExt(pth)}`;
 }
 
-function getVertices() {
+/**
+ * Returns object with graph vertices data/styles by graph path.
+ * @param {string} graph_path
+ * @returns {{vertices:Array, styles:Array}}
+ */
+function getVertices(graph_path) {
     const verts = [];
     const styles = [];
-    getDirectories(path.resolve(__dirname, `../${graph_name}/${vertices_name}`))
+    getDirectories(path.resolve(graph_path, `./${vertices_name}`))
         .forEach((dir) => {
             getFiles(dir).forEach((file) => {
                 let v = {
@@ -148,28 +160,27 @@ function getVertices() {
     };
 }
 
-function getEdges() {
+/**
+ * Returns object with graph edges data/styles by graph path.
+ * @param {string} graph_path
+ * @returns {{vertices:Array, styles:Array}}
+ */
+function getEdges(graph_path) {
     const edges = [];
     const styles = [];
-    getDirectories(path.resolve(__dirname, `../${graph_name}/${edges_name}`))
+    getDirectories(path.resolve(graph_path, `./${edges_name}`))
         .forEach((dir) => {
-            let source = getCategoryName(dir, true);
+            let source = getCategoryName(dir);
             getDirectories(dir).forEach((sub) => {
-                let target = getCategoryName(sub, true);
+                let target = getCategoryName(sub);
                 getFiles(sub).forEach((file) => {
                     if (!~getFileNameNoExt(file).indexOf('-')
                         && getFileNameNoExt(file).split('-').length !== 2) {
                         throw new TypeError(`File name doesn't mucth to file name convention: ${file}`);
                     }
                     let names = getFileNameNoExt(file).split('-');
-                    let sourceFile = path.resolve(
-                        __dirname,
-                        `../${graph_name}/${vertices_name}/${source}/${names[0]}.yaml`
-                    );
-                    let targetFile = path.resolve(
-                        __dirname,
-                        `../${graph_name}/${vertices_name}/${target}/${names[1]}.yaml`
-                    );
+                    let sourceFile = path.resolve(graph_path, `./${vertices_name}/${source}/${names[0]}.yaml`);
+                    let targetFile = path.resolve(graph_path, `./${vertices_name}/${target}/${names[1]}.yaml`);
                     if (!isFileExist(sourceFile) || !isFileExist(targetFile)) {
                         throw new TypeError(`Missed components for relation: ${file}`);
                     } else {
@@ -227,11 +238,18 @@ function getEdges() {
         styles: styles
     };
 }
-fs.writeFileSync(
-    path.resolve(__dirname, '../public/json/graph.json'),
-    JSON.stringify(getVertices().vertices.concat(getEdges().edges), ' ', 2)
-);
-fs.writeFileSync(
-    path.resolve(__dirname, '../public/json/styles.json'),
-    JSON.stringify(getVertices().styles.concat(getEdges().styles), ' ', 2)
-);
+
+getDirectories(path.resolve(__dirname, `../${graph_name}`)).forEach((graph) => {
+    const name = graph.split(path.sep).pop();
+    if (!isDirectoryExist(path.resolve(__dirname, `../public/design/${name}`))) {
+        fs.mkdirSync(path.resolve(__dirname, `../public/design/${name}`));
+    }
+    fs.writeFileSync(
+        path.resolve(__dirname, `../public/design/${name}/data.json`),
+        JSON.stringify(getVertices(graph).vertices.concat(getEdges(graph).edges), ' ', 2)
+    );
+    fs.writeFileSync(
+        path.resolve(__dirname, `../public/design/${name}/styles.json`),
+        JSON.stringify(getVertices(graph).styles.concat(getEdges(graph).styles), ' ', 2)
+    );
+});

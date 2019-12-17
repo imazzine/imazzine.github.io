@@ -1,10 +1,10 @@
 window['@imazzine'] = window['@imazzine'] || {};
-window['@imazzine'].load = function() {
+window['@imazzine'].load = function(name) {
   var graphObject = {};
-  return window.axios.get('/public/json/styles.json')
+  return window.axios.get(`/public/design/${name}/styles.json`)
     .then((res) => {
       graphObject.style = res.data;
-      return axios.get('/public/json/graph.json');
+      return axios.get(`/public/design/${name}/data.json`);
     })
     .then((res) => {
       graphObject.elements = res.data;
@@ -20,4 +20,4 @@ window['@imazzine'].load = function() {
       window['@imazzine'].cy = cytoscape(graphObj);
     });
 };
-window['@imazzine'].load();
+window['@imazzine'].load('js');
