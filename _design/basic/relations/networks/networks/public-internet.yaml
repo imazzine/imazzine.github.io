@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+name:
+description: >
+  Public network have an access to Internet resources.
+source_quantity_relation: '0..*'
+target_quantity_relation: '1'

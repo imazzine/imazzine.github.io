@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+name:
+description: >
+  User's workstation host proccess4.
+source_quantity_relation: '1'
+target_quantity_relation: '0..*'

@@ -1,0 +1,5 @@
+%YAML 1.2
+---
+name: thread1
+description: >
+  Thread of process1.

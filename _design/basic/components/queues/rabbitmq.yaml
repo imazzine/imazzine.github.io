@@ -1,0 +1,5 @@
+%YAML 1.2
+---
+name: RabbitMQ
+description: >
+  RabbitMQ instance.

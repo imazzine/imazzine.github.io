@@ -20,4 +20,4 @@ window['@imazzine'].load = function(name) {
       window['@imazzine'].cy = cytoscape(graphObj);
     });
 };
-window['@imazzine'].load('js');
+window['@imazzine'].load('basic');

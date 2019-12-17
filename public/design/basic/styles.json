@@ -1,0 +1,506 @@
+[
+  {
+    "selector": "node.devices",
+    "style": {
+      "label": "data(name)",
+      "shape": "round-rectangle",
+      "width": 82,
+      "height": 24,
+      "border-width": 0,
+      "color": "#ffffff",
+      "border-style": "solid",
+      "background-color": "#3497db",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "center"
+    }
+  },
+  {
+    "selector": "node.devices:selected",
+    "style": {
+      "font-weight": "bold",
+      "color": "#ffffff",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#297fb9",
+      "border-opacity": 1,
+      "background-color": "#3497db"
+    }
+  },
+  {
+    "selector": "node.networks",
+    "style": {
+      "label": "data(name)",
+      "shape": "hexagon",
+      "width": 28,
+      "height": 24,
+      "font-size": 12,
+      "font-weight": "normal",
+      "text-halign": "center",
+      "text-valign": "bottom",
+      "text-margin-y": 15,
+      "color": "#3497db",
+      "background-color": "#3497db"
+    }
+  },
+  {
+    "selector": "node#networks-internet.networks",
+    "style": {
+      "width": 36,
+      "height": 32
+    }
+  },
+  {
+    "selector": "node.networks:selected",
+    "style": {
+      "font-weight": "bold",
+      "color": "#297fb9",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#297fb9",
+      "border-opacity": 1,
+      "background-color": "#3497db",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "node.processes",
+    "style": {
+      "label": "data(name)",
+      "shape": "tag",
+      "width": 36,
+      "height": 24,
+      "border-width": 0,
+      "color": "#45bc9b",
+      "border-style": "solid",
+      "background-color": "#45bc9b",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "top",
+      "text-margin-y": -18
+    }
+  },
+  {
+    "selector": "node.processes:selected",
+    "style": {
+      "font-weight": "bold",
+      "color": "#38a086",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#38a086",
+      "border-opacity": 1,
+      "background-color": "#45bc9b",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "node.queues",
+    "style": {
+      "label": "data(name)",
+      "shape": "polygon",
+      "width": 36,
+      "height": 36,
+      "color": "#f29d39",
+      "border-opacity": 1,
+      "border-width": 1,
+      "border-style": "solid",
+      "border-color": "#f29d39",
+      "background-color": "#f1c643",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "top",
+      "text-margin-y": -18,
+      "shape-polygon-points": [
+        0.7,
+        -1,
+        0.84,
+        -0.9,
+        0.95,
+        -0.5,
+        1,
+        0,
+        0.95,
+        0.5,
+        0.84,
+        0.9,
+        0.7,
+        1,
+        0.56,
+        0.9,
+        0.45,
+        0.5,
+        0.4,
+        0,
+        0.45,
+        -0.5,
+        0.56,
+        -0.9,
+        0.7,
+        -1,
+        -0.7,
+        -1,
+        -0.84,
+        -0.9,
+        -0.95,
+        -0.5,
+        -1,
+        0,
+        -0.95,
+        0.5,
+        -0.84,
+        0.9,
+        -0.7,
+        1,
+        0.7,
+        1,
+        0.56,
+        0.9,
+        0.45,
+        0.5,
+        0.4,
+        0,
+        0.45,
+        -0.5,
+        0.56,
+        -0.9,
+        0.7,
+        -1
+      ]
+    }
+  },
+  {
+    "selector": "node.queues:selected",
+    "style": {
+      "font-weight": "bold",
+      "color": "#f29d39",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#f29d39",
+      "border-opacity": 1,
+      "background-color": "#f1c643",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "node.storages",
+    "style": {
+      "label": "data(name)",
+      "shape": "polygon",
+      "width": 36,
+      "height": 36,
+      "color": "#f29d39",
+      "border-opacity": 1,
+      "border-width": 1,
+      "border-style": "solid",
+      "border-color": "#f29d39",
+      "background-color": "#f1c643",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "top",
+      "text-margin-y": -18,
+      "shape-polygon-points": [
+        1,
+        -0.7,
+        0.9,
+        -0.84,
+        0.5,
+        -0.95,
+        0,
+        -1,
+        -0.5,
+        -0.95,
+        -0.9,
+        -0.84,
+        -1,
+        -0.7,
+        -0.9,
+        -0.56,
+        -0.5,
+        -0.45,
+        0,
+        -0.4,
+        0.5,
+        -0.45,
+        0.9,
+        -0.56,
+        1,
+        -0.7,
+        1,
+        0.7,
+        0.9,
+        0.84,
+        0.5,
+        0.95,
+        0,
+        1,
+        -0.5,
+        0.95,
+        -0.9,
+        0.84,
+        -1,
+        0.7,
+        -1,
+        -0.7,
+        -0.9,
+        -0.56,
+        -0.5,
+        -0.45,
+        0,
+        -0.4,
+        0.5,
+        -0.45,
+        0.9,
+        -0.56,
+        1,
+        -0.7
+      ]
+    }
+  },
+  {
+    "selector": "node.storages:selected",
+    "style": {
+      "font-weight": "bold",
+      "color": "#f29d39",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#f29d39",
+      "border-opacity": 1,
+      "background-color": "#f1c643",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "node.threads",
+    "style": {
+      "label": "data(name)",
+      "shape": "tag",
+      "width": 36,
+      "height": 24,
+      "color": "#4eae61",
+      "background-color": "#5dcd70",
+      "font-size": 12,
+      "text-halign": "center",
+      "text-valign": "top",
+      "text-margin-y": -18
+    }
+  },
+  {
+    "selector": "node.threads:selected",
+    "style": {
+      "font-weight": "bold",
+      "border-width": 2,
+      "border-style": "solid",
+      "border-color": "#4eae61",
+      "border-opacity": 1,
+      "background-color": "#5dcd70",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.devices-processes",
+    "style": {
+      "width": 1,
+      "line-color": "#45bc9b",
+      "curve-style": "bezier",
+      "source-arrow-color": "#45bc9b",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.devices-processes:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#38a086",
+      "line-color": "#38a086",
+      "source-arrow-color": "#38a086",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.devices-queues",
+    "style": {
+      "width": 1,
+      "line-color": "#f29d39",
+      "curve-style": "bezier",
+      "source-arrow-color": "#f29d39",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "filled"
+    }
+  },
+  {
+    "selector": "edge.devices-queues:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#f29d39",
+      "line-color": "#f29d39",
+      "source-arrow-color": "#f29d39",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.devices-storages",
+    "style": {
+      "width": 1,
+      "line-color": "#f29d39",
+      "curve-style": "bezier",
+      "source-arrow-color": "#f29d39",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "filled"
+    }
+  },
+  {
+    "selector": "edge.devices-storages:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#f29d39",
+      "line-color": "#f29d39",
+      "source-arrow-color": "#f29d39",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.networks-devices",
+    "style": {
+      "width": 1,
+      "line-color": "#3497db",
+      "curve-style": "bezier",
+      "source-arrow-color": "#3497db",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.networks-devices:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#297fb9",
+      "line-color": "#297fb9",
+      "source-arrow-color": "#297fb9",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.networks-networks",
+    "style": {
+      "width": 1,
+      "line-color": "#3497db",
+      "curve-style": "bezier",
+      "target-arrow-color": "#3497db",
+      "target-arrow-shape": "vee",
+      "target-arrow-fill": "filled"
+    }
+  },
+  {
+    "selector": "edge.networks-networks:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#297fb9",
+      "line-color": "#297fb9",
+      "source-arrow-color": "#297fb9",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.processes-threads",
+    "style": {
+      "width": 1,
+      "line-color": "#5dcd70",
+      "curve-style": "bezier",
+      "source-arrow-color": "#5dcd70",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.processes-threads:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#4eae61",
+      "line-color": "#4eae61",
+      "source-arrow-color": "#4eae61",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  }
+]

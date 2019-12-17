@@ -1,0 +1,556 @@
+[
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Laptop",
+      "description": "User's laptop.\n",
+      "id": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Mobile",
+      "description": "User's phone or tablet.\n",
+      "id": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Server",
+      "description": "User's server.\n",
+      "id": "devices-server"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Workstation",
+      "description": "User's workstation.\n",
+      "id": "devices-workstation"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Home",
+      "description": "User's home network.\n",
+      "id": "networks-home"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Internet",
+      "description": "Global network.\n",
+      "id": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Public",
+      "description": "Public network.\n",
+      "id": "networks-public"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "VPN",
+      "description": "Virtual private network.\n",
+      "id": "networks-vpn"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Work",
+      "description": "User's work network.\n",
+      "id": "networks-work"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process1",
+      "description": "Host process 1.\n",
+      "id": "processes-process1"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process2",
+      "description": "Host process 2.\n",
+      "id": "processes-process2"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process3",
+      "description": "Host process 3.\n",
+      "id": "processes-process3"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process4",
+      "description": "Host process 4.\n",
+      "id": "processes-process4"
+    }
+  },
+  {
+    "classes": [
+      "queues"
+    ],
+    "data": {
+      "name": "RabbitMQ",
+      "description": "RabbitMQ instance.\n",
+      "id": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
+      "storages"
+    ],
+    "data": {
+      "name": "RAM",
+      "description": "Random Access Memory.\n",
+      "id": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread1",
+      "description": "Thread of process1.\n",
+      "id": "threads-thread1"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread2",
+      "description": "Thread of process2.\n",
+      "id": "threads-thread2"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread3",
+      "description": "Thread of process3.\n",
+      "id": "threads-thread3"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread4",
+      "description": "Thread of process4.\n",
+      "id": "threads-thread4"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop host proccess1.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-laptop_processes-process1",
+      "source": "devices-laptop",
+      "target": "processes-process1"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's mobile host proccess2.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-mobile_processes-process2",
+      "source": "devices-mobile",
+      "target": "processes-process2"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's server host proccess3.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-server_processes-process3",
+      "source": "devices-server",
+      "target": "processes-process3"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation host proccess4.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-workstation_processes-process4",
+      "source": "devices-workstation",
+      "target": "processes-process4"
+    }
+  },
+  {
+    "classes": [
+      "devices-queues"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop RabbitMQ instance.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-laptop_queues-rabbitmq",
+      "source": "devices-laptop",
+      "target": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
+      "devices-queues"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation RabbitMQ instance..\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-workstation_queues-rabbitmq",
+      "source": "devices-workstation",
+      "target": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-laptop_storages-ram",
+      "source": "devices-laptop",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's mobile RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-mobile_storages-ram",
+      "source": "devices-mobile",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-workstation_storages-ram",
+      "source": "devices-workstation",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop connected to home network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-home_devices-laptop",
+      "source": "networks-home",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's phone/tablet connected to Home network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-home_devices-mobile",
+      "source": "networks-home",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop connected to public network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-public_devices-laptop",
+      "source": "networks-public",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's phone/tablet connected to public network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-public_devices-mobile",
+      "source": "networks-public",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's laptop connected to vpn network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-vpn_devices-laptop",
+      "source": "networks-vpn",
+      "target": "devices-laptop"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's phone/tablet connected to VPN network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-vpn_devices-mobile",
+      "source": "networks-vpn",
+      "target": "devices-mobile"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation connected to vpn network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-vpn_devices-workstation",
+      "source": "networks-vpn",
+      "target": "devices-workstation"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's server connected to work network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-work_devices-server",
+      "source": "networks-work",
+      "target": "devices-server"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "User's workstation connected to work network.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-work_devices-workstation",
+      "source": "networks-work",
+      "target": "devices-workstation"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "Home network have an access to Internet resources.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "1",
+      "id": "networks-home_networks-internet",
+      "source": "networks-home",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "Public network have an access to Internet resources.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "1",
+      "id": "networks-public_networks-internet",
+      "source": "networks-public",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "VPN network have an access to Internet resources.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "networks-vpn_networks-internet",
+      "source": "networks-vpn",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "Work network have an access to Internet resources.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "networks-work_networks-internet",
+      "source": "networks-work",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process1 host thread1\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process1_threads-thread1",
+      "source": "processes-process1",
+      "target": "threads-thread1"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process2 host thread2\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process2_threads-thread2",
+      "source": "processes-process2",
+      "target": "threads-thread2"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process3 host thread3\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process3_threads-thread3",
+      "source": "processes-process3",
+      "target": "threads-thread3"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process4 host thread4\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process4_threads-thread4",
+      "source": "processes-process4",
+      "target": "threads-thread4"
+    }
+  }
+]
