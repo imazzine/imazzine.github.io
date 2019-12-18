@@ -1,12 +1,12 @@
 [
   {
     "classes": [
-      "devices"
+      "cpus"
     ],
     "data": {
-      "name": "Laptop",
-      "description": "User's laptop.\n",
-      "id": "devices-laptop"
+      "name": "Core",
+      "description": "CPU core.\n",
+      "id": "cpus-core"
     }
   },
   {
@@ -14,9 +14,9 @@
       "devices"
     ],
     "data": {
-      "name": "Mobile",
-      "description": "User's phone or tablet.\n",
-      "id": "devices-mobile"
+      "name": "Device 1",
+      "description": "Device 1.\n",
+      "id": "devices-device1"
     }
   },
   {
@@ -24,9 +24,9 @@
       "devices"
     ],
     "data": {
-      "name": "Server",
-      "description": "User's server.\n",
-      "id": "devices-server"
+      "name": "Device 2",
+      "description": "Device 2.\n",
+      "id": "devices-device2"
     }
   },
   {
@@ -34,19 +34,9 @@
       "devices"
     ],
     "data": {
-      "name": "Workstation",
-      "description": "User's workstation.\n",
-      "id": "devices-workstation"
-    }
-  },
-  {
-    "classes": [
-      "networks"
-    ],
-    "data": {
-      "name": "Home",
-      "description": "User's home network.\n",
-      "id": "networks-home"
+      "name": "Device 3",
+      "description": "Device 3.\n",
+      "id": "devices-device3"
     }
   },
   {
@@ -64,9 +54,9 @@
       "networks"
     ],
     "data": {
-      "name": "Public",
-      "description": "Public network.\n",
-      "id": "networks-public"
+      "name": "Network 1",
+      "description": "Network 1.\n",
+      "id": "networks-network1"
     }
   },
   {
@@ -74,9 +64,9 @@
       "networks"
     ],
     "data": {
-      "name": "VPN",
-      "description": "Virtual private network.\n",
-      "id": "networks-vpn"
+      "name": "Network 2",
+      "description": "Network 2.\n",
+      "id": "networks-network2"
     }
   },
   {
@@ -84,9 +74,9 @@
       "networks"
     ],
     "data": {
-      "name": "Work",
-      "description": "User's work network.\n",
-      "id": "networks-work"
+      "name": "Network 3",
+      "description": "Network 3.\n",
+      "id": "networks-network3"
     }
   },
   {
@@ -117,16 +107,6 @@
       "name": "process3",
       "description": "Host process 3.\n",
       "id": "processes-process3"
-    }
-  },
-  {
-    "classes": [
-      "processes"
-    ],
-    "data": {
-      "name": "process4",
-      "description": "Host process 4.\n",
-      "id": "processes-process4"
     }
   },
   {
@@ -181,12 +161,44 @@
   },
   {
     "classes": [
-      "threads"
+      "devices-cpus"
     ],
     "data": {
-      "name": "thread4",
-      "description": "Thread of process4.\n",
-      "id": "threads-thread4"
+      "name": null,
+      "description": "Device 1 CPU core.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1..*",
+      "id": "devices-device1_cpus-core",
+      "source": "devices-device1",
+      "target": "cpus-core"
+    }
+  },
+  {
+    "classes": [
+      "devices-cpus"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 2 CPU core.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1..*",
+      "id": "devices-device2_cpus-core",
+      "source": "devices-device2",
+      "target": "cpus-core"
+    }
+  },
+  {
+    "classes": [
+      "devices-cpus"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 3 CPU core.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1..*",
+      "id": "devices-device3_cpus-core",
+      "source": "devices-device3",
+      "target": "cpus-core"
     }
   },
   {
@@ -195,11 +207,11 @@
     ],
     "data": {
       "name": null,
-      "description": "User's laptop host proccess1.\n",
+      "description": "Device 1 hosts Proccess 1.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "devices-laptop_processes-process1",
-      "source": "devices-laptop",
+      "id": "devices-device1_processes-process1",
+      "source": "devices-device1",
       "target": "processes-process1"
     }
   },
@@ -209,11 +221,11 @@
     ],
     "data": {
       "name": null,
-      "description": "User's mobile host proccess2.\n",
+      "description": "Device 2 hosts Proccess 2.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "devices-mobile_processes-process2",
-      "source": "devices-mobile",
+      "id": "devices-device2_processes-process2",
+      "source": "devices-device2",
       "target": "processes-process2"
     }
   },
@@ -223,53 +235,25 @@
     ],
     "data": {
       "name": null,
-      "description": "User's server host proccess3.\n",
+      "description": "Device 3 hosts Proccess 3.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "devices-server_processes-process3",
-      "source": "devices-server",
+      "id": "devices-device3_processes-process3",
+      "source": "devices-device3",
       "target": "processes-process3"
     }
   },
   {
     "classes": [
-      "devices-processes"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's workstation host proccess4.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "devices-workstation_processes-process4",
-      "source": "devices-workstation",
-      "target": "processes-process4"
-    }
-  },
-  {
-    "classes": [
       "devices-queues"
     ],
     "data": {
       "name": null,
-      "description": "User's laptop RabbitMQ instance.\n",
+      "description": "Device 3 has an access to RabbitMQ resources.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
-      "id": "devices-laptop_queues-rabbitmq",
-      "source": "devices-laptop",
-      "target": "queues-rabbitmq"
-    }
-  },
-  {
-    "classes": [
-      "devices-queues"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's workstation RabbitMQ instance..\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "1",
-      "id": "devices-workstation_queues-rabbitmq",
-      "source": "devices-workstation",
+      "id": "devices-device3_queues-rabbitmq",
+      "source": "devices-device3",
       "target": "queues-rabbitmq"
     }
   },
@@ -279,11 +263,11 @@
     ],
     "data": {
       "name": null,
-      "description": "User's laptop RAM.\n",
+      "description": "Device 1 RAM.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
-      "id": "devices-laptop_storages-ram",
-      "source": "devices-laptop",
+      "id": "devices-device1_storages-ram",
+      "source": "devices-device1",
       "target": "storages-ram"
     }
   },
@@ -293,11 +277,11 @@
     ],
     "data": {
       "name": null,
-      "description": "User's mobile RAM.\n",
+      "description": "Device 2 RAM.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
-      "id": "devices-mobile_storages-ram",
-      "source": "devices-mobile",
+      "id": "devices-device2_storages-ram",
+      "source": "devices-device2",
       "target": "storages-ram"
     }
   },
@@ -307,11 +291,11 @@
     ],
     "data": {
       "name": null,
-      "description": "User's workstation RAM.\n",
+      "description": "Device 3 RAM.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
-      "id": "devices-workstation_storages-ram",
-      "source": "devices-workstation",
+      "id": "devices-device3_storages-ram",
+      "source": "devices-device3",
       "target": "storages-ram"
     }
   },
@@ -321,12 +305,12 @@
     ],
     "data": {
       "name": null,
-      "description": "User's laptop connected to home network.\n",
+      "description": "Device 1 connected to home network 1.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "networks-home_devices-laptop",
-      "source": "networks-home",
-      "target": "devices-laptop"
+      "id": "networks-network1_devices-device1",
+      "source": "networks-network1",
+      "target": "devices-device1"
     }
   },
   {
@@ -335,12 +319,12 @@
     ],
     "data": {
       "name": null,
-      "description": "User's phone/tablet connected to Home network.\n",
+      "description": "Device 2 connected to home network 2.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "networks-home_devices-mobile",
-      "source": "networks-home",
-      "target": "devices-mobile"
+      "id": "networks-network2_devices-device2",
+      "source": "networks-network2",
+      "target": "devices-device2"
     }
   },
   {
@@ -349,96 +333,12 @@
     ],
     "data": {
       "name": null,
-      "description": "User's laptop connected to public network.\n",
+      "description": "Device 3 connected to home network 3.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "0..*",
-      "id": "networks-public_devices-laptop",
-      "source": "networks-public",
-      "target": "devices-laptop"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's phone/tablet connected to public network.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "networks-public_devices-mobile",
-      "source": "networks-public",
-      "target": "devices-mobile"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's laptop connected to vpn network.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "networks-vpn_devices-laptop",
-      "source": "networks-vpn",
-      "target": "devices-laptop"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's phone/tablet connected to VPN network.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "networks-vpn_devices-mobile",
-      "source": "networks-vpn",
-      "target": "devices-mobile"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's workstation connected to vpn network.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "networks-vpn_devices-workstation",
-      "source": "networks-vpn",
-      "target": "devices-workstation"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's server connected to work network.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "networks-work_devices-server",
-      "source": "networks-work",
-      "target": "devices-server"
-    }
-  },
-  {
-    "classes": [
-      "networks-devices"
-    ],
-    "data": {
-      "name": null,
-      "description": "User's workstation connected to work network.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "networks-work_devices-workstation",
-      "source": "networks-work",
-      "target": "devices-workstation"
+      "id": "networks-network3_devices-device3",
+      "source": "networks-network3",
+      "target": "devices-device3"
     }
   },
   {
@@ -447,11 +347,11 @@
     ],
     "data": {
       "name": null,
-      "description": "Home network have an access to Internet resources.\n",
+      "description": "Network 1 have an access to Internet.\n",
       "source_quantity_relation": "0..*",
       "target_quantity_relation": "1",
-      "id": "networks-home_networks-internet",
-      "source": "networks-home",
+      "id": "networks-network1_networks-internet",
+      "source": "networks-network1",
       "target": "networks-internet"
     }
   },
@@ -461,11 +361,11 @@
     ],
     "data": {
       "name": null,
-      "description": "Public network have an access to Internet resources.\n",
+      "description": "Network 2 have an access to Internet.\n",
       "source_quantity_relation": "0..*",
       "target_quantity_relation": "1",
-      "id": "networks-public_networks-internet",
-      "source": "networks-public",
+      "id": "networks-network2_networks-internet",
+      "source": "networks-network2",
       "target": "networks-internet"
     }
   },
@@ -475,25 +375,11 @@
     ],
     "data": {
       "name": null,
-      "description": "VPN network have an access to Internet resources.\n",
+      "description": "Network 3 have an access to Internet.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
-      "id": "networks-vpn_networks-internet",
-      "source": "networks-vpn",
-      "target": "networks-internet"
-    }
-  },
-  {
-    "classes": [
-      "networks-networks"
-    ],
-    "data": {
-      "name": null,
-      "description": "Work network have an access to Internet resources.\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "1",
-      "id": "networks-work_networks-internet",
-      "source": "networks-work",
+      "id": "networks-network3_networks-internet",
+      "source": "networks-network3",
       "target": "networks-internet"
     }
   },
@@ -537,20 +423,6 @@
       "id": "processes-process3_threads-thread3",
       "source": "processes-process3",
       "target": "threads-thread3"
-    }
-  },
-  {
-    "classes": [
-      "processes-threads"
-    ],
-    "data": {
-      "name": null,
-      "description": "process4 host thread4\n",
-      "source_quantity_relation": "1",
-      "target_quantity_relation": "0..*",
-      "id": "processes-process4_threads-thread4",
-      "source": "processes-process4",
-      "target": "threads-thread4"
     }
   }
 ]

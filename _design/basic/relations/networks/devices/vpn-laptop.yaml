@@ -1,7 +1,0 @@
-%YAML 1.2
----
-name:
-description: >
-  User's laptop connected to vpn network.
-source_quantity_relation: '1'
-target_quantity_relation: '0..*'
