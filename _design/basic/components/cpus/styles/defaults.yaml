@@ -4,12 +4,12 @@ label: data(name)
 shape: 'polygon'
 width: 36
 height: 36
-color: '#f29d39'
+color: '#7e8c8d'
 border-opacity: 1
 border-width: 1
 border-style: 'solid'
-border-color: '#f29d39'
-background-color: '#f1c643'
+border-color: '#7e8c8d'
+background-color: '#95a5a5'
 font-size: 12
 text-halign: 'center'
 text-valign: 'top'

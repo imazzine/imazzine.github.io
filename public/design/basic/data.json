@@ -41,6 +41,16 @@
   },
   {
     "classes": [
+      "files"
+    ],
+    "data": {
+      "name": "File",
+      "description": "File.\n",
+      "id": "files-file"
+    }
+  },
+  {
+    "classes": [
       "networks"
     ],
     "data": {
@@ -77,6 +87,16 @@
       "name": "Network 3",
       "description": "Network 3.\n",
       "id": "networks-network3"
+    }
+  },
+  {
+    "classes": [
+      "packages"
+    ],
+    "data": {
+      "name": "Package",
+      "description": "Package.\n",
+      "id": "packages-package"
     }
   },
   {

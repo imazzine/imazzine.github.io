@@ -1,12 +1,12 @@
 %YAML 1.2
 ---
 font-weight: 'bold'
-color: '#7e8c8d'
+color: '#bec3c7'
 border-width: 2
 border-style: 'solid'
-border-color: '#7e8c8d'
+border-color: '#bec3c7'
 border-opacity: 1
-background-color: '#95a5a5'
+background-color: '#ecf0f1'
 text-background-color: '#ffffff'
 text-background-opacity: 0.85
 text-background-padding: 3
