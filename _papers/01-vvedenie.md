@@ -4,7 +4,7 @@ lang: ru
 categories: [ru, paper]
 ref: '01'
 title: Введение
-excerpt: `
+excerpt: >-
     Об imazzine!book; критический обзор архитектур
     распределенных вычислительных систем.
 ---
