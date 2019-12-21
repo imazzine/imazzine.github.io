@@ -1,0 +1,448 @@
+[
+  {
+    "classes": [
+      "cpus"
+    ],
+    "data": {
+      "name": "Core",
+      "description": "CPU core.\n",
+      "id": "cpus-core"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Device 1",
+      "description": "Device 1.\n",
+      "id": "devices-device1"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Device 2",
+      "description": "Device 2.\n",
+      "id": "devices-device2"
+    }
+  },
+  {
+    "classes": [
+      "devices"
+    ],
+    "data": {
+      "name": "Device 3",
+      "description": "Device 3.\n",
+      "id": "devices-device3"
+    }
+  },
+  {
+    "classes": [
+      "files"
+    ],
+    "data": {
+      "name": "File",
+      "description": "File.\n",
+      "id": "files-file"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Internet",
+      "description": "Global network.\n",
+      "id": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Network 1",
+      "description": "Network 1.\n",
+      "id": "networks-network1"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Network 2",
+      "description": "Network 2.\n",
+      "id": "networks-network2"
+    }
+  },
+  {
+    "classes": [
+      "networks"
+    ],
+    "data": {
+      "name": "Network 3",
+      "description": "Network 3.\n",
+      "id": "networks-network3"
+    }
+  },
+  {
+    "classes": [
+      "packages"
+    ],
+    "data": {
+      "name": "Package",
+      "description": "Package.\n",
+      "id": "packages-package"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process1",
+      "description": "Host process 1.\n",
+      "id": "processes-process1"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process2",
+      "description": "Host process 2.\n",
+      "id": "processes-process2"
+    }
+  },
+  {
+    "classes": [
+      "processes"
+    ],
+    "data": {
+      "name": "process3",
+      "description": "Host process 3.\n",
+      "id": "processes-process3"
+    }
+  },
+  {
+    "classes": [
+      "queues"
+    ],
+    "data": {
+      "name": "RabbitMQ",
+      "description": "RabbitMQ instance.\n",
+      "id": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
+      "storages"
+    ],
+    "data": {
+      "name": "RAM",
+      "description": "Random Access Memory.\n",
+      "id": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread1",
+      "description": "Thread of process1.\n",
+      "id": "threads-thread1"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread2",
+      "description": "Thread of process2.\n",
+      "id": "threads-thread2"
+    }
+  },
+  {
+    "classes": [
+      "threads"
+    ],
+    "data": {
+      "name": "thread3",
+      "description": "Thread of process3.\n",
+      "id": "threads-thread3"
+    }
+  },
+  {
+    "classes": [
+      "devices-cpus"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 1 CPU core.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1..*",
+      "id": "devices-device1_cpus-core",
+      "source": "devices-device1",
+      "target": "cpus-core"
+    }
+  },
+  {
+    "classes": [
+      "devices-cpus"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 2 CPU core.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1..*",
+      "id": "devices-device2_cpus-core",
+      "source": "devices-device2",
+      "target": "cpus-core"
+    }
+  },
+  {
+    "classes": [
+      "devices-cpus"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 3 CPU core.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1..*",
+      "id": "devices-device3_cpus-core",
+      "source": "devices-device3",
+      "target": "cpus-core"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 1 hosts Proccess 1.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-device1_processes-process1",
+      "source": "devices-device1",
+      "target": "processes-process1"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 2 hosts Proccess 2.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-device2_processes-process2",
+      "source": "devices-device2",
+      "target": "processes-process2"
+    }
+  },
+  {
+    "classes": [
+      "devices-processes"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 3 hosts Proccess 3.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "devices-device3_processes-process3",
+      "source": "devices-device3",
+      "target": "processes-process3"
+    }
+  },
+  {
+    "classes": [
+      "devices-queues"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 3 has an access to RabbitMQ resources.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device3_queues-rabbitmq",
+      "source": "devices-device3",
+      "target": "queues-rabbitmq"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 1 RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device1_storages-ram",
+      "source": "devices-device1",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 2 RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device2_storages-ram",
+      "source": "devices-device2",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 3 RAM.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device3_storages-ram",
+      "source": "devices-device3",
+      "target": "storages-ram"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 1 connected to home network 1.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-network1_devices-device1",
+      "source": "networks-network1",
+      "target": "devices-device1"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 2 connected to home network 2.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-network2_devices-device2",
+      "source": "networks-network2",
+      "target": "devices-device2"
+    }
+  },
+  {
+    "classes": [
+      "networks-devices"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device 3 connected to home network 3.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "networks-network3_devices-device3",
+      "source": "networks-network3",
+      "target": "devices-device3"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "Network 1 have an access to Internet.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "1",
+      "id": "networks-network1_networks-internet",
+      "source": "networks-network1",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "Network 2 have an access to Internet.\n",
+      "source_quantity_relation": "0..*",
+      "target_quantity_relation": "1",
+      "id": "networks-network2_networks-internet",
+      "source": "networks-network2",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "networks-networks"
+    ],
+    "data": {
+      "name": null,
+      "description": "Network 3 have an access to Internet.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "networks-network3_networks-internet",
+      "source": "networks-network3",
+      "target": "networks-internet"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process1 host thread1\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process1_threads-thread1",
+      "source": "processes-process1",
+      "target": "threads-thread1"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process2 host thread2\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process2_threads-thread2",
+      "source": "processes-process2",
+      "target": "threads-thread2"
+    }
+  },
+  {
+    "classes": [
+      "processes-threads"
+    ],
+    "data": {
+      "name": null,
+      "description": "process3 host thread3\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "0..*",
+      "id": "processes-process3_threads-thread3",
+      "source": "processes-process3",
+      "target": "threads-thread3"
+    }
+  }
+]

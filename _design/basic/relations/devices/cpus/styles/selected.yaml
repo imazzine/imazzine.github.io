@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+source-label: 'data(source_quantity_relation)'
+target-label: 'data(target_quantity_relation)'
+font-size: 10
+text-halign: 'center'
+text-valign: 'center'
+source-text-offset: 8
+target-text-offset: 18
+font-weight: 'bold'
+width: 2
+color: '#7e8c8d'
+line-color: '#7e8c8d'
+source-arrow-color: '#7e8c8d'
+text-background-color: '#ffffff'
+text-background-opacity: 0.85
+text-background-padding: 3
+text-background-shape: 'round-rectangle'

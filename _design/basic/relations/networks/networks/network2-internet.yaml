@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+name:
+description: >
+  Network 2 have an access to Internet.
+source_quantity_relation: '0..*'
+target_quantity_relation: '1'

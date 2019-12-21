@@ -1,0 +1,13 @@
+%YAML 1.2
+---
+font-weight: 'bold'
+color: '#7e8c8d'
+border-width: 2
+border-style: 'solid'
+border-color: '#7e8c8d'
+border-opacity: 1
+background-color: '#95a5a5'
+text-background-color: '#ffffff'
+text-background-opacity: 0.85
+text-background-padding: 3
+text-background-shape: 'round-rectangle'

@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+name:
+description: >
+  Device 3 hosts Proccess 3.
+source_quantity_relation: '1'
+target_quantity_relation: '0..*'

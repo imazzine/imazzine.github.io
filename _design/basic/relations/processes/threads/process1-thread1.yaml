@@ -1,0 +1,7 @@
+%YAML 1.2
+---
+name:
+description: >
+  process1 host thread1
+source_quantity_relation: '1'
+target_quantity_relation: '0..*'

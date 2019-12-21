@@ -1,0 +1,17 @@
+%YAML 1.2
+---
+label: data(name)
+shape: 'polygon'
+width: 36
+height: 36
+color: '#bec3c7'
+border-opacity: 1
+border-width: 1
+border-style: 'solid'
+border-color: '#bec3c7'
+background-color: '#ecf0f1'
+font-size: 12
+text-halign: 'center'
+text-valign: 'top'
+text-margin-y: -18
+shape-polygon-points: [-0.7, -1, -0.7, 1, 0.7, 1, 0.7, -0.5, 0.3, -1, 0.3, -0.5, 0.7, -0.5, 0.3, -1, ]
