@@ -144,6 +144,16 @@
       "storages"
     ],
     "data": {
+      "name": "HDD",
+      "description": "Hard Disc Drive.\n",
+      "id": "storages-hdd"
+    }
+  },
+  {
+    "classes": [
+      "storages"
+    ],
+    "data": {
       "name": "RAM",
       "description": "Random Access Memory.\n",
       "id": "storages-ram"
@@ -283,7 +293,21 @@
     ],
     "data": {
       "name": null,
-      "description": "Device 1 RAM.\n",
+      "description": "Device HDD.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device1_storages-hdd",
+      "source": "devices-device1",
+      "target": "storages-hdd"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device RAM.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
       "id": "devices-device1_storages-ram",
@@ -297,7 +321,21 @@
     ],
     "data": {
       "name": null,
-      "description": "Device 2 RAM.\n",
+      "description": "Device HDD.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device2_storages-hdd",
+      "source": "devices-device2",
+      "target": "storages-hdd"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device RAM.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
       "id": "devices-device2_storages-ram",
@@ -311,7 +349,21 @@
     ],
     "data": {
       "name": null,
-      "description": "Device 3 RAM.\n",
+      "description": "Device HDD.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "devices-device3_storages-hdd",
+      "source": "devices-device3",
+      "target": "storages-hdd"
+    }
+  },
+  {
+    "classes": [
+      "devices-storages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Device RAM.\n",
       "source_quantity_relation": "1",
       "target_quantity_relation": "1",
       "id": "devices-device3_storages-ram",
@@ -405,6 +457,20 @@
   },
   {
     "classes": [
+      "packages-files"
+    ],
+    "data": {
+      "name": null,
+      "description": "Package file.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "packages-package_files-file",
+      "source": "packages-package",
+      "target": "files-file"
+    }
+  },
+  {
+    "classes": [
       "processes-threads"
     ],
     "data": {
@@ -443,6 +509,20 @@
       "id": "processes-process3_threads-thread3",
       "source": "processes-process3",
       "target": "threads-thread3"
+    }
+  },
+  {
+    "classes": [
+      "storages-packages"
+    ],
+    "data": {
+      "name": null,
+      "description": "Package installed on HDD. This also could be a database name on DB server.\n",
+      "source_quantity_relation": "1",
+      "target_quantity_relation": "1",
+      "id": "storages-hdd_packages-package",
+      "source": "storages-hdd",
+      "target": "packages-package"
     }
   }
 ]

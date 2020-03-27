@@ -1,8 +1,0 @@
-%YAML 1.2
----
-width: 1
-line-color: '#3497db'
-curve-style: 'bezier' #haystack|straight|bezier|unbundled-bezier|segments|taxi
-target-arrow-color: '#3497db'
-target-arrow-shape: 'vee'
-target-arrow-fill: 'filled'

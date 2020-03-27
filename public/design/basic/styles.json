@@ -767,6 +767,38 @@
     }
   },
   {
+    "selector": "edge.packages-files",
+    "style": {
+      "width": 1,
+      "line-color": "#bec3c7",
+      "curve-style": "bezier",
+      "source-arrow-color": "#bec3c7",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "filled"
+    }
+  },
+  {
+    "selector": "edge.packages-files:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#bec3c7",
+      "line-color": "#bec3c7",
+      "source-arrow-color": "#bec3c7",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
     "selector": "edge.processes-threads",
     "style": {
       "width": 1,
@@ -792,6 +824,38 @@
       "color": "#4eae61",
       "line-color": "#4eae61",
       "source-arrow-color": "#4eae61",
+      "text-background-color": "#ffffff",
+      "text-background-opacity": 0.85,
+      "text-background-padding": 3,
+      "text-background-shape": "round-rectangle"
+    }
+  },
+  {
+    "selector": "edge.storages-packages",
+    "style": {
+      "width": 1,
+      "line-color": "#f29d39",
+      "curve-style": "bezier",
+      "source-arrow-color": "#f29d39",
+      "source-arrow-shape": "diamond",
+      "source-arrow-fill": "hollow"
+    }
+  },
+  {
+    "selector": "edge.storages-packages:selected",
+    "style": {
+      "source-label": "data(source_quantity_relation)",
+      "target-label": "data(target_quantity_relation)",
+      "font-size": 10,
+      "text-halign": "center",
+      "text-valign": "center",
+      "source-text-offset": 8,
+      "target-text-offset": 8,
+      "font-weight": "bold",
+      "width": 2,
+      "color": "#f29d39",
+      "line-color": "#f29d39",
+      "source-arrow-color": "#f29d39",
       "text-background-color": "#ffffff",
       "text-background-opacity": 0.85,
       "text-background-padding": 3,

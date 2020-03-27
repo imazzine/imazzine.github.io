@@ -1,8 +1,0 @@
-%YAML 1.2
----
-width: 1
-line-color: '#5dcd70'
-curve-style: 'bezier'
-source-arrow-color: '#5dcd70'
-source-arrow-shape: 'diamond'
-source-arrow-fill: 'hollow'

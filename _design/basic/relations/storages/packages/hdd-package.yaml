@@ -2,6 +2,7 @@
 ---
 name:
 description: >
-  Device RAM.
+  Package installed on HDD. This also could
+  be a database name on DB server.
 source_quantity_relation: '1'
 target_quantity_relation: '1'

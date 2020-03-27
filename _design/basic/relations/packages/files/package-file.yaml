@@ -2,6 +2,6 @@
 ---
 name:
 description: >
-  Device RAM.
+  Package file.
 source_quantity_relation: '1'
 target_quantity_relation: '1'

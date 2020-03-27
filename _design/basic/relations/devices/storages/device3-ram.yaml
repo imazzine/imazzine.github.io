@@ -2,6 +2,6 @@
 ---
 name:
 description: >
-  Device 3 RAM.
+  Device RAM.
 source_quantity_relation: '1'
 target_quantity_relation: '1'

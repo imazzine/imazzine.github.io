@@ -1,9 +1,0 @@
-%YAML 1.2
----
-font-weight: 'bold'
-color: '#ffffff'
-border-width: 2
-border-style: 'solid'
-border-color: '#297fb9'
-border-opacity: 1
-background-color: '#3497db'
