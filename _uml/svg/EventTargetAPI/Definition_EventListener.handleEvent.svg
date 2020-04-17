@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="249px" preserveAspectRatio="none" style="width:365px;height:249px;" version="1.1" viewBox="0 0 365 249" width="365px" zoomAndPan="magnify"><defs><filter height="300%" id="fg6wxki4qgt2d" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="341" x="12" y="27.4023">Definition: EventListener#handleEvent()</text><ellipse cx="183" cy="41.1992" fill="#000000" filter="url(#fg6wxki4qgt2d)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FFFFFF" filter="url(#fg6wxki4qgt2d)" height="136.7539" style="stroke: #000000; stroke-width: 2.0;" width="150" x="108" y="61.6523"/><path d="M181,62.6523 L181,71.1406 L171,81.1406 L108,81.1406 " fill="none" style="stroke: #000000; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="111" y="76.1875">SyncTask</text><polygon fill="#FEFECE" filter="url(#fg6wxki4qgt2d)" points="167.5,98.1406,208.5,98.1406,198.5,132.2734,157.5,132.2734" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="167.5" y="119.7422">event</text><rect fill="#FEFECE" filter="url(#fg6wxki4qgt2d)" height="34.1328" style="stroke: #A80036; stroke-width: 1.5;" width="130" x="118" y="152.2734"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="123" x2="123" y1="152.2734" y2="186.4063"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="243" x2="243" y1="152.2734" y2="186.4063"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="110" x="128" y="173.875">this.callback(event)</text><ellipse cx="183" cy="228.4063" fill="#FFFFFF" filter="url(#fg6wxki4qgt2d)" rx="10" ry="10" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 2.5;" x1="176.8128" x2="189.1872" y1="222.2191" y2="234.5934"/><line style="stroke: #000000; stroke-width: 2.5;" x1="189.1872" x2="176.8128" y1="222.2191" y2="234.5934"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="183" x2="183" y1="132.2734" y2="152.2734"/><polygon fill="#A80036" points="179,142.2734,183,152.2734,187,142.2734,183,146.2734" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="183" x2="183" y1="51.1992" y2="98.1406"/><polygon fill="#A80036" points="179,88.1406,183,98.1406,187,88.1406,183,92.1406" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="183" x2="183" y1="186.4063" y2="218.4063"/><polygon fill="#A80036" points="179,208.4063,183,218.4063,187,208.4063,183,212.4063" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml Definition_EventListener.handleEvent
+    title Definition: EventListener#handleEvent()
+
+    start
+        partition SyncTask {
+            :event/
+            :this.callback(event)|
+        }
+    end
+@enduml
+
+PlantUML version 1.2019.09(Mon Aug 26 19:19:51 EEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Mac OS X
+OS Version: 10.15.3
+Default Encoding: UTF-8
+Language: en
+Country: UA
+--></g></svg>

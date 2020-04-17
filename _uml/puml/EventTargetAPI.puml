@@ -1,0 +1,523 @@
+@startuml Types
+
+    hide empty members
+    hide empty methods
+    hide empty fields
+    hide empty attributes
+
+    title EventTargetAPI Types
+    ' package "https://dom.spec.whatwg.org/#events" as whatwg [[https://dom.spec.whatwg.org/#events]] {
+    '     interface "EventTarget" as IEventTarget [[https://dom.spec.whatwg.org/#eventtarget]] {
+    '         +constructor(): EventTarget
+    '         +addEventListener(type: string, callback?: EventListener, capture?: boolean, passive?: boolean, once?: boolean): void
+    '         +removeEventListener(type: string, callback?: EventListener, capture?: boolean, passive?: boolean, once?: boolean): void
+    '         +dispatchEvent(event: Event): boolean
+    '     }
+
+    '     interface "EventListener" as IEventListener [[https://dom.spec.whatwg.org/#callbackdef-eventlistener]] {
+    '         +handleEvent(event: Event): void
+    '     }
+    '     IEventListener <-- IEventTarget: use 
+
+    '     interface "Event" as IEvent [[https://dom.spec.whatwg.org/#event]] {
+    '         +readonly type: string
+    '         +readonly target?: EventTarget
+    '         +readonly currentTarget?: EventTarget
+    '         +readonly eventPhase: EventPhase
+    '         +readonly bubbles: boolean
+    '         +readonly cancelable: boolean
+    '         +readonly defaultPrevented: boolean
+    '         +readonly composed: boolean
+    '         +readonly timeStamp: DOMHighResTimeStamp
+    '         ' [Unforgeable] readonly attribute boolean isTrusted;
+
+    '         +constructor(type: string, eventInitDict?: EventInit): Event
+    '         +composedPath(): Array<EventTarget>
+    '         +stopPropagation(): void
+    '         +stopImmediatePropagation(): void
+    '         +preventDefault(): void
+    '     }
+    '     IEvent --* IEventTarget
+    ' }
+
+    ' package "uuid@^7" as UuidPackage [[https://www.npmjs.com/package/uuid]] {
+    '     object "exports" as UuidPackageExports {
+    '         +v1(options?: Object, buffer?: Buffer, offset?: Number): string|Buffer
+    '         +v4(options?: Object, buffer?: Buffer, offset?: Number): string|Buffer
+    '         +v3(name: string, namespace: string, buffer?: Buffer, offset?: string): string|Buffer
+    '         +v5(name: string, namespace: string, buffer?: Buffer, offset?: string): string|Buffer
+    '     }
+    ' }
+
+    package "@imazzine/core" as ImazzineCorePackage {
+
+        object internal #ffc7fd {
+            +undisposed: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], Disposable>
+            +listenersMaps: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<EventTarget, [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<EventListener>>>
+        }
+
+        object "exports" as ImazzineCorePackageExports #c9ffc7 {
+            +[[./Definition_exports.getUuid.svg getUuid]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            +[[./Definition_exports.getStack.svg getStack]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            +[[./Definition_exports.getUndisposed.svg getUndisposed]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<Disposable>
+            +Errors: Errors
+            +EventPhase: EventPhase
+            +Monitorable: Monitorable
+            +Disposable: Disposable
+            +EventTarget: EventTarget
+            +Event: Event
+        }
+
+        enum "Errors" as ImazzineCorePackageErrors {
+            +<b>MANUAL_CALL</b>:\nDisposable#disposeInternal() method\nshould not be explicitly called.\nUse Disposable#dispose() instead.
+            +<b>BROKEN_CHAIN</b>:\nsuper.dispose() was not called in\noverridden method.
+        }
+        ImazzineCorePackageErrors "1" -* "1" ImazzineCorePackageExports
+
+        enum EventPhase {
+            +<b>NONE</b>: 0
+            +<b>CAPTURING_PHASE</b>: 1
+            +<b>AT_TARGET</b>: 2
+            +<b>BUBBLING_PHASE</b>: 3
+        }
+        ImazzineCorePackageExports "1" *- "1" EventPhase
+        
+        class Monitorable {
+            -_uuid: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            -_stack: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            +[[./Definition_Monitorable.constructor.svg constructor]](): Monitorable
+            +[[./Definition_Monitorable.getUuid.svg getUuid]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            +[[./Definition_Monitorable.getCreationStack.svg getCreationStack]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+        }
+        ImazzineCorePackageExports "1" *-- "1" Monitorable
+
+        interface IDisposable {
+            +isDisposed(): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +dispose(): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+        }
+
+        class Disposable extends Monitorable implements IDisposable {
+            -_disposed: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            -_disposing: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +[[./Definition_Disposable.constructor.svg constructor]](): Disposable
+            #[[./Definition_Disposable.disposeInternal.svg disposeInternal]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            +[[./Definition_Disposable.dispose.svg dispose]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            +[[./Definition_Disposable.isDisposed.svg isDisposed]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+        }
+        internal "1" o-- "0..*" Disposable
+        ImazzineCorePackageExports "1" *-- "1" Disposable
+
+        class EventListener extends Monitorable {
+            +callback: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function Function]]
+            +capture: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +passive: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +removed: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +once: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +[[./Definition_EventListener.constructor.svg constructor]](callback: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function Function]], capture=[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean false]], passive=[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean false]], once=[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean false]]): EventListener
+            +[[./Definition_EventListener.handleEvent.svg handleEvent]](event: Event): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+        }
+        internal "1" o-- "0..*" EventListener
+
+        class EventTarget extends Disposable {
+            +[[./Definition_EventTarget.constructor.svg constructor]](): EventTarget
+            +[[./Definition_EventTarget.disposeInternal.svg disposeInternal]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            +[[./Definition_EventTarget.addEventListener.svg addEventListener]](type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], callback: Function, capture?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], passive?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], once?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            +[[./Definition_EventTarget.removeEventListener.svg removeEventListener]](type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], callback: Function, capture?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], passive?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], once?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            +dispatchEvent(event: Event): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+        }
+        internal "1" o-- "0..*" EventTarget
+        ImazzineCorePackageExports "1" *-- "1" EventTarget
+
+        class EventBinder {
+            +phase: EventPhase
+            +prevented: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +target?: EventTarget
+            +current?: EventTarget
+            +[[./Definition_EventBinder.constructor.svg constructor]](phase: EventPhase, target?: EventTarget, current?: EventTarget): EventBinder
+        }
+        internal "1" o-- "0..1" EventBinder
+
+        class Event {
+            -_type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            -_timeStamp: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number number]]
+            -_binder: EventBinder
+            ..
+            +[[./Definition_Event.type.svg get type]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
+            +[[./Definition_Event.target.svg get target]](): EventTarget
+            +[[./Definition_Event.currentTarget.svg get currentTarget]](): EventTarget
+            +[[./Definition_Event.eventPhase.svg get eventPhase]](): EventPhase
+            +[[./Definition_Event.defaultPrevented.svg get defaultPrevented]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +[[./Definition_Event.timeStamp.svg get timeStamp]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number number]]
+            --
+            +[[./Definition_Event.constructor.svg constructor]](type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]): Event
+            +[[./Definition_Event.stopPropagation.svg stopPropagation]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            +[[./Definition_Event.preventDefault.svg preventDefault]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+            ..
+            +[[./Definition_Event.setBinderInternal.svg setBinderInternal]](binder: EventBinder): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
+        }
+        EventTarget "1..*" -* "1" Event
+        EventBinder "0..1" --o "1" Event
+        ImazzineCorePackageExports "1" *-- "1" Event
+    }
+    ' UuidPackage <-- ImazzineCorePackage: depend on
+@enduml
+
+@startuml Definition_exports.getUuid
+    title Definition: exports.getUuid()
+
+    participant "getUuid()" as fn
+    participant "uuid.v1()" as v1 [[https://www.npmjs.com/package/uuid#version-1-timestamp]]
+    participant "uuid.v5()" as v5 [[https://www.npmjs.com/package/uuid#version-5-namespace]]
+
+    group JS Sync Task
+        ...
+        --> fn: initial call
+        fn --> v1: request uuid v1 for uuid v5 required "name" parameter
+        fn <-- v1: random uuid (timestamp based)
+        fn --> v1: request uuid v1 for uuid v5 required "namespace" parameter
+        fn <-- v1: random uuid (timestamp based)
+        fn --> v5: request final uuid v5 with calculated (random) parameters
+        fn <-- v5: uuid
+        <-- fn: uuid
+        ...
+    end
+@enduml
+
+@startuml Definition_exports.getStack
+    title Definition: exports.getStack()
+
+    start
+        partition SyncTask {
+            if (env.npm_package_config_monitoring) then (yes)
+                :let stack = new [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack Error().stack]] ]
+                :stack = stack.replace('Error', 'Created') ]
+                :const stackArray = stack.split('\\n') ]
+                :stackArray.splice(1, 1) ]
+                :stack = stackArray.join('\\n')]
+            else (no)
+                :let stack = 'disabled' ]
+            endif
+                :return stack/
+        }
+    end
+@enduml
+
+@startuml Definition_exports.getUndisposed
+    title Definition: exports.getUndisposed()
+
+    start
+        partition SyncTask {
+            :return internal.undisposed.values()/
+        }
+    end
+@enduml
+
+@startuml Definition_Monitorable.constructor
+    title Definition: Monitorable#constructor()
+
+    start
+        partition SyncTask {
+            :this._stack = [[./Definition_exports.getStack.svg exports.getStack()]] ]
+            :this._uuid = [[./Definition_exports.getUuid.svg exports.getUuid()]] ]
+        }
+    end
+@enduml
+
+@startuml Definition_Monitorable.getUuid
+    title Definition: Monitorable#getUuid()
+
+    start
+        partition SyncTask {
+            :return this._uuid/
+        }
+    end
+@enduml
+
+@startuml Definition_Monitorable.getCreationStack
+    title Definition: Monitorable#getCreationStack()
+
+    start
+        partition SyncTask {
+            :return this._stack/
+        }
+    end
+@enduml
+
+@startuml Definition_Disposable.constructor
+    title Definition: Disposable#constructor()
+
+    start
+        partition SyncTask {
+            :[[./Definition_Monitorable.constructor.svg super()]] |
+            :this._disposed = false]
+            :this._disposing = false]
+            :internal.undisposed.set([[./Definition_Monitorable.getUuid.svg this.getUuid()]], this)]
+        }
+    end
+@enduml
+
+@startuml Definition_Disposable.disposeInternal
+    title Definition: Disposable#disposeInternal()
+
+    start
+        partition SyncTask {
+            if (this._disposing) then (yes)
+                :this._disposed = true]
+                :internal.undisposed.delete([[./Definition_Monitorable.getUuid.svg this.getUuid()]])]
+                :this._disposing = false]
+            else (no)
+                :throw new Error(Errors.MANUAL_CALL)]
+            endif
+        }
+    end
+@enduml
+
+@startuml Definition_Disposable.dispose
+    title Definition: Disposable#dispose()
+
+    start
+        partition SyncTask {
+            if (!this._disposed) then (yes)
+                :this._disposing = true]
+                :[[./Definition_Disposable.disposeInternal.svg this.disposeInternal()]] |
+                if (!this._disposed && this._disposing) then (yes)
+                    :throw new Error(Errors.BROKEN_CHAIN)]
+                endif
+            endif
+        }
+    end
+@enduml
+
+@startuml Definition_Disposable.isDisposed
+    title Definition: Disposable#isDisposed()
+
+    start
+        partition SyncTask {
+            :return this._disposed/
+        }
+    end
+@enduml
+
+@startuml Definition_EventListener.constructor
+    title Definition: EventListener#constructor()
+
+    start
+        partition SyncTask {
+            :callback, capture, passive, once/
+            :[[./Definition_Monitorable.constructor.svg super()]] |
+            :this.callback = callback]
+            :this.capture = capture]
+            :this.passive = passive]
+            :this.removed = false]
+            :this.once = once]
+        }
+    end
+@enduml
+
+@startuml Definition_EventListener.handleEvent
+    title Definition: EventListener#handleEvent()
+
+    start
+        partition SyncTask {
+            :event/
+            :this.callback(event)|
+        }
+    end
+@enduml
+
+@startuml Definition_EventBinder.constructor
+    title Definition: EventBinder#constructor()
+
+    start
+        partition SyncTask {
+            :phase, target, current/
+            :this.phase = EventPhase.NONE]
+            :this.prevented = false]
+            :this.target = target]
+            :this.current = current]
+        }
+    end
+@enduml
+
+@startuml Definition_Event.constructor
+    title Definition: Event#constructor()
+
+    start
+        partition SyncTask {
+            :type/
+            :this._type = type]
+            :this._timeStamp = [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now Date.now()]] ]
+            :[[./Definition_Event.setBinderInternal.svg this.setBinderInternal]](new EventDispatcher(EventPhase.NONE))]
+        }
+    end
+@enduml
+
+@startuml Definition_Event.type
+    title Definition: Event#type
+
+    start
+        partition SyncTask {
+            :return this._type/
+        }
+    end
+@enduml
+
+@startuml Definition_Event.timeStamp
+    title Definition: Event#timeStamp
+
+    start
+        partition SyncTask {
+            :return this._timeStamp/
+        }
+    end
+@enduml
+
+@startuml Definition_Event.defaultPrevented
+    title Definition: Event#defaultPrevented
+
+    start
+        partition SyncTask {
+            :return this._binder.prevented/
+        }
+    end
+@enduml
+
+@startuml Definition_Event.target
+    title Definition: Event#target
+
+    start
+        partition SyncTask {
+            :return this._binder.target/
+        }
+    end
+@enduml
+
+@startuml Definition_Event.currentTarget
+    title Definition: Event#currentTarget
+
+    start
+        partition SyncTask {
+            :return this._binder.current/
+        }
+    end
+@enduml
+
+@startuml Definition_Event.eventPhase
+    title Definition: Event#eventPhase
+
+    start
+        partition SyncTask {
+            :return this._binder.phase/
+        }
+    end
+@enduml
+
+@startuml Definition_Event.preventDefault
+    title Definition: Event#preventDefault()
+
+    start
+        partition SyncTask {
+            :this._binder.prevented = true]
+        }
+    end
+@enduml
+
+@startuml Definition_Event.stopPropagation
+    title Definition: Event#stopPropagation()
+
+    start
+        partition SyncTask {
+            :void]
+        }
+    end
+@enduml
+
+@startuml Definition_Event.setBinderInternal
+    title Definition: Event#setBinderInternal()
+
+    start
+        partition SyncTask {
+            :binder/
+            if (dispatcher instanceof EventBinder) then (yes)
+                :this._binder = binder]
+            endif
+        }
+    end
+@enduml
+
+@startuml Definition_EventTarget.constructor
+    title Definition: EventTarget#constructor()
+
+    start
+        partition SyncTask {
+            :[[./Definition_Disposable.constructor.svg super()]]|
+            :internal.listenersMaps.set(this, new Map())]
+        }
+    end
+@enduml
+
+@startuml Definition_EventTarget.disposeInternal
+    title Definition: EventTarget#disposeInternal()
+
+    start
+        partition SyncTask {
+            :internal.listenersMaps.delete(this)]
+            :[[./Definition_Disposable.disposeInternal.svg super()]]|
+        }
+    end
+@enduml
+
+@startuml Definition_EventTarget.addEventListener
+    title Definition: EventTarget#addEventListener()
+
+    start
+        partition SyncTask {
+            :type, callback, capture, passive, once/
+            :const listenersMap = internal.listenersMaps.get(this)]
+            :let listeners = listenersMap.get(type)]
+            :let listener = null]
+            if (!listeners) then (yes)
+                :listeners = [] ]
+                :listenersMap.set(type, listeners)]
+            endif
+            while (let i = 0; i < listeners.length; i++)
+                if (!listeners[i].removed && \nlisteners[i].callback === callback && \nlisteners[i].capture === capture) then (yes)
+                    :listener = listeners[i] ]
+                    :listener.passive = passive]
+                    :listener.once = once]
+                endif
+            endwhile
+            if (!listener) then (yes)
+                :listener = new EventListener(callback, capture, passive, once)]
+                :listeners.push(listener)]
+            endif
+        }
+    end
+@enduml
+
+@startuml Definition_EventTarget.removeEventListener
+    title Definition: EventTarget#addEventListener()
+
+    start
+        partition SyncTask {
+            :type, callback, capture, passive, once/
+            :const listenersMap = internal.listenersMaps.get(this)]
+            :const listeners = listenersMap.get(type)]
+            if (listeners) then (yes)
+                while (let i = 0; i < listeners.length; i++)
+                    if (!listeners[i].removed && \nlisteners[i].callback === callback && \nlisteners[i].capture === capture) then (yes)
+                        :listeners[i].removed = true]
+                        :listeners[i].callback = null]
+                        :listeners[i].capture = null]
+                        :listeners[i].passive = null]
+                        :listeners[i].once = null]
+                        :listeners.splice(i, 1)]
+                    endif
+                endwhile
+                if (listeners.length === 0) then (yes)
+                    :listenersMap.remove(type)]
+                endif
+            endif
+        }
+    end
+@enduml

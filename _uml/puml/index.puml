@@ -1,0 +1,7 @@
+@startuml index
+    hide members
+
+    title Basic Interfaces
+    
+    interface "EventTargetAPI" as EventTargetAPI [[./../EventTargetAPI/Types.svg]]
+@enduml
