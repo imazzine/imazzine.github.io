@@ -1,0 +1,17 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Accessor
+import:
+  - internals: internals
+params: []
+returns:
+  - Node
+description: >
+  //
+workflow: []
+set: []
+get:
+  - >
+    return internals.nodesIndices.get(this).parent;

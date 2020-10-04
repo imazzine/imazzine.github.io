@@ -1,0 +1,13 @@
+accessibility: public
+static: true
+async: false
+type: 
+  - Map<string, Disposable>
+import: []
+params: []
+returns: []
+description: >
+  Map of undisposed disposable nodes.
+workflow: []
+set: []
+get: []

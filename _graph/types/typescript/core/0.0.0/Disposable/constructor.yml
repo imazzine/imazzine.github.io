@@ -1,0 +1,23 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params: []
+returns:
+  - Disposable
+description: >
+  Class constructor.
+workflow:
+  - >
+    super();
+  - >
+    this._disposed = false;
+  - >
+    this._disposing = false;
+  - >
+    internals.undisposed.set(this.getUid(), this);
+set: []
+get: []

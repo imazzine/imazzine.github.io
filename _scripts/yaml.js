@@ -38,7 +38,7 @@ function isFileExist(fileName) {
 /**
  * Get directories for specific path.
  * @param {string} pth
- * @return {Array.<string>}
+ * @return {Array<string>}
  */
 function getDirectories(pth) {
     const dirs = [];
@@ -57,7 +57,7 @@ function getDirectories(pth) {
 /**
  * Get directories for specific path.
  * @param {string} pth
- * @return {Array.<string>}
+ * @return {Array<string>}
  */
 function getFiles(pth) {
     const dirs = [];

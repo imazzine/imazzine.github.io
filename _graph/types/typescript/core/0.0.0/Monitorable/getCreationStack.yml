@@ -1,0 +1,16 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import: []
+params: []
+returns:
+  - string
+description: >
+  Returns instance creation stack trace string.
+workflow:
+  - >
+    return this._stack;
+set: []
+get: []

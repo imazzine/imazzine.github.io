@@ -1,0 +1,8 @@
+package:
+  name: 'uuid'
+  version: '8.1.0'
+  uri: 'https://www.npmjs.com/package/uuid/v/8.1.0'
+typedef:
+  name: '@types/uuid'
+  version: '8.0.0'
+  uri: 'https://www.npmjs.com/package/@types/uuid/v/8.0.0'

@@ -1,0 +1,19 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - EventBinder: EventBinder
+params:
+  - binder: EventBinder
+returns: []
+description: >
+  //
+workflow:
+  - if: binder instanceof EventBinder
+    then:
+      - >
+        this._binder = binder;
+set: []
+get: []

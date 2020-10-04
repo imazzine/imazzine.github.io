@@ -54,17 +54,23 @@
         object internal #ffc7fd {
             +undisposed: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], Disposable>
             +listenersMaps: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<EventTarget, [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<EventListener>>>
+            +nodesIndices: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<Node, NodeIndex>
+            +[[./Definition_internal.getAncestors.svg getAncestors]](node: EventTarget): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<EventTarget>
+            +[[./Definition_internal.dispatchEvent.svg dispatchEvent]](target: EventTarget, event: Event): boolean
+            +[[./Definition_internal.fireListeners.svg fireListeners]](binder: EventBinder, event: Event, capture: boolean): boolean
         }
 
         object "exports" as ImazzineCorePackageExports #c9ffc7 {
             +[[./Definition_exports.getUuid.svg getUuid]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
             +[[./Definition_exports.getStack.svg getStack]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
             +[[./Definition_exports.getUndisposed.svg getUndisposed]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<Disposable>
+            +[[./Definition_exports.getAncestors.svg getAncestors]](node: EventTarget): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<EventTarget>
             +Errors: Errors
             +EventPhase: EventPhase
             +Monitorable: Monitorable
             +Disposable: Disposable
             +EventTarget: EventTarget
+            +Node: Node
             +Event: Event
         }
 
@@ -123,19 +129,21 @@
             +[[./Definition_EventTarget.disposeInternal.svg disposeInternal]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
             +[[./Definition_EventTarget.addEventListener.svg addEventListener]](type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], callback: Function, capture?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], passive?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], once?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
             +[[./Definition_EventTarget.removeEventListener.svg removeEventListener]](type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], callback: Function, capture?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], passive?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]], once?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
-            +dispatchEvent(event: Event): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +[[./Definition_EventTarget.dispatchEvent.svg dispatchEvent]](event: Event): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
         }
         internal "1" o-- "0..*" EventTarget
         ImazzineCorePackageExports "1" *-- "1" EventTarget
 
         class EventBinder {
             +phase: EventPhase
+            +passive: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +stopped: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +prevented: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +target?: EventTarget
             +current?: EventTarget
             +[[./Definition_EventBinder.constructor.svg constructor]](phase: EventPhase, target?: EventTarget, current?: EventTarget): EventBinder
         }
-        internal "1" o-- "0..1" EventBinder
+        EventBinder "1" *-- "1..2" EventTarget
 
         class Event {
             -_type: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
@@ -155,9 +163,43 @@
             ..
             +[[./Definition_Event.setBinderInternal.svg setBinderInternal]](binder: EventBinder): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
         }
-        EventTarget "1..*" -* "1" Event
-        EventBinder "0..1" --o "1" Event
+        Event "1" *-- "1..*" EventBinder
         ImazzineCorePackageExports "1" *-- "1" Event
+
+        class Node extends EventTarget {
+            +[[./Definition_Node.isConnected.svg get isConnected]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            ..
+            +[[./Definition_Node.parentNode.svg get parentNode]](): Node
+            ..
+            +[[./Definition_Node.childNodes.svg get childNodes]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<Node>
+            +[[./Definition_Node.firstChild.svg get firstChild]](): Node
+            +[[./Definition_Node.lastChild.svg get lastChild]](): Node
+            ..
+            +[[./Definition_Node.nextSibling.svg get nextSibling]](): Node
+            +[[./Definition_Node.previousSibling.svg get previousSibling]](): Node
+            --
+            +[[./Definition_Node.constructor.svg constructor]](): Node
+            +[[./Definition_Node.disposeInternal.svg disposeInternal]](): void
+            --
+            +[[./Definition_Node.getRootNode.svg getRootNode]](): Node
+            +[[./Definition_Node.hasChildNodes.svg hasChildNodes]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            +[[./Definition_Node.contains.svg contains]](otherNode: Node): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            ..
+            +[[./Definition_Node.appendChild.svg appendChild]](childNode: Node): Node
+            +[[./Definition_Node.insertBefore.svg insertBefore]](newNode: Node, refNode: Node|null): Node
+            +[[./Definition_Node.removeChild.svg removeChild]](child: Node): Node
+            +[[./Definition_Node.replaceChild.svg replaceChild]](newChild: Node, oldChild: Node): Node
+        }
+        internal "1" o-- "0..*" Node
+        ImazzineCorePackageExports "1" *-- "1" Node
+
+        class NodeIndex {
+            +parent?: Node
+            +children: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<Node>
+            +[[./Definition_NodeIndex.constructor.svg constructor]](parent?: Node, children?: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<Node>)
+        }
+        internal "1" o-- "0..*" NodeIndex
+        NodeIndex "1" o-- "0..*" Node
     }
     ' UuidPackage <-- ImazzineCorePackage: depend on
 @enduml
@@ -165,21 +207,11 @@
 @startuml Definition_exports.getUuid
     title Definition: exports.getUuid()
 
-    participant "getUuid()" as fn
-    participant "uuid.v1()" as v1 [[https://www.npmjs.com/package/uuid#version-1-timestamp]]
-    participant "uuid.v5()" as v5 [[https://www.npmjs.com/package/uuid#version-5-namespace]]
-
-    group JS Sync Task
-        ...
-        --> fn: initial call
-        fn --> v1: request uuid v1 for uuid v5 required "name" parameter
-        fn <-- v1: random uuid (timestamp based)
-        fn --> v1: request uuid v1 for uuid v5 required "namespace" parameter
-        fn <-- v1: random uuid (timestamp based)
-        fn --> v5: request final uuid v5 with calculated (random) parameters
-        fn <-- v5: uuid
-        <-- fn: uuid
-        ...
+    start
+        :const name = [[https://www.npmjs.com/package/uuid#version-1-timestamp uuid.v1()]] ]
+        :const ns = [[https://www.npmjs.com/package/uuid#version-1-timestamp uuid.v1()]] ]
+        :const uid = [[https://www.npmjs.com/package/uuid#version-5-namespace uuid.v5(name, ns)]] ]
+        :return uid/
     end
 @enduml
 
@@ -208,6 +240,101 @@
     start
         partition SyncTask {
             :return internal.undisposed.values()/
+        }
+    end
+@enduml
+
+@startuml Definition_exports.getAncestors
+    title Definition: exports.getAncestors()
+
+    start
+        partition SyncTask {
+            :node/
+            :let ancestors = internal.[[./Definition_internal.getAncestors.svg getAncestors]](node) |
+            :return ancestors /
+        }
+    end
+@enduml
+
+@startuml Definition_internal.getAncestors
+    title Definition: internal.getAncestors()
+
+    start
+        partition SyncTask {
+            :node/
+            :let ancestors = [] ]
+            if (node instanceof Node) then (yes)
+                :let ancestor = internal.nodesIndices.get(node).parent]
+                while (ancestor != null)
+                    :ancestors.push(ancestor) ]
+                    :ancestor = internal.nodesIndices.get(ancestor).parent]
+                endwhile
+            endif
+            :return ancestors /
+        }
+    end
+@enduml
+
+@startuml Definition_internal.dispatchEvent
+    title Definition: internal.dispatchEvent()
+
+    start
+        partition SyncTask {
+            :target, event/
+            :const ancestors = internal.[[./Definition_internal.getAncestors.svg getAncestors]](target) |
+            :const binder = [[./Definition_EventBinder.constructor.svg new EventBinder]](EventPhase.NONE, target)]
+            :event.[[./Definition_Event.setBinderInternal.svg setBinderInternal]](binder)|
+            :let result = true]
+            :let current]
+            while (let i = ancestors.length - 1; !binder.stopped && i >= 0; i--)
+                :binder.phase = EventPhase.CAPTURING_PHASE]
+                :binder.current = ancestors[i] ]
+                :result = internal.[[./Definition_internal.fireListeners.svg fireListeners]](binder, event, true) && result |
+            endwhile
+            if (!binder.stopped) then (yes)
+                :binder.phase = EventPhase.AT_TARGET]
+                :binder.current = target ]
+                :result = internal.[[./Definition_internal.fireListeners.svg fireListeners]](binder, event, true) && result |
+                if (!binder.stopped) then (yes)
+                    :result = internal.[[./Definition_internal.fireListeners.svg fireListeners]](binder, event, false) && result |
+                endif
+            endif
+            while (let i = 0; !binder.stopped && i < ancestors.length; i++)
+                :binder.phase = EventPhase.BUBBLING_PHASE]
+                :binder.current = ancestors[i] ]
+                :result = internal.[[./Definition_internal.fireListeners.svg fireListeners]](binder, event, false)  && result |
+            endwhile
+            :binder.phase = EventPhase.NONE]
+            :return result/
+        }
+    end
+@enduml
+
+@startuml Definition_internal.fireListeners
+    title Definition: internal.fireListeners()
+
+    start
+        partition SyncTask {
+            :binder, event, capture/
+            :const target = event.[[./Definition_Event.currentTarget.svg currentTarget]])]
+            :const map = internal.listenersMaps.get(target)]
+            :const listeners = map.get(event.[[./Definition_Event.type.svg type]])]
+            :let result = true]
+            if (listeners instanceof Array) then (yes)
+                :let listener]
+                while(let i = 0; i < listeners.length; i++)
+                    :listener = listeners[i] ]
+                    if (listener.capture == capture && !listener.removed) then (yes)
+                        :binder.passive = listener.passive]
+                        :result = listener.callback.call(undefined, event) && result]
+                        if (listener.once) then (yes)
+                            :target.[[./Definition_EventTarget.removeEventListener.svg removeEventListener]](event.[[./Definition_Event.type.svg type]], listener.callback, listener.capture, listener.passive, listener.once)|
+                        endif
+                    endif
+                endwhile
+                :binder.passive = false]
+            endif
+            :return result/
         }
     end
 @enduml
@@ -332,6 +459,8 @@
         partition SyncTask {
             :phase, target, current/
             :this.phase = EventPhase.NONE]
+            :this.passive = false]
+            :this.stopped = false]
             :this.prevented = false]
             :this.target = target]
             :this.current = current]
@@ -347,7 +476,7 @@
             :type/
             :this._type = type]
             :this._timeStamp = [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now Date.now()]] ]
-            :[[./Definition_Event.setBinderInternal.svg this.setBinderInternal]](new EventDispatcher(EventPhase.NONE))]
+            :[[./Definition_Event.setBinderInternal.svg this.setBinderInternal]](new EventBinder(EventPhase.NONE))]
         }
     end
 @enduml
@@ -417,7 +546,9 @@
 
     start
         partition SyncTask {
-            :this._binder.prevented = true]
+            if (!this._binder.passive) then (yes)
+                :this._binder.prevented = true]
+            endif
         }
     end
 @enduml
@@ -427,7 +558,9 @@
 
     start
         partition SyncTask {
-            :void]
+            if (!this._binder.passive) then (yes)
+                :this._binder.stopped = true]
+            endif
         }
     end
 @enduml
@@ -438,7 +571,7 @@
     start
         partition SyncTask {
             :binder/
-            if (dispatcher instanceof EventBinder) then (yes)
+            if (binder instanceof EventBinder) then (yes)
                 :this._binder = binder]
             endif
         }
@@ -518,6 +651,282 @@
                     :listenersMap.remove(type)]
                 endif
             endif
+        }
+    end
+@enduml
+
+@startuml Definition_EventTarget.dispatchEvent
+    title Definition: EventTarget#dispatchEvent()
+
+    start
+        partition SyncTask {
+            :event/
+            :return internal.[[.//Definition_internal.dispatchEvent.svg dispatchEvent]](this, event)/
+        }
+    end
+@enduml
+
+@startuml Definition_NodeIndex.constructor
+    title Definition: NodeIndex#constructor()
+
+    start
+        partition SyncTask {
+            :parent, children/
+            :this.parent = null]
+            :this.children = [] ]
+            if (parent) then (yes)
+                :this.parent = parent]
+            endif
+            if (children) then (yes)
+                :this.children = children]
+            endif
+            :this/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.constructor
+    title Definition: Node#constructor()
+
+    start
+        partition SyncTask {
+            :[[./Definition_EventTarget.constructor.svg super()]]|
+            :internal.nodesIndices.set(this, new NodeIndex())]
+            :this/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.disposeInternal
+    title Definition: Node#disposeInternal()
+
+    start
+        partition SyncTask {
+            :const parent = internal.nodesIndices.get(this).parent]
+            :const children = internal.nodesIndices.get(this).children]
+            while (let i = 0; i < children.length; i++)
+                :children[i].[[./Definition_Disposable.dispose.svg dispose]]() ]
+            endwhile
+            if (parent != null) then (yes)
+                :const parIndex = internal.nodesIndices.get(parent).children.indexOf(this)]
+                :internal.nodesIndices.get(parent).children.splice(parIndex, 1)]
+            endif
+            :internal.nodesIndices.delete(this)]
+            :[[./Definition_EventTarget.disposeInternal.svg super()]]|
+        }
+    end
+@enduml
+
+@startuml Definition_Node.isConnected
+    title Definition: Node#isConnected
+
+    start
+        partition SyncTask {
+            :const index = internal.nodesIndices.get(this)]
+            if (index.parent || index.children.length) then (yes)
+                :return true/
+            endif
+            :return false/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.parentNode
+    title Definition: Node#parentNode
+
+    start
+        partition SyncTask {
+            :return internal.nodesIndices.get(this).parent/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.childNodes
+    title Definition: Node#childNodes
+
+    start
+        partition SyncTask {
+            :const children = internal.nodesIndices.get(this).children]
+            :const result = new Map()]
+            while (for let i = 0; i < children.length; i++)
+                :result.set(i, children[i]) ]
+            endwhile
+            :return result/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.firstChild
+    title Definition: Node#firstChild
+
+    start
+        partition SyncTask {
+            :const children = internal.nodesIndices.get(this).children]
+            if (children.length > 0) then (yes)
+                :return children[0] /
+            endif
+            :return null/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.lastChild
+    title Definition: Node#lastChild
+
+    start
+        partition SyncTask {
+            :const children = internal.nodesIndices.get(this).children]
+            if (children.length > 0) then (yes)
+                :return children[children.length - 1] /
+            endif
+            :return null/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.nextSibling
+    title Definition: Node#nextSibling
+
+    start
+        partition SyncTask {
+            :const parent = internal.nodesIndices.get(this).parent]
+            if (parent) then (yes)
+                :const index = parent.children.indexOf(this) ]
+                if (parent.children.length > index + 1) then (yes)
+                    :return parent.children[index + 1] /
+                endif
+            endif
+            :return null/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.previousSibling
+    title Definition: Node#previousSibling
+
+    start
+        partition SyncTask {
+            :const parent = internal.nodesIndices.get(this).parent]
+            if (parent) then (yes)
+                :const index = parent.children.indexOf(this) ]
+                if (index > 0) then (yes)
+                    :return parent.children[index - 1] /
+                endif
+            endif
+            :return null/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.getRootNode
+    title Definition: Node#getRootNode()
+
+    start
+        partition SyncTask {
+            :let root = this]
+            :let parent = internal.nodesIndices.get(this).parent]
+            while (parent)
+                :root = parent]
+                :parent = internal.nodesIndices.get(root).parent]
+            endwhile
+            :return root/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.hasChildNodes
+    title Definition: Node#hasChildNodes()
+
+    start
+        partition SyncTask {
+            :const children = internal.nodesIndices.get(this).children]
+            if (children.length > 0) then (yes)
+                :return true/
+            endif
+            :return false/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.contains
+    title Definition: Node#contains()
+
+    start
+        partition SyncTask {
+            :otherNode/
+            :const children = internal.nodesIndices.get(this).children]
+            if (children.indexOf(otherNode) >= 0) then (yes)
+                :return true/
+            endif
+            :return false/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.appendChild
+    title Definition: Node#appendChild()
+
+    start
+        partition SyncTask {
+            :childNode/
+            :[[./Definition_Node.insertBefore.svg this.insertBefore]](childNode, null)|
+            :childNode/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.insertBefore
+    title Definition: Node#insertBefore()
+
+    start
+        partition SyncTask {
+            :newNode, refNode/
+            :internal.nodesIndices.get(newNode).parent = this]
+            :const children = internal.nodesIndices.get(this).children]
+            :const newIndex = children.indexOf(newNode)]
+            if (newIndex >= 0) then (yes)
+                :children.splice(newIndex, 1)]
+            endif
+            if (refNode == null) then (yes)
+                :children.push(newNode)]
+            else (no)
+                :children.splice(children.indexOf(refNode), 0, newNode)]
+            endif
+            :newNode/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.removeChild
+    title Definition: Node#removeChild()
+
+    start
+        partition SyncTask {
+            :child/
+            :const children = internal.nodesIndices.get(this).children]
+            :const index = children.indexOf(child)]
+            if (index >= 0) then (yes)
+                :internal.nodesIndices.get(child).parent = null]
+                :children.splice(index, 1)]
+            endif
+            :child/
+        }
+    end
+@enduml
+
+@startuml Definition_Node.replaceChild
+    title Definition: Node#replaceChild()
+
+    start
+        partition SyncTask {
+            :newChild, oldChild/
+            :const children = internal.nodesIndices.get(this).children]
+            :const index = children.indexOf(oldChild)]
+            if (index >= 0) then (yes)
+                :internal.nodesIndices.get(oldChild).parent = null]
+                :children.splice(index, 1, newChild)]
+            endif
+            :oldChild/
         }
     end
 @enduml

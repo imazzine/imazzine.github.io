@@ -1,0 +1,47 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params:
+  - type: string
+  - callback: Function
+  - capture: boolean=false
+  - passive: boolean=false
+  - once: boolean=false
+returns: []
+description: >
+  //
+workflow:
+  - >
+    const listenersMap: Map<string, Array<EventListener>> = internals.listenersMaps.get(this);
+  - >
+    let listeners: Array<EventListener> = listenersMap.get(type);
+  - >
+    let listener: EventListener;
+  - if: '!listeners'
+    then:
+      - >
+        listeners = [];
+      - >
+        listenersMap.set(type, listeners);
+  - for: 'let i: number = 0; i < listeners.length; i++'
+    do:
+      - if: '!listeners[i].removed && listeners[i].callback === callback && listeners[i].capture === capture'
+        then:
+          - >
+            listener = listeners[i];
+          - >
+            listener.passive = passive;
+          - >
+            listener.once = once;
+  - if: '!listener'
+    then:
+      - >
+        listener = new EventListener(callback, capture, passive, once);
+      - >
+        listeners.push(listener);
+set: []
+get: []

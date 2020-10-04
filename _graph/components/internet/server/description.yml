@@ -1,0 +1,8 @@
+name: Server
+description: Hardware server.
+cpu: 8+
+gpu: 0
+ram: 16+ GB
+hdd: 2+ TB
+sdd: 0
+os: [ Linux, Windows ]

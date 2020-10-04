@@ -1,0 +1,17 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Accessor
+import:
+  - Node: Node
+params: []
+returns:
+  - Function
+description: >
+  //
+workflow: []
+set: []
+get:
+  - >
+    return Node;

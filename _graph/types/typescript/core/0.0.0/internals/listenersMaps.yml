@@ -1,0 +1,13 @@
+accessibility: public
+static: true
+async: false
+type: 
+  - Map<EventTarget, Map<string, Array<EventListener>>>
+import: []
+params: []
+returns: []
+description: >
+  EventTarget listeners map.
+workflow: []
+set: []
+get: []

@@ -1,0 +1,13 @@
+accessibility: private
+static: false
+async: false
+type:
+  - EventBinder
+import: []
+params: []
+returns: []
+description: >
+  Event binder object.
+workflow: []
+set: []
+get: []

@@ -1,0 +1,17 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import: []
+params: []
+returns: []
+description: >
+  //
+workflow:
+  - if: '!this._binder.passive'
+    then:
+      - >
+        this._binder.stopped = true;
+set: []
+get: []

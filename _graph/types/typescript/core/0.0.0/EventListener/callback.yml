@@ -1,0 +1,13 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import: []
+params: []
+returns: []
+description: >
+  Callback function.
+workflow: []
+set: []
+get: []

@@ -1,0 +1,18 @@
+accessibility: protected
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params: []
+returns: []
+description: >
+  //
+workflow:
+  - >
+    internals.listenersMaps.delete(this);
+  - >
+    super();
+set: []
+get: []

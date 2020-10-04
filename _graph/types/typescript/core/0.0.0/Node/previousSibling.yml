@@ -1,0 +1,28 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Accessor
+import:
+  - internals: internals
+params: []
+returns:
+  - null
+  - Node
+description: >
+  //
+workflow: []
+set: []
+get:
+  - >
+    const parent = internals.nodesIndices.get(this).parent;
+  - if: parent
+    then:
+      - >
+        const index: number = parent.children.indexOf(this);
+      - if: index > 0
+        then:
+          - >
+            return parent.children[index - 1];
+  - >
+    return null;

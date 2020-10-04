@@ -1,0 +1,17 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Accessor
+import:
+  - enums/EventPhase: EventPhase
+params: []
+returns:
+  - EventPhase
+description: >
+  Returns events phases enum.
+workflow: []
+set: []
+get:
+  - >
+    return EventPhase;

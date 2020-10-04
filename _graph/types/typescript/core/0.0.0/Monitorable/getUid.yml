@@ -1,0 +1,16 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import: []
+params: []
+returns:
+  - string
+description: >
+  Returns instance UID string.
+workflow:
+  - >
+    return this._uid;
+set: []
+get: []

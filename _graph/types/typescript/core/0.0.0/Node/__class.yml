@@ -1,0 +1,6 @@
+import:
+  - EventTarget: EventTarget
+extends: EventTarget
+implements: []
+description: >
+  Node class.

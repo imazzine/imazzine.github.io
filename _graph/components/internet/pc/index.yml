@@ -1,0 +1,3 @@
+name: PC
+description: Personal computer.
+os: [ Windows, MacOS, Linux ]

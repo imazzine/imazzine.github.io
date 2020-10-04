@@ -1,0 +1,19 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params: []
+returns:
+  - EventTarget
+description: >
+  Class constructor.
+workflow:
+  - >
+    super();
+  - >
+    internal.listenersMaps.set(this, new Map());
+set: []
+get: []

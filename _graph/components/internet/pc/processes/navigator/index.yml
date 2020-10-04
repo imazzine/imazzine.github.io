@@ -1,0 +1,6 @@
+name: navigator
+description: Navigator main process.
+type: process
+path: <string>
+host: <string> #[ Chrome, Safari, FireFox, Opera ]
+parent: null

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/public/styles/imazzine.css">
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://unpkg.com/cytoscape@3.12.0/dist/cytoscape.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>
       {{ page.title | escape }}
     </title>
@@ -64,11 +63,12 @@
       </div>
       <!-- Main Block -->
       <main class="mdl-layout__content mdl-grid">
-        <div class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
+        <!-- <div class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
           {{content}}
-        </div>
+        </div> -->
         <div id="cytoblock" class="page-content mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col"></div>
-        <script src="/public/js/load.js"></script>
+        <!-- <script src="/public/js/load.js"></script> -->
+        <script src="/public/js/viewer.js"></script>
       </main>
     </div>
   </body>

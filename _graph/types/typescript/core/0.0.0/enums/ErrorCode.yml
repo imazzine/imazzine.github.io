@@ -1,0 +1,14 @@
+description: Errors codes enums.
+type: number
+enums:
+  DISPOSABLE_MANUAL_CALL:
+    value: 0
+    description: >
+      This error code should be used to throw an error when
+      .disposeInternal() method was explicitly called.
+  DISPOSABLE_BROKEN_CHAIN:
+    value: 1
+    description: >
+      This error code should be used to throw an error when
+      .disposeInternal() method of super class was not called
+      from overriden method.

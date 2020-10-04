@@ -1,0 +1,4 @@
+name: CPU
+description: Central Processing Unit.
+cores_number: <number>
+clock_speed: <number>

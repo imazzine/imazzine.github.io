@@ -1,0 +1,23 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - enums/EventPhase: EventPhase
+  - EventBinder: EventBinder
+params:
+  - type: string
+returns:
+  - Event
+description: >
+  Class constructor.
+workflow:
+  - >
+    this._type = type;
+  - >
+    this._timeStamp = Date.now();
+  - >
+    this.setBinderInternal(new EventBinder(EventPhase.NONE));
+set: []
+get: []

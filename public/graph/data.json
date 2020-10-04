@@ -1,0 +1,6366 @@
+{
+  "nodes": [
+    {
+      "data": {
+        "id": "@imazzine/types",
+        "name": "types",
+        "label": "types",
+        "cluster": {
+          "id": 1,
+          "host": 2
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript",
+        "name": "typescript",
+        "label": "typescript",
+        "cluster": {
+          "id": 2,
+          "host": 3
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core",
+        "name": "core",
+        "label": "core",
+        "cluster": {
+          "id": 3,
+          "host": 4
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0",
+        "name": "0.0.0",
+        "label": "0.0.0",
+        "cluster": {
+          "id": 4,
+          "host": 5
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "name": "Disposable",
+        "label": "Disposable",
+        "cluster": {
+          "id": 5,
+          "host": 6
+        },
+        "details": {
+          "import": [
+            {
+              "Monitorable": "Monitorable"
+            }
+          ],
+          "extends": "Monitorable",
+          "implements": [],
+          "description": "Disposable class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable/_disposed",
+        "name": "_disposed",
+        "label": "_disposed",
+        "cluster": {
+          "id": 6,
+          "host": 7
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Disposed flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable/_disposing",
+        "name": "_disposing",
+        "label": "_disposing",
+        "cluster": {
+          "id": 6,
+          "host": 8
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Disposing flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 6,
+          "host": 9
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Disposable"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "super();\n",
+            "this._disposed = false;\n",
+            "this._disposing = false;\n",
+            "internals.undisposed.set(this.getUid(), this);\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable/dispose",
+        "name": "dispose",
+        "label": "dispose",
+        "cluster": {
+          "id": 6,
+          "host": 10
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "unums/ErrorCode": "ErrorCode"
+            }
+          ],
+          "params": [],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            {
+              "if": "!this._disposed",
+              "then": [
+                "this._disposing = true;\n",
+                "this.disposeInternal();\n",
+                {
+                  "if": "!this._disposed && this._disposing",
+                  "then": [
+                    "throw new Error(ErrorCode.DISPOSABLE_BROKEN_CHAIN);\n"
+                  ]
+                }
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable/disposeInternal",
+        "name": "disposeInternal",
+        "label": "disposeInternal",
+        "cluster": {
+          "id": 6,
+          "host": 11
+        },
+        "details": {
+          "accessibility": "protected",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            },
+            {
+              "enums/ErrorCode": "ErrorCode"
+            }
+          ],
+          "params": [],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            {
+              "if": "this._disposing",
+              "then": [
+                "this._disposed = true;\n",
+                "internal.undisposed.delete(this.getUid());\n",
+                "this._disposing = false;\n"
+              ],
+              "else": [
+                "throw new Error(ErrorCode.DISPOSABLE_MANUAL_CALL);\n"
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable/isDisposed",
+        "name": "isDisposed",
+        "label": "isDisposed",
+        "cluster": {
+          "id": 6,
+          "host": 12
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "return this._disposed;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event",
+        "name": "Event",
+        "label": "Event",
+        "cluster": {
+          "id": 5,
+          "host": 13
+        },
+        "details": {
+          "import": [],
+          "extends": null,
+          "implements": [],
+          "description": "Event class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/_binder",
+        "name": "_binder",
+        "label": "_binder",
+        "cluster": {
+          "id": 13,
+          "host": 14
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "EventBinder"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Event binder object.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/_timeStamp",
+        "name": "_timeStamp",
+        "label": "_timeStamp",
+        "cluster": {
+          "id": 13,
+          "host": 15
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "number"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Creation timstamp.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/_type",
+        "name": "_type",
+        "label": "_type",
+        "cluster": {
+          "id": 13,
+          "host": 16
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "string"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Event type.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 13,
+          "host": 17
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "enums/EventPhase": "EventPhase"
+            },
+            {
+              "EventBinder": "EventBinder"
+            }
+          ],
+          "params": [
+            {
+              "type": "string"
+            }
+          ],
+          "returns": [
+            "Event"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "this._type = type;\n",
+            "this._timeStamp = Date.now();\n",
+            "this.setBinderInternal(new EventBinder(EventPhase.NONE));\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/currentTarget",
+        "name": "currentTarget",
+        "label": "currentTarget",
+        "cluster": {
+          "id": 13,
+          "host": 18
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "EventTarget"
+          ],
+          "description": "Event currentTarget accessor.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return this._binder.current;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/defaultPrevented",
+        "name": "defaultPrevented",
+        "label": "defaultPrevented",
+        "cluster": {
+          "id": 13,
+          "host": 19
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "boolean"
+          ],
+          "description": "Event defaultPrevented accessor.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return this._binder.prevented;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/eventPhase",
+        "name": "eventPhase",
+        "label": "eventPhase",
+        "cluster": {
+          "id": 13,
+          "host": 20
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "enums/EventPhase"
+          ],
+          "description": "Event eventPhase accessor.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return this._binder.phase;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/preventDefault",
+        "name": "preventDefault",
+        "label": "preventDefault",
+        "cluster": {
+          "id": 13,
+          "host": 21
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            {
+              "if": "!this._binder.passive",
+              "then": [
+                "this._binder.prevented = true;\n"
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/setBinderInternal",
+        "name": "setBinderInternal",
+        "label": "setBinderInternal",
+        "cluster": {
+          "id": 13,
+          "host": 22
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "EventBinder": "EventBinder"
+            }
+          ],
+          "params": [
+            {
+              "binder": "EventBinder"
+            }
+          ],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            {
+              "if": "binder instanceof EventBinder",
+              "then": [
+                "this._binder = binder;\n"
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/stopPropagation",
+        "name": "stopPropagation",
+        "label": "stopPropagation",
+        "cluster": {
+          "id": 13,
+          "host": 23
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            {
+              "if": "!this._binder.passive",
+              "then": [
+                "this._binder.stopped = true;\n"
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/target",
+        "name": "target",
+        "label": "target",
+        "cluster": {
+          "id": 13,
+          "host": 24
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "EventTarget"
+          ],
+          "description": "Event target accessor.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return this._binder.target;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/timeStamp",
+        "name": "timeStamp",
+        "label": "timeStamp",
+        "cluster": {
+          "id": 13,
+          "host": 25
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "number"
+          ],
+          "description": "Event created timestamp accessor.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return this._timeStamp;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event/type",
+        "name": "type",
+        "label": "type",
+        "cluster": {
+          "id": 13,
+          "host": 26
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "string"
+          ],
+          "description": "Event type accessor.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return this._type;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "name": "EventBinder",
+        "label": "EventBinder",
+        "cluster": {
+          "id": 5,
+          "host": 27
+        },
+        "details": {
+          "import": [],
+          "extends": null,
+          "implements": [],
+          "description": "EventBinder class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 27,
+          "host": 28
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "enums/EventPhase": "EventPhase"
+            }
+          ],
+          "params": [
+            {
+              "phase": "EventPhase"
+            },
+            {
+              "target": "EventTarget="
+            },
+            {
+              "current": "EventTarget="
+            }
+          ],
+          "returns": [
+            "EventBinder"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "this.phase = EventPhase.NONE;\n",
+            "this.passive = false;\n",
+            "this.stopped = false;\n",
+            "this.prevented = false;\n",
+            "this.target = target;\n",
+            "this.current = current;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/current",
+        "name": "current",
+        "label": "current",
+        "cluster": {
+          "id": 27,
+          "host": 29
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "undefined",
+            "EventTarget"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Event current target.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/passive",
+        "name": "passive",
+        "label": "passive",
+        "cluster": {
+          "id": 27,
+          "host": 30
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Passive flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/phase",
+        "name": "phase",
+        "label": "phase",
+        "cluster": {
+          "id": 27,
+          "host": 31
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "enums/EventPhase"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Event phase.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/prevented",
+        "name": "prevented",
+        "label": "prevented",
+        "cluster": {
+          "id": 27,
+          "host": 32
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Prevented flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/stopped",
+        "name": "stopped",
+        "label": "stopped",
+        "cluster": {
+          "id": 27,
+          "host": 33
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Stopped flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder/target",
+        "name": "target",
+        "label": "target",
+        "cluster": {
+          "id": 27,
+          "host": 34
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "undefined",
+            "EventTarget"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Event target.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "name": "EventListener",
+        "label": "EventListener",
+        "cluster": {
+          "id": 5,
+          "host": 35
+        },
+        "details": {
+          "import": [
+            {
+              "Monitorable": "Monitorable"
+            }
+          ],
+          "extends": "Monitorable",
+          "implements": [],
+          "description": "EventListener class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/callback",
+        "name": "callback",
+        "label": "callback",
+        "cluster": {
+          "id": 35,
+          "host": 36
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Callback function.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/capture",
+        "name": "capture",
+        "label": "capture",
+        "cluster": {
+          "id": 35,
+          "host": 37
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Capture flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 35,
+          "host": 38
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [
+            {
+              "callback": "Function"
+            },
+            {
+              "capture": "boolean=false"
+            },
+            {
+              "passive": "boolean=false"
+            },
+            {
+              "once": "boolean=false"
+            }
+          ],
+          "returns": [
+            "EventListener"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "super();\n",
+            "this.callback = callback;\n",
+            "this.capture = capture;\n",
+            "this.passive = passive;\n",
+            "this.removed = false;\n",
+            "this.once = once;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/handleEvent",
+        "name": "handleEvent",
+        "label": "handleEvent",
+        "cluster": {
+          "id": 35,
+          "host": 39
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [
+            {
+              "event": "Event"
+            }
+          ],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            "this.callback(event);\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/once",
+        "name": "once",
+        "label": "once",
+        "cluster": {
+          "id": 35,
+          "host": 40
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Once flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/passive",
+        "name": "passive",
+        "label": "passive",
+        "cluster": {
+          "id": 35,
+          "host": 41
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Passive flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener/removed",
+        "name": "removed",
+        "label": "removed",
+        "cluster": {
+          "id": 35,
+          "host": 42
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "boolean"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Removed flag.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget",
+        "name": "EventTarget",
+        "label": "EventTarget",
+        "cluster": {
+          "id": 5,
+          "host": 43
+        },
+        "details": {
+          "import": [
+            {
+              "Disposable": "Disposable"
+            }
+          ],
+          "extends": "Disposable",
+          "implements": [],
+          "description": "EventTarget class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget/addEventListener",
+        "name": "addEventListener",
+        "label": "addEventListener",
+        "cluster": {
+          "id": 43,
+          "host": 44
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "type": "string"
+            },
+            {
+              "callback": "Function"
+            },
+            {
+              "capture": "boolean=false"
+            },
+            {
+              "passive": "boolean=false"
+            },
+            {
+              "once": "boolean=false"
+            }
+          ],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            "const listenersMap: Map<string, Array<EventListener>> = internals.listenersMaps.get(this);\n",
+            "let listeners: Array<EventListener> = listenersMap.get(type);\n",
+            "let listener: EventListener;\n",
+            {
+              "if": "!listeners",
+              "then": [
+                "listeners = [];\n",
+                "listenersMap.set(type, listeners);\n"
+              ]
+            },
+            {
+              "for": "let i: number = 0; i < listeners.length; i++",
+              "do": [
+                {
+                  "if": "!listeners[i].removed && listeners[i].callback === callback && listeners[i].capture === capture",
+                  "then": [
+                    "listener = listeners[i];\n",
+                    "listener.passive = passive;\n",
+                    "listener.once = once;\n"
+                  ]
+                }
+              ]
+            },
+            {
+              "if": "!listener",
+              "then": [
+                "listener = new EventListener(callback, capture, passive, once);\n",
+                "listeners.push(listener);\n"
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 43,
+          "host": 45
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "EventTarget"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "super();\n",
+            "internal.listenersMaps.set(this, new Map());\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget/dispatchEvent",
+        "name": "dispatchEvent",
+        "label": "dispatchEvent",
+        "cluster": {
+          "id": 43,
+          "host": 46
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "event": "Event"
+            }
+          ],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "return internals.dispatchEvent(this, event);\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget/disposeInternal",
+        "name": "disposeInternal",
+        "label": "disposeInternal",
+        "cluster": {
+          "id": 43,
+          "host": 47
+        },
+        "details": {
+          "accessibility": "protected",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            "internals.listenersMaps.delete(this);\n",
+            "super();\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget/removeEventListener",
+        "name": "removeEventListener",
+        "label": "removeEventListener",
+        "cluster": {
+          "id": 43,
+          "host": 48
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "type": "string"
+            },
+            {
+              "callback": "Function"
+            },
+            {
+              "capture": "boolean=false"
+            },
+            {
+              "passive": "boolean=false"
+            },
+            {
+              "once": "boolean=false"
+            }
+          ],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            "const listenersMap: Map<string, Array<EventListener>> = internals.listenersMaps.get(this);\n",
+            "const listeners: Array<EventListener> = listenersMap.get(type);\n",
+            {
+              "if": "listeners",
+              "then": [
+                {
+                  "for": "let i: number = 0; i < listeners.length; i++",
+                  "do": [
+                    {
+                      "if": "!listeners[i].removed && listeners[i].callback === callback && listeners[i].capture === capture",
+                      "then": [
+                        "listeners[i].removed = true;\n",
+                        "listeners[i].callback = null;\n",
+                        "listeners[i].capture = null;\n",
+                        "listeners[i].passive = null;\n",
+                        "listeners[i].once = null;\n",
+                        "listeners.splice(i, 1);\n"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "if": "listeners.length === 0",
+                  "then": [
+                    "listenersMap.remove(type);\n"
+                  ]
+                }
+              ]
+            }
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable",
+        "name": "Monitorable",
+        "label": "Monitorable",
+        "cluster": {
+          "id": 5,
+          "host": 49
+        },
+        "details": {
+          "import": [],
+          "extends": null,
+          "implements": [],
+          "description": "Base class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable/_stack",
+        "name": "_stack",
+        "label": "_stack",
+        "cluster": {
+          "id": 49,
+          "host": 50
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "string"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Private property to store stack trace string.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable/_uid",
+        "name": "_uid",
+        "label": "_uid",
+        "cluster": {
+          "id": 49,
+          "host": 51
+        },
+        "details": {
+          "accessibility": "private",
+          "static": false,
+          "async": false,
+          "type": [
+            "string"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Private property to store UID string.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 49,
+          "host": 52
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "exports": [
+                {
+                  "getStack": "getStack"
+                },
+                {
+                  "getUid": "getUid"
+                }
+              ]
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Monitorable"
+          ],
+          "description": "Monitorable class constructor.\n",
+          "workflow": [
+            "this._stack = getStack('Created');\n",
+            "this._uid = getUid();\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable/getCreationStack",
+        "name": "getCreationStack",
+        "label": "getCreationStack",
+        "cluster": {
+          "id": 49,
+          "host": 53
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "string"
+          ],
+          "description": "Returns instance creation stack trace string.\n",
+          "workflow": [
+            "return this._stack;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable/getUid",
+        "name": "getUid",
+        "label": "getUid",
+        "cluster": {
+          "id": 49,
+          "host": 54
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [
+            "string"
+          ],
+          "description": "Returns instance UID string.\n",
+          "workflow": [
+            "return this._uid;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node",
+        "name": "Node",
+        "label": "Node",
+        "cluster": {
+          "id": 5,
+          "host": 55
+        },
+        "details": {
+          "import": [
+            {
+              "EventTarget": "EventTarget"
+            }
+          ],
+          "extends": "EventTarget",
+          "implements": [],
+          "description": "Node class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/appendChild",
+        "name": "appendChild",
+        "label": "appendChild",
+        "cluster": {
+          "id": 55,
+          "host": 56
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "childNode": "Node"
+            }
+          ],
+          "returns": [
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "this.insertBefore(childNode, null);\n",
+            "return childNode;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/childNodes",
+        "name": "childNodes",
+        "label": "childNodes",
+        "cluster": {
+          "id": 55,
+          "host": 57
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Map<Node>"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            "const result: Map<Node> = new Map();\n",
+            {
+              "for": "for let i: number = 0; i < children.length; i++",
+              "do": [
+                "result.set(i, children[i]);\n"
+              ]
+            },
+            "return result;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 55,
+          "host": 58
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            },
+            {
+              "NodeIndex": "NodeIndex"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Node"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "super();\n",
+            "internals.nodesIndices.set(this, new NodeIndex());\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/contains",
+        "name": "contains",
+        "label": "contains",
+        "cluster": {
+          "id": 55,
+          "host": 59
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "otherNode": "Node"
+            }
+          ],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "const children = internals.nodesIndices.get(this).children;\n",
+            {
+              "if": "children.indexOf(otherNode) >= 0",
+              "then": [
+                "return true;\n"
+              ]
+            },
+            "return false;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/disposeInternal",
+        "name": "disposeInternal",
+        "label": "disposeInternal",
+        "cluster": {
+          "id": 55,
+          "host": 60
+        },
+        "details": {
+          "accessibility": "protected",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [],
+          "description": "//\n",
+          "workflow": [
+            "const parent: Node = internals.nodesIndices.get(this).parent;\n",
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            {
+              "for": "let i: number = 0; i < children.length; i++",
+              "do": [
+                "children[i].dispose();\n"
+              ]
+            },
+            {
+              "if": "parent != null",
+              "then": [
+                "const parIndex: number = internals.nodesIndices.get(parent).children.indexOf(this);\n",
+                "internals.nodesIndices.get(parent).children.splice(parIndex, 1);\n"
+              ]
+            },
+            "internals.nodesIndices.delete(this);\n",
+            "super();\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/firstChild",
+        "name": "firstChild",
+        "label": "firstChild",
+        "cluster": {
+          "id": 55,
+          "host": 61
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            null,
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            {
+              "if": "children.length > 0",
+              "then": [
+                "return children[0];\n"
+              ]
+            },
+            "return null;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/getRootNode",
+        "name": "getRootNode",
+        "label": "getRootNode",
+        "cluster": {
+          "id": 55,
+          "host": 62
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "let root: Node = this;\n",
+            "let parent: Node = internals.nodesIndices.get(this).parent;\n",
+            {
+              "while": "parent",
+              "do": [
+                "root = parent;\n",
+                "parent = internals.nodesIndices.get(root).parent;\n"
+              ]
+            },
+            "return root;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/hasChildNodes",
+        "name": "hasChildNodes",
+        "label": "hasChildNodes",
+        "cluster": {
+          "id": 55,
+          "host": 63
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "const children = internals.nodesIndices.get(this).children;\n",
+            {
+              "if": "children.length > 0",
+              "then": [
+                "return true;\n"
+              ]
+            },
+            "return false;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/insertBefore",
+        "name": "insertBefore",
+        "label": "insertBefore",
+        "cluster": {
+          "id": 55,
+          "host": 64
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "newNode": "Node"
+            },
+            {
+              "refNode": "Node|null"
+            }
+          ],
+          "returns": [
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "internals.nodesIndices.get(newNode).parent = this;\n",
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            "const newIndex: number = children.indexOf(newNode);\n",
+            {
+              "if": "newIndex >= 0",
+              "then": [
+                "children.splice(newIndex, 1);\n"
+              ]
+            },
+            {
+              "if": "refNode == null",
+              "then": [
+                "children.push(newNode);\n"
+              ],
+              "else": [
+                "children.splice(children.indexOf(refNode), 0, newNode);\n"
+              ]
+            },
+            "return newNode;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/isConnected",
+        "name": "isConnected",
+        "label": "isConnected",
+        "cluster": {
+          "id": 55,
+          "host": 65
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "const index: NodeIndex = internals.nodesIndices.get(this);\n",
+            {
+              "if": "index.parent || index.children.length",
+              "then": [
+                "return true;\n"
+              ]
+            },
+            "return false;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/lastChild",
+        "name": "lastChild",
+        "label": "lastChild",
+        "cluster": {
+          "id": 55,
+          "host": 66
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            null,
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            {
+              "if": "children.length > 0",
+              "then": [
+                "return children[children.length - 1];\n"
+              ]
+            },
+            "return null;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/nextSibling",
+        "name": "nextSibling",
+        "label": "nextSibling",
+        "cluster": {
+          "id": 55,
+          "host": 67
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            null,
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "const parent = internals.nodesIndices.get(this).parent;\n",
+            {
+              "if": "parent",
+              "then": [
+                "const index: number = parent.children.indexOf(this);\n",
+                {
+                  "if": "parent.children.length > index + 1",
+                  "then": [
+                    "return parent.children[index + 1];\n"
+                  ]
+                }
+              ]
+            },
+            "return null;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/parentNode",
+        "name": "parentNode",
+        "label": "parentNode",
+        "cluster": {
+          "id": 55,
+          "host": 68
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return internals.nodesIndices.get(this).parent;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/previousSibling",
+        "name": "previousSibling",
+        "label": "previousSibling",
+        "cluster": {
+          "id": 55,
+          "host": 69
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [],
+          "returns": [
+            null,
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "const parent = internals.nodesIndices.get(this).parent;\n",
+            {
+              "if": "parent",
+              "then": [
+                "const index: number = parent.children.indexOf(this);\n",
+                {
+                  "if": "index > 0",
+                  "then": [
+                    "return parent.children[index - 1];\n"
+                  ]
+                }
+              ]
+            },
+            "return null;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/removeChild",
+        "name": "removeChild",
+        "label": "removeChild",
+        "cluster": {
+          "id": 55,
+          "host": 70
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "child": "Node"
+            }
+          ],
+          "returns": [
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            "const index: number = children.indexOf(child);\n",
+            {
+              "if": "index >= 0",
+              "then": [
+                "internals.nodesIndices.get(child).parent = undefined;\n",
+                "children.splice(index, 1);\n"
+              ]
+            },
+            "return child;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node/replaceChild",
+        "name": "replaceChild",
+        "label": "replaceChild",
+        "cluster": {
+          "id": 55,
+          "host": 71
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "newChild": "Node"
+            },
+            {
+              "oldChild": "Node"
+            }
+          ],
+          "returns": [
+            "Node"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "const children: Array<Node> = internals.nodesIndices.get(this).children;\n",
+            "const index: number = children.indexOf(oldChild);\n",
+            {
+              "if": "index >= 0",
+              "then": [
+                "internals.nodesIndices.get(oldChild).parent = undefined;\n",
+                "children.splice(index, 1, newChild);\n"
+              ]
+            },
+            "return oldChild;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex",
+        "name": "NodeIndex",
+        "label": "NodeIndex",
+        "cluster": {
+          "id": 5,
+          "host": 72
+        },
+        "details": {
+          "import": [],
+          "extends": null,
+          "implements": [],
+          "description": "Node index class.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex/children",
+        "name": "children",
+        "label": "children",
+        "cluster": {
+          "id": 72,
+          "host": 73
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Array<Node>"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Nodes children.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex/constructor",
+        "name": "constructor",
+        "label": "constructor",
+        "cluster": {
+          "id": 72,
+          "host": 74
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [
+            {
+              "parent": "Node="
+            },
+            {
+              "children": "Array<Node>="
+            }
+          ],
+          "returns": [
+            "NodeIndex"
+          ],
+          "description": "Class constructor.\n",
+          "workflow": [
+            "this.parent = parent;\n",
+            "this.children = children || [];\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex/parent",
+        "name": "parent",
+        "label": "parent",
+        "cluster": {
+          "id": 72,
+          "host": 75
+        },
+        "details": {
+          "accessibility": "public",
+          "static": false,
+          "async": false,
+          "type": [
+            "undefined",
+            "Node"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Node parent.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/constants",
+        "name": "constants",
+        "label": "constants",
+        "cluster": {
+          "id": 5,
+          "host": 76
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/constants/TMP",
+        "name": "TMP",
+        "label": "TMP",
+        "cluster": {
+          "id": 76,
+          "host": 77
+        },
+        "details": {
+          "type": "number",
+          "value": 0,
+          "description": "Temporary constant for tests.\n"
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/dependencies",
+        "name": "dependencies",
+        "label": "dependencies",
+        "cluster": {
+          "id": 5,
+          "host": 78
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/dependencies/uuid",
+        "name": "uuid",
+        "label": "uuid",
+        "cluster": {
+          "id": 78,
+          "host": 79
+        },
+        "details": {
+          "package": {
+            "name": "uuid",
+            "version": "8.1.0",
+            "uri": "https://www.npmjs.com/package/uuid/v/8.1.0"
+          },
+          "typedef": {
+            "name": "@types/uuid",
+            "version": "8.0.0",
+            "uri": "https://www.npmjs.com/package/@types/uuid/v/8.0.0"
+          }
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/enums",
+        "name": "enums",
+        "label": "enums",
+        "cluster": {
+          "id": 5,
+          "host": 80
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/enums/ErrorCode",
+        "name": "ErrorCode",
+        "label": "ErrorCode",
+        "cluster": {
+          "id": 80,
+          "host": 81
+        },
+        "details": {
+          "description": "Errors codes enums.",
+          "type": "number",
+          "enums": {
+            "DISPOSABLE_MANUAL_CALL": {
+              "value": 0,
+              "description": "This error code should be used to throw an error when .disposeInternal() method was explicitly called.\n"
+            },
+            "DISPOSABLE_BROKEN_CHAIN": {
+              "value": 1,
+              "description": "This error code should be used to throw an error when .disposeInternal() method of super class was not called from overriden method.\n"
+            }
+          }
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/enums/EventPhase",
+        "name": "EventPhase",
+        "label": "EventPhase",
+        "cluster": {
+          "id": 80,
+          "host": 82
+        },
+        "details": {
+          "description": "Events lifecycle phases enums.",
+          "type": "number",
+          "enums": {
+            "NONE": {
+              "value": 0,
+              "description": "Events not currently dispatched are in this phase.\n"
+            },
+            "CAPTURING_PHASE": {
+              "value": 1,
+              "description": "When an event is dispatched to an object that participates in a tree it will be in this phase before it reaches its target.\n"
+            },
+            "AT_TARGET": {
+              "value": 2,
+              "description": "When an event is dispatched it will be in this phase on its target.\n"
+            },
+            "BUBBLING_PHASE": {
+              "value": 3,
+              "description": "When an event is dispatched to an object that participates in a tree it will be in this phase after it reaches its target.\n"
+            }
+          }
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports",
+        "name": "exports",
+        "label": "exports",
+        "cluster": {
+          "id": 5,
+          "host": 83
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/Disposable",
+        "name": "Disposable",
+        "label": "Disposable",
+        "cluster": {
+          "id": 83,
+          "host": 84
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "Disposable": "Disposable"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Function"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return Disposable;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/ErrorCode",
+        "name": "ErrorCode",
+        "label": "ErrorCode",
+        "cluster": {
+          "id": 83,
+          "host": 85
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "enums/ErrorCode": "ErrorCode"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "ErrorCode"
+          ],
+          "description": "Accessor to errors codes enum.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return ErrorCode;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/Event",
+        "name": "Event",
+        "label": "Event",
+        "cluster": {
+          "id": 83,
+          "host": 86
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "Event": "Event"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Function"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return Event;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/EventPhase",
+        "name": "EventPhase",
+        "label": "EventPhase",
+        "cluster": {
+          "id": 83,
+          "host": 87
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "enums/EventPhase": "EventPhase"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "EventPhase"
+          ],
+          "description": "Returns events phases enum.\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return EventPhase;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/EventTarget",
+        "name": "EventTarget",
+        "label": "EventTarget",
+        "cluster": {
+          "id": 83,
+          "host": 88
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "EventTarget": "EventTarget"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Function"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return EventTarget;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/Monitorable",
+        "name": "Monitorable",
+        "label": "Monitorable",
+        "cluster": {
+          "id": 83,
+          "host": 89
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "Monitorable": "Monitorable"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Function"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return Monitorable;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/Node",
+        "name": "Node",
+        "label": "Node",
+        "cluster": {
+          "id": 83,
+          "host": 90
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Accessor"
+          ],
+          "import": [
+            {
+              "Node": "Node"
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Function"
+          ],
+          "description": "//\n",
+          "workflow": [],
+          "set": [],
+          "get": [
+            "return Node;\n"
+          ]
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/getAncestors",
+        "name": "getAncestors",
+        "label": "getAncestors",
+        "cluster": {
+          "id": 83,
+          "host": 91
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": "internals"
+            }
+          ],
+          "params": [
+            {
+              "node": "EventTarget"
+            }
+          ],
+          "returns": [
+            "Array<EventTarget>"
+          ],
+          "description": "Returns an array of ancestors for specified node.\n",
+          "workflow": [
+            "return internals.getAncestors(node);\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/getStack",
+        "name": "getStack",
+        "label": "getStack",
+        "cluster": {
+          "id": 83,
+          "host": 92
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [
+            {
+              "action": "string"
+            }
+          ],
+          "returns": [
+            "string"
+          ],
+          "description": "Returns stack trace string.\n",
+          "workflow": [
+            "let stack: string = 'disabled';\n",
+            {
+              "if": "env.npm_package_config_monitoring",
+              "then": [
+                "const err = new Error();\n",
+                "stack = err.stack.replace('Error', action);\n",
+                "const stackArray: Array = stack.split('\\n');\n",
+                "stackArray.splice(1, 1);\n",
+                "stack = stackArray.join('\\n');\n"
+              ]
+            },
+            "return stack;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/getUid",
+        "name": "getUid",
+        "label": "getUid",
+        "cluster": {
+          "id": 83,
+          "host": 93
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "uuid": [
+                {
+                  "v1": "v1"
+                },
+                {
+                  "v5": "v5"
+                }
+              ]
+            }
+          ],
+          "params": [],
+          "returns": [
+            "string"
+          ],
+          "description": "Generate and return a unique RFC4122 based UUID string.\n",
+          "workflow": [
+            "const name: string = v1();\n",
+            "const ns: string = v1();\n",
+            "const uid: string = v5(name, ns);\n",
+            "return uid;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports/getUndisposed",
+        "name": "getUndisposed",
+        "label": "getUndisposed",
+        "cluster": {
+          "id": 83,
+          "host": 94
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "internals": [
+                {
+                  "undisposed": "undisposed"
+                }
+              ]
+            }
+          ],
+          "params": [],
+          "returns": [
+            "Array<Disposable>"
+          ],
+          "description": "Returns an array of undisposed nodes.\n",
+          "workflow": [
+            "return undisposed.values();\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals",
+        "name": "internals",
+        "label": "internals",
+        "cluster": {
+          "id": 5,
+          "host": 95
+        },
+        "details": {}
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__group"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals/dispatchEvent",
+        "name": "dispatchEvent",
+        "label": "dispatchEvent",
+        "cluster": {
+          "id": 95,
+          "host": 96
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [
+            {
+              "enums/EventPhase": "EventPhase"
+            },
+            {
+              "EventBinder": "EventBinder"
+            }
+          ],
+          "params": [
+            {
+              "target": "EventTarget"
+            },
+            {
+              "event": "Event"
+            }
+          ],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "const ancestors: Array<EventTarget> = this.getAncestors(target);\n",
+            "const binder: EventBinder = new EventBinder(EventPhase.NONE, target);\n",
+            "event.setBinderInternal(binder);\n",
+            "let result: boolean = true;\n",
+            "let current;\n",
+            {
+              "for": "let i: number = ancestors.length - 1; !binder.stopped && i >= 0; i--",
+              "do": [
+                "binder.phase = EventPhase.CAPTURING_PHASE;\n",
+                "binder.current = ancestors[i];\n",
+                "result = this.fireListeners(binder, event, true) && result;\n"
+              ]
+            },
+            {
+              "if": "!binder.stopped",
+              "then": [
+                "binder.phase = EventPhase.AT_TARGET;\n",
+                "binder.current = target;\n",
+                "result = this.fireListeners(binder, event, true) && result;\n",
+                {
+                  "if": "!binder.stopped",
+                  "then": [
+                    "result = this.fireListeners(binder, event, false) && result;\n"
+                  ]
+                }
+              ]
+            },
+            {
+              "for": "let i: number = 0; !binder.stopped && i < ancestors.length; i++",
+              "do": [
+                "binder.phase = EventPhase.BUBBLING_PHASE;\n",
+                "binder.current = ancestors[i];\n",
+                "result = this.fireListeners(binder, event, false) && result;\n"
+              ]
+            },
+            "return result;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals/fireListeners",
+        "name": "fireListeners",
+        "label": "fireListeners",
+        "cluster": {
+          "id": 95,
+          "host": 97
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [
+            {
+              "binder": "EventBinder"
+            },
+            {
+              "event": "Event"
+            },
+            {
+              "capture": "boolean"
+            }
+          ],
+          "returns": [
+            "boolean"
+          ],
+          "description": "//\n",
+          "workflow": [
+            "const target: EventTarget = event.currentTarget;\n",
+            "const map: Map<string, Array<EventListener>> = this.listenersMaps.get(target);\n",
+            "const listeners: Array<EventListener> = map.get(event.type);\n",
+            "let result: boolean = true;\n",
+            {
+              "if": "listeners instanceof Array",
+              "then": [
+                "let listener: EventListener;\n",
+                {
+                  "for": "let i: number = 0; i < listeners.length; i++",
+                  "do": [
+                    "listener = listeners[i];\n",
+                    {
+                      "if": "listener.capture == capture && !listener.removed",
+                      "then": [
+                        "binder.passive = listener.passive;\n",
+                        "result = listener.callback.call(undefined, event) && result;\n",
+                        {
+                          "if": "listener.once",
+                          "then": [
+                            "target.removeEventListener(event.type, listener.callback, listener.capture, listener.passive, listener.once);\n"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "binder.passive = false;\n"
+              ]
+            },
+            "return result;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals/getAncestors",
+        "name": "getAncestors",
+        "label": "getAncestors",
+        "cluster": {
+          "id": 95,
+          "host": 98
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Function"
+          ],
+          "import": [],
+          "params": [
+            {
+              "node": "EventTarget"
+            }
+          ],
+          "returns": [
+            "Array<EventTarget>"
+          ],
+          "description": "Returns an array of ancestors for specified node.\n",
+          "workflow": [
+            "let ancestors: EventTarget[] = [];\n",
+            {
+              "if": "node instanceof Node",
+              "then": [
+                "let ancestor = this.nodesIndices.get(node).parent;\n",
+                {
+                  "while": "ancestor != null",
+                  "do": [
+                    "ancestors.push(ancestor);\n",
+                    "ancestor = this.nodesIndices.get(ancestor).parent;\n"
+                  ]
+                }
+              ]
+            },
+            "return ancestors;\n"
+          ],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals/listenersMaps",
+        "name": "listenersMaps",
+        "label": "listenersMaps",
+        "cluster": {
+          "id": 95,
+          "host": 99
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Map<EventTarget, Map<string, Array<EventListener>>>"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "EventTarget listeners map.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals/nodesIndices",
+        "name": "nodesIndices",
+        "label": "nodesIndices",
+        "cluster": {
+          "id": 95,
+          "host": 100
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Map<Node, NodeIndex>"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Nodes indicies.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals/undisposed",
+        "name": "undisposed",
+        "label": "undisposed",
+        "cluster": {
+          "id": 95,
+          "host": 101
+        },
+        "details": {
+          "accessibility": "public",
+          "static": true,
+          "async": false,
+          "type": [
+            "Map<string, Disposable>"
+          ],
+          "import": [],
+          "params": [],
+          "returns": [],
+          "description": "Map of undisposed disposable nodes.\n",
+          "workflow": [],
+          "set": [],
+          "get": []
+        }
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "nodes",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": false,
+      "classes": "composition composition__file"
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "id": "@imazzine/types -> @imazzine/types/typescript",
+        "source": "@imazzine/types",
+        "target": "@imazzine/types/typescript"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript -> @imazzine/types/typescript/core",
+        "source": "@imazzine/types/typescript",
+        "target": "@imazzine/types/typescript/core"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core -> @imazzine/types/typescript/core/0.0.0",
+        "source": "@imazzine/types/typescript/core",
+        "target": "@imazzine/types/typescript/core/0.0.0"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/Disposable",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable -> @imazzine/types/typescript/core/0.0.0/Disposable/_disposed",
+        "source": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable/_disposed"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable -> @imazzine/types/typescript/core/0.0.0/Disposable/_disposing",
+        "source": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable/_disposing"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable -> @imazzine/types/typescript/core/0.0.0/Disposable/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable -> @imazzine/types/typescript/core/0.0.0/Disposable/dispose",
+        "source": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable/dispose"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable -> @imazzine/types/typescript/core/0.0.0/Disposable/disposeInternal",
+        "source": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable/disposeInternal"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Disposable -> @imazzine/types/typescript/core/0.0.0/Disposable/isDisposed",
+        "source": "@imazzine/types/typescript/core/0.0.0/Disposable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Disposable/isDisposed"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/Event",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/_binder",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/_binder"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/_timeStamp",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/_timeStamp"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/_type",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/_type"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/currentTarget",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/currentTarget"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/defaultPrevented",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/defaultPrevented"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/eventPhase",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/eventPhase"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/preventDefault",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/preventDefault"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/setBinderInternal",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/setBinderInternal"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/stopPropagation",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/stopPropagation"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/target",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/target"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/timeStamp",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/timeStamp"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Event -> @imazzine/types/typescript/core/0.0.0/Event/type",
+        "source": "@imazzine/types/typescript/core/0.0.0/Event",
+        "target": "@imazzine/types/typescript/core/0.0.0/Event/type"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/EventBinder",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/current",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/current"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/passive",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/passive"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/phase",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/phase"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/prevented",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/prevented"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/stopped",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/stopped"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventBinder -> @imazzine/types/typescript/core/0.0.0/EventBinder/target",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventBinder",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventBinder/target"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/EventListener",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/callback",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/callback"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/capture",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/capture"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/handleEvent",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/handleEvent"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/once",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/once"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/passive",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/passive"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventListener -> @imazzine/types/typescript/core/0.0.0/EventListener/removed",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventListener",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventListener/removed"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/EventTarget",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventTarget"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget -> @imazzine/types/typescript/core/0.0.0/EventTarget/addEventListener",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventTarget",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventTarget/addEventListener"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget -> @imazzine/types/typescript/core/0.0.0/EventTarget/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventTarget",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventTarget/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget -> @imazzine/types/typescript/core/0.0.0/EventTarget/dispatchEvent",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventTarget",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventTarget/dispatchEvent"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget -> @imazzine/types/typescript/core/0.0.0/EventTarget/disposeInternal",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventTarget",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventTarget/disposeInternal"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/EventTarget -> @imazzine/types/typescript/core/0.0.0/EventTarget/removeEventListener",
+        "source": "@imazzine/types/typescript/core/0.0.0/EventTarget",
+        "target": "@imazzine/types/typescript/core/0.0.0/EventTarget/removeEventListener"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/Monitorable",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/Monitorable"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable -> @imazzine/types/typescript/core/0.0.0/Monitorable/_stack",
+        "source": "@imazzine/types/typescript/core/0.0.0/Monitorable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Monitorable/_stack"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable -> @imazzine/types/typescript/core/0.0.0/Monitorable/_uid",
+        "source": "@imazzine/types/typescript/core/0.0.0/Monitorable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Monitorable/_uid"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable -> @imazzine/types/typescript/core/0.0.0/Monitorable/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/Monitorable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Monitorable/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable -> @imazzine/types/typescript/core/0.0.0/Monitorable/getCreationStack",
+        "source": "@imazzine/types/typescript/core/0.0.0/Monitorable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Monitorable/getCreationStack"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Monitorable -> @imazzine/types/typescript/core/0.0.0/Monitorable/getUid",
+        "source": "@imazzine/types/typescript/core/0.0.0/Monitorable",
+        "target": "@imazzine/types/typescript/core/0.0.0/Monitorable/getUid"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/Node",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/appendChild",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/appendChild"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/childNodes",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/childNodes"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/contains",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/contains"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/disposeInternal",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/disposeInternal"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/firstChild",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/firstChild"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/getRootNode",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/getRootNode"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/hasChildNodes",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/hasChildNodes"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/insertBefore",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/insertBefore"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/isConnected",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/isConnected"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/lastChild",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/lastChild"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/nextSibling",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/nextSibling"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/parentNode",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/parentNode"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/previousSibling",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/previousSibling"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/removeChild",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/removeChild"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/Node -> @imazzine/types/typescript/core/0.0.0/Node/replaceChild",
+        "source": "@imazzine/types/typescript/core/0.0.0/Node",
+        "target": "@imazzine/types/typescript/core/0.0.0/Node/replaceChild"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/NodeIndex",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/NodeIndex"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex -> @imazzine/types/typescript/core/0.0.0/NodeIndex/children",
+        "source": "@imazzine/types/typescript/core/0.0.0/NodeIndex",
+        "target": "@imazzine/types/typescript/core/0.0.0/NodeIndex/children"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex -> @imazzine/types/typescript/core/0.0.0/NodeIndex/constructor",
+        "source": "@imazzine/types/typescript/core/0.0.0/NodeIndex",
+        "target": "@imazzine/types/typescript/core/0.0.0/NodeIndex/constructor"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/NodeIndex -> @imazzine/types/typescript/core/0.0.0/NodeIndex/parent",
+        "source": "@imazzine/types/typescript/core/0.0.0/NodeIndex",
+        "target": "@imazzine/types/typescript/core/0.0.0/NodeIndex/parent"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/constants",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/constants"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/constants -> @imazzine/types/typescript/core/0.0.0/constants/TMP",
+        "source": "@imazzine/types/typescript/core/0.0.0/constants",
+        "target": "@imazzine/types/typescript/core/0.0.0/constants/TMP"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/dependencies",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/dependencies"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/dependencies -> @imazzine/types/typescript/core/0.0.0/dependencies/uuid",
+        "source": "@imazzine/types/typescript/core/0.0.0/dependencies",
+        "target": "@imazzine/types/typescript/core/0.0.0/dependencies/uuid"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/enums",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/enums"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/enums -> @imazzine/types/typescript/core/0.0.0/enums/ErrorCode",
+        "source": "@imazzine/types/typescript/core/0.0.0/enums",
+        "target": "@imazzine/types/typescript/core/0.0.0/enums/ErrorCode"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/enums -> @imazzine/types/typescript/core/0.0.0/enums/EventPhase",
+        "source": "@imazzine/types/typescript/core/0.0.0/enums",
+        "target": "@imazzine/types/typescript/core/0.0.0/enums/EventPhase"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/exports",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/Disposable",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/Disposable"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/ErrorCode",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/ErrorCode"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/Event",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/Event"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/EventPhase",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/EventPhase"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/EventTarget",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/EventTarget"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/Monitorable",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/Monitorable"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/Node",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/Node"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/getAncestors",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/getAncestors"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/getStack",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/getStack"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/getUid",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/getUid"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/exports -> @imazzine/types/typescript/core/0.0.0/exports/getUndisposed",
+        "source": "@imazzine/types/typescript/core/0.0.0/exports",
+        "target": "@imazzine/types/typescript/core/0.0.0/exports/getUndisposed"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0 -> @imazzine/types/typescript/core/0.0.0/internals",
+        "source": "@imazzine/types/typescript/core/0.0.0",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals -> @imazzine/types/typescript/core/0.0.0/internals/dispatchEvent",
+        "source": "@imazzine/types/typescript/core/0.0.0/internals",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals/dispatchEvent"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals -> @imazzine/types/typescript/core/0.0.0/internals/fireListeners",
+        "source": "@imazzine/types/typescript/core/0.0.0/internals",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals/fireListeners"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals -> @imazzine/types/typescript/core/0.0.0/internals/getAncestors",
+        "source": "@imazzine/types/typescript/core/0.0.0/internals",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals/getAncestors"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals -> @imazzine/types/typescript/core/0.0.0/internals/listenersMaps",
+        "source": "@imazzine/types/typescript/core/0.0.0/internals",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals/listenersMaps"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals -> @imazzine/types/typescript/core/0.0.0/internals/nodesIndices",
+        "source": "@imazzine/types/typescript/core/0.0.0/internals",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals/nodesIndices"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    },
+    {
+      "data": {
+        "id": "@imazzine/types/typescript/core/0.0.0/internals -> @imazzine/types/typescript/core/0.0.0/internals/undisposed",
+        "source": "@imazzine/types/typescript/core/0.0.0/internals",
+        "target": "@imazzine/types/typescript/core/0.0.0/internals/undisposed"
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "group": "edges",
+      "removed": false,
+      "selected": false,
+      "selectable": true,
+      "locked": false,
+      "grabbable": true,
+      "pannable": true,
+      "classes": "composition"
+    }
+  ]
+}

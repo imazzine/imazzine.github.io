@@ -1,0 +1,13 @@
+accessibility: public
+static: false
+async: false
+type:
+  - enums/EventPhase
+import: []
+params: []
+returns: []
+description: >
+  Event phase.
+workflow: []
+set: []
+get: []

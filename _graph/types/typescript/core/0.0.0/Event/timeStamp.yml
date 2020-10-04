@@ -1,0 +1,16 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Accessor
+import: []
+params: []
+returns:
+  - number
+description: >
+  Event created timestamp accessor.
+workflow: []
+set: []
+get:
+  - >
+    return this._timeStamp;

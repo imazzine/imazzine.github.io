@@ -1,0 +1,17 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Accessor
+import:
+  - Event: Event
+params: []
+returns:
+  - Function
+description: >
+  //
+workflow: []
+set: []
+get:
+  - >
+    return Event;

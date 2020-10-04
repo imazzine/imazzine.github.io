@@ -1,0 +1,6 @@
+import:
+  - Monitorable: Monitorable
+extends: Monitorable
+implements: []
+description: >
+  EventListener class.

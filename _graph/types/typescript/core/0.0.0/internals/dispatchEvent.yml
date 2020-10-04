@@ -1,0 +1,58 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Function
+import:
+  - enums/EventPhase: EventPhase
+  - EventBinder: EventBinder
+params:
+  - target: EventTarget
+  - event: Event
+returns:
+  - boolean
+description: >
+  //
+workflow:
+  - >
+    const ancestors: Array<EventTarget> = this.getAncestors(target);
+  - >
+    const binder: EventBinder = new EventBinder(EventPhase.NONE, target);
+  - >
+    event.setBinderInternal(binder);
+  - >
+    let result: boolean = true;
+  - >
+    let current;
+  - for: 'let i: number = ancestors.length - 1; !binder.stopped && i >= 0; i--'
+    do:
+      - >
+        binder.phase = EventPhase.CAPTURING_PHASE;
+      - >
+        binder.current = ancestors[i];
+      - >
+        result = this.fireListeners(binder, event, true) && result;
+  - if: '!binder.stopped'
+    then:
+      - >
+        binder.phase = EventPhase.AT_TARGET;
+      - >
+        binder.current = target;
+      - >
+        result = this.fireListeners(binder, event, true) && result;
+      - if: '!binder.stopped'
+        then:
+          - >
+            result = this.fireListeners(binder, event, false) && result;
+  - for: 'let i: number = 0; !binder.stopped && i < ancestors.length; i++'
+    do:
+      - >
+        binder.phase = EventPhase.BUBBLING_PHASE;
+      - >
+        binder.current = ancestors[i];
+      - >
+        result = this.fireListeners(binder, event, false) && result;
+  - >
+    return result;
+set: []
+get: []

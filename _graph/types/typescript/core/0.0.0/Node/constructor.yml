@@ -1,0 +1,20 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+  - NodeIndex: NodeIndex
+params: []
+returns:
+  - Node
+description: >
+  Class constructor.
+workflow:
+  - >
+    super();
+  - >
+    internals.nodesIndices.set(this, new NodeIndex());
+set: []
+get: []

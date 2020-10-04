@@ -1,0 +1,6 @@
+name: nodejs
+description: Node.js process.
+type: process
+path: <string>
+hosts: [ Node.js v10.x, Node.js v11.x, Node.js v12.x ]
+parent: null

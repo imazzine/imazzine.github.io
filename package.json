@@ -1,22 +1,30 @@
 {
-    "name": "imazzine.github.io",
-    "version": "0.0.0",
-    "description": "Imazzine Project Documentation",
-    "devDependencies": {
-        "webpack": "^4.41.2",
-        "webpack-dev-server": "^3.9.0",
-        "yaml": "^1.7.2",
-        "uuid": "^7.0.2"
-    },
-    "config": {
-        "monitoring": true
-    },
-    "scripts": {
-        "start": "node ./_scripts/start.js",
-        "yaml": "node ./_scripts/yaml.js",
-        "test_uuid": "node ./_scripts/test_uuid.js",
-        "test_stack": "node ./_scripts/test_stack.js",
-        "test_config": "node ./_scripts/test_config.js",
-        "test_map": "node ./_scripts/test_map.js"
+  "name": "imazzine.github.io",
+  "version": "0.0.0",
+  "description": "Imazzine Project Documentation",
+  "config": {
+    "zz": {
+      "namespace": "@imazzine",
+      "types": "./_graph/types/"
     }
+  },
+  "scripts": {
+    "build_scripts": "webpack --config webpack.config.scripts.js && npm run types",
+    "build_viewer": "webpack --config webpack.config.viewer.js",
+    "config": "node ./_scripts/test_config.js",
+    "types": "node ./_scripts/types.js"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.14.5",
+    "@types/js-yaml": "^3.12.4",
+    "@types/node": "^14.0.14",
+    "cytoscape": "^3.15.1",
+    "fork-ts-checker-webpack-plugin": "^5.0.5",
+    "js-yaml": "^3.14.0",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "yaml": "^1.10.0"
+  }
 }

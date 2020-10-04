@@ -1,0 +1,20 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params:
+  - childNode: Node
+returns:
+  - Node
+description: >
+  //
+workflow:
+  - >
+    this.insertBefore(childNode, null);
+  - >
+    return childNode;
+set: []
+get: []

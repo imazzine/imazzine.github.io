@@ -1,0 +1,14 @@
+accessibility: public
+static: false
+async: false
+type:
+  - undefined
+  - Node
+import: []
+params: []
+returns: []
+description: >
+  Node parent.
+workflow: []
+set: []
+get: []

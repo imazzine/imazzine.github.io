@@ -1,0 +1,13 @@
+accessibility: public
+static: true
+async: false
+type: 
+  - Map<Node, NodeIndex>
+import: []
+params: []
+returns: []
+description: >
+  Nodes indicies.
+workflow: []
+set: []
+get: []

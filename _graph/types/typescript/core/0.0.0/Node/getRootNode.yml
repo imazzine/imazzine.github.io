@@ -1,0 +1,27 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params: []
+returns:
+  - Node
+description: >
+  //
+workflow:
+  - >
+    let root: Node = this;
+  - >
+    let parent: Node = internals.nodesIndices.get(this).parent;
+  - while: parent
+    do:
+      - >
+        root = parent;
+      - >
+        parent = internals.nodesIndices.get(root).parent;
+  - >
+    return root;
+set: []
+get: []

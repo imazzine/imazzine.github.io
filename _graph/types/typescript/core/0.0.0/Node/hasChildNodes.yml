@@ -1,0 +1,23 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params: []
+returns:
+  - boolean
+description: >
+  //
+workflow:
+  - >
+    const children = internals.nodesIndices.get(this).children;
+  - if: children.length > 0
+    then:
+      - >
+        return true;
+  - >
+    return false;
+set: []
+get: []

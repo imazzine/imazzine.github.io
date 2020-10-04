@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="303px" preserveAspectRatio="none" style="width:297px;height:303px;" version="1.1" viewBox="0 0 297 303" width="297px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ouy5ssdbs6pu" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="273" x="12" y="27.4023">Definition: Node#appendChild()</text><ellipse cx="149" cy="41.1992" fill="#000000" filter="url(#f1ouy5ssdbs6pu)" rx="10" ry="10" style="stroke: none; stroke-width: 1.0;"/><rect fill="#FFFFFF" filter="url(#f1ouy5ssdbs6pu)" height="190.8867" style="stroke: #000000; stroke-width: 2.0;" width="227" x="35.5" y="61.6523"/><path d="M108.5,62.6523 L108.5,71.1406 L98.5,81.1406 L35.5,81.1406 " fill="none" style="stroke: #000000; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="38.5" y="76.1875">SyncTask</text><polygon fill="#FEFECE" filter="url(#f1ouy5ssdbs6pu)" points="120,98.1406,188,98.1406,178,132.2734,110,132.2734" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="120" y="119.7422">childNode</text><rect fill="#FEFECE" filter="url(#f1ouy5ssdbs6pu)" height="34.1328" style="stroke: #A80036; stroke-width: 1.5;" width="207" x="45.5" y="152.2734"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="50.5" x2="50.5" y1="152.2734" y2="186.4063"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="247.5" x2="247.5" y1="152.2734" y2="186.4063"/><a href="./Definition_Node.insertBefore.svg" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="./Definition_Node.insertBefore.svg" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="93" x="55.5" y="173.875">this.insertBefore</text></a><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="94" x="148.5" y="173.875">(childNode, null)</text><polygon fill="#FEFECE" filter="url(#f1ouy5ssdbs6pu)" points="120,206.4063,188,206.4063,178,240.5391,110,240.5391" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="120" y="228.0078">childNode</text><ellipse cx="149" cy="282.5391" fill="#FFFFFF" filter="url(#f1ouy5ssdbs6pu)" rx="10" ry="10" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 2.5;" x1="142.8128" x2="155.1872" y1="276.3519" y2="288.7262"/><line style="stroke: #000000; stroke-width: 2.5;" x1="155.1872" x2="142.8128" y1="276.3519" y2="288.7262"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="149" x2="149" y1="132.2734" y2="152.2734"/><polygon fill="#A80036" points="145,142.2734,149,152.2734,153,142.2734,149,146.2734" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="149" x2="149" y1="186.4063" y2="206.4063"/><polygon fill="#A80036" points="145,196.4063,149,206.4063,153,196.4063,149,200.4063" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="149" x2="149" y1="51.1992" y2="98.1406"/><polygon fill="#A80036" points="145,88.1406,149,98.1406,153,88.1406,149,92.1406" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="149" x2="149" y1="240.5391" y2="272.5391"/><polygon fill="#A80036" points="145,262.5391,149,272.5391,153,262.5391,149,266.5391" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml Definition_Node.appendChild
+    title Definition: Node#appendChild()
+
+    start
+        partition SyncTask {
+            :childNode/
+            :[[./Definition_Node.insertBefore.svg this.insertBefore]](childNode, null)|
+            :childNode/
+        }
+    end
+@enduml
+
+PlantUML version 1.2019.09(Mon Aug 26 19:19:51 EEST 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Mac OS X
+OS Version: 10.15.3
+Default Encoding: UTF-8
+Language: en
+Country: UA
+--></g></svg>

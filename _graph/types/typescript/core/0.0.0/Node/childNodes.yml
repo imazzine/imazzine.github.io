@@ -1,0 +1,25 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Accessor
+import:
+  - internals: internals
+params: []
+returns:
+  - Map<Node>
+description: >
+  //
+workflow: []
+set: []
+get:
+  - >
+    const children: Array<Node> = internals.nodesIndices.get(this).children;
+  - >
+    const result: Map<Node> = new Map();
+  - for: 'for let i: number = 0; i < children.length; i++'
+    do:
+      - >
+        result.set(i, children[i]);
+  - >
+    return result;

@@ -1,0 +1,25 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Function
+import:
+  - uuid:
+    - v1: v1
+    - v5: v5
+params: []
+returns:
+  - string
+description: >
+  Generate and return a unique RFC4122 based UUID string.
+workflow:
+  - >
+    const name: string = v1();
+  - >
+    const ns: string = v1();
+  - >
+    const uid: string = v5(name, ns);
+  - >
+    return uid;
+set: []
+get: []

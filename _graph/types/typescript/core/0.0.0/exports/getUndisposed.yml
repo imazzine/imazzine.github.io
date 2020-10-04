@@ -1,0 +1,18 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Function
+import:
+  - internals:
+    - undisposed: undisposed
+params: []
+returns:
+  - Array<Disposable>
+description: >
+  Returns an array of undisposed nodes.
+workflow:
+  - >
+    return undisposed.values();
+set: []
+get: []

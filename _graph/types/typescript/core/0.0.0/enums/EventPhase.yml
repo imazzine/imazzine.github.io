@@ -1,0 +1,21 @@
+description: Events lifecycle phases enums.
+type: number
+enums:
+  NONE:
+    value: 0
+    description: >
+      Events not currently dispatched are in this phase.
+  CAPTURING_PHASE:
+    value: 1
+    description: >
+      When an event is dispatched to an object that participates in a
+      tree it will be in this phase before it reaches its target.
+  AT_TARGET:
+    value: 2
+    description: >
+      When an event is dispatched it will be in this phase on its target.
+  BUBBLING_PHASE:
+    value: 3
+    description: >
+      When an event is dispatched to an object that participates in a tree
+      it will be in this phase after it reaches its target.

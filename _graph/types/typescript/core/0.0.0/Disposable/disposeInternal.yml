@@ -1,0 +1,26 @@
+accessibility: protected
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+  - enums/ErrorCode: ErrorCode
+params: []
+returns: []
+description: >
+  //
+workflow:
+  - if: this._disposing
+    then:
+      - >
+        this._disposed = true;
+      - >
+        internal.undisposed.delete(this.getUid());
+      - >
+        this._disposing = false;
+    else:
+      - >
+        throw new Error(ErrorCode.DISPOSABLE_MANUAL_CALL);
+set: []
+get: []

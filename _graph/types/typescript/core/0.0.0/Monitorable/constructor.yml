@@ -1,0 +1,21 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - exports:
+    - getStack: getStack
+    - getUid: getUid
+params: []
+returns:
+  - Monitorable
+description: >
+  Monitorable class constructor.
+workflow:
+  - >
+    this._stack = getStack('Created');
+  - >
+    this._uid = getUid();
+set: []
+get: []

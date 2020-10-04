@@ -1,0 +1,18 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params:
+  - event: Event
+returns:
+  - boolean
+description: >
+  //
+workflow:
+  - >
+    return internals.dispatchEvent(this, event);
+set: []
+get: []

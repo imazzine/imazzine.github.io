@@ -1,0 +1,13 @@
+accessibility: private
+static: false
+async: false
+type:
+  - string
+import: []
+params: []
+returns: []
+description: >
+  Private property to store stack trace string.
+workflow: []
+set: []
+get: []

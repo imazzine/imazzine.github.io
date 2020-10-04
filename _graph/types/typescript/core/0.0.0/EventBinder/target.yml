@@ -1,0 +1,14 @@
+accessibility: public
+static: false
+async: false
+type:
+  - undefined
+  - EventTarget
+import: []
+params: []
+returns: []
+description: >
+  Event target.
+workflow: []
+set: []
+get: []

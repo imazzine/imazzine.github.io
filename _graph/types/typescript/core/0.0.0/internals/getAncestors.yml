@@ -1,0 +1,29 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Function
+import: []
+params:
+  - node: EventTarget
+returns:
+  - Array<EventTarget>
+description: >
+  Returns an array of ancestors for specified node.
+workflow:
+  - >
+    let ancestors: EventTarget[] = [];
+  - if: node instanceof Node
+    then:
+      - >
+        let ancestor = this.nodesIndices.get(node).parent;
+      - while: ancestor != null
+        do:
+          - >
+            ancestors.push(ancestor);
+          - >
+            ancestor = this.nodesIndices.get(ancestor).parent;
+  - >
+    return ancestors;
+set: []
+get: []

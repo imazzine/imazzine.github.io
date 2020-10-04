@@ -1,0 +1,8 @@
+name: Mobile Phone
+description: Mobile phone.
+cpu: 2+
+gpu: 1
+ram: 1+ GB
+hdd: 0
+sdd: 16+ GB
+os: [ IOS, Android ]

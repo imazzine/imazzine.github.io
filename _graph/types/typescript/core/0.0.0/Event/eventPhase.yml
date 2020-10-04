@@ -1,0 +1,16 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Accessor
+import: []
+params: []
+returns:
+  - enums/EventPhase
+description: >
+  Event eventPhase accessor.
+workflow: []
+set: []
+get:
+  - >
+    return this._binder.phase;

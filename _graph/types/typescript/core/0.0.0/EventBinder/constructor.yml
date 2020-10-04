@@ -1,0 +1,30 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - enums/EventPhase: EventPhase
+params:
+  - phase: EventPhase
+  - target: EventTarget=
+  - current: EventTarget=
+returns:
+  - EventBinder
+description: >
+  Class constructor.
+workflow:
+  - >
+    this.phase = EventPhase.NONE;
+  - >
+    this.passive = false;
+  - >
+    this.stopped = false;
+  - >
+    this.prevented = false;
+  - >
+    this.target = target;
+  - >
+    this.current = current;
+set: []
+get: []

@@ -1,0 +1,17 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Accessor
+import:
+  - enums/ErrorCode: ErrorCode
+params: []
+returns:
+  - ErrorCode
+description: >
+  Accessor to errors codes enum.
+workflow: []
+set: []
+get:
+  - >
+    return ErrorCode;

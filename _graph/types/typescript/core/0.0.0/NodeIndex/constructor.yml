@@ -1,0 +1,20 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import: []
+params:
+  - parent: Node=
+  - children: Array<Node>=
+returns:
+  - NodeIndex
+description: >
+  Class constructor.
+workflow:
+  - >
+    this.parent = parent;
+  - >
+    this.children = children || [];
+set: []
+get: []

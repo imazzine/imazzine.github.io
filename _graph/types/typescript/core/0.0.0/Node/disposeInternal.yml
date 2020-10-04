@@ -1,0 +1,32 @@
+accessibility: protected
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params: []
+returns: []
+description: >
+  //
+workflow:
+  - >
+    const parent: Node = internals.nodesIndices.get(this).parent;
+  - >
+    const children: Array<Node> = internals.nodesIndices.get(this).children;
+  - for: 'let i: number = 0; i < children.length; i++'
+    do:
+      - >
+        children[i].dispose();
+  - if: 'parent != null'
+    then:
+      - >
+        const parIndex: number = internals.nodesIndices.get(parent).children.indexOf(this);
+      - >
+        internals.nodesIndices.get(parent).children.splice(parIndex, 1);
+  - >
+    internals.nodesIndices.delete(this);
+  - >
+    super();
+set: []
+get: []

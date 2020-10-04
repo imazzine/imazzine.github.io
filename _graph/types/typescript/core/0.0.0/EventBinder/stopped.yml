@@ -1,0 +1,13 @@
+accessibility: public
+static: false
+async: false
+type:
+  - boolean
+import: []
+params: []
+returns: []
+description: >
+  Stopped flag.
+workflow: []
+set: []
+get: []

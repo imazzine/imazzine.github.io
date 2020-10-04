@@ -1,0 +1,47 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Function
+import: []
+params:
+  - binder: EventBinder
+  - event: Event
+  - capture: boolean
+returns:
+  - boolean
+description: >
+  //
+workflow:
+  - >
+    const target: EventTarget = event.currentTarget;
+  - >
+    const map: Map<string, Array<EventListener>> = this.listenersMaps.get(target);
+  - >
+    const listeners: Array<EventListener> = map.get(event.type);
+  - >
+    let result: boolean = true;
+  - if: listeners instanceof Array
+    then:
+      - >
+        let listener: EventListener;
+      - for: 'let i: number = 0; i < listeners.length; i++'
+        do:
+          - >
+            listener = listeners[i];
+          - if: listener.capture == capture && !listener.removed
+            then:
+              - >
+                binder.passive = listener.passive;
+              - >
+                result = listener.callback.call(undefined, event) && result;
+              - if: listener.once
+                then:
+                  - >
+                    target.removeEventListener(event.type, listener.callback, listener.capture, listener.passive, listener.once);
+      - >
+        binder.passive = false;
+  - >
+    return result;
+set: []
+get: []

@@ -1,0 +1,30 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import: []
+params:
+  - callback: Function
+  - capture: boolean=false
+  - passive: boolean=false
+  - once: boolean=false
+returns:
+  - EventListener
+description: >
+  Class constructor.
+workflow:
+  - >
+    super();
+  - >
+    this.callback = callback;
+  - >
+    this.capture = capture;
+  - >
+    this.passive = passive;
+  - >
+    this.removed = false;
+  - >
+    this.once = once;
+set: []
+get: []

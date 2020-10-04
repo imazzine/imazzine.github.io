@@ -1,0 +1,51 @@
+<script>
+  customElements.define('sbi-datasource', WordCount, { extends: 'p' });
+</script>
+<!-- <sbi-column type="string" name="city"></sbi-column> -->
+<!-- <sbi-column type="number" name="price"></sbi-column> -->
+<!-- <sbi-column type="string" name="product"></sbi-column> -->
+<!-- <sbi-column type="datetime" name="date"></sbi-column> -->
+
+<!-- Data Source -->
+<sbi-datasource id="source-1"></sbi-datasource>
+
+<!-- Data Table -->
+<sbi-table id="dataset-1" datasource="source-1">
+  <!-- Columns -->
+  <sbi-column name="city" sorting="desc"></sbi-column>
+  <sbi-column name="average" formula="AVG([price])"></sbi-column>
+  <sbi-column name="minimum" formula="MIN([price])"></sbi-column>
+  <sbi-column name="maximum" formula="MAX([price])"></sbi-column>
+  <sbi-column name="product_count" formula="COUNT([product])"></sbi-column>
+  <sbi-column name="days_count" formula="COUNT([date])">
+    <sbi-column name="date" level="days"></sbi-column>
+  </sbi-column>
+  <sbi-column name="complex_formula" formula="MOD([max]-[min])/[avg]">
+    <sbi-column name="minimum" as="min"></sbi-column>
+    <sbi-column name="maximum" as="max"></sbi-column>
+    <sbi-column name="average" as="avg"></sbi-column>
+  </sbi-column>
+  <!-- Filters -->
+  <sbi-filter for="city" equals="Kyiv"> </sbi-filter>
+  <sbi-filter for="city" not-equals="Tel Aviv"> </sbi-filter>
+  <sbi-filter for="city" starts-with="Ky"> </sbi-filter>
+  <sbi-filter for="city" contains="yi"> </sbi-filter>
+  <sbi-filter for="complex_formula" more-or-equal="0" less="100"></sbi-filter>
+  <sbi-filter for="product">
+    <sbi-exclude value="MacBook Pro"></sbi-exclude>
+  </sbi-filter>
+  <sbi-filter for="product">
+    <sbi-include value="Acer"></sbi-include>
+    <sbi-include value="Lenovo"></sbi-include>
+  </sbi-filter>
+</sbi-table>
+
+<!-- Data View -->
+<sbi-view id="view-1" table="dataset-1">
+  <sbi-column name="city"></sbi-column>
+  <sbi-column name="average"></sbi-column>
+  <sbi-column name="minimum"></sbi-column>
+  <sbi-column name="maximum"></sbi-column>
+  <sbi-column name="days_count"></sbi-column>
+  <sbi-column name="complex_formula"></sbi-column>
+</sbi-view>

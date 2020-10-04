@@ -1,0 +1,13 @@
+accessibility: private
+static: false
+async: false
+type:
+  - boolean
+import: []
+params: []
+returns: []
+description: >
+  Disposed flag.
+workflow: []
+set: []
+get: []

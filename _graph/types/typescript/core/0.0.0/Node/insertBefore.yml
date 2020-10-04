@@ -1,0 +1,36 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params:
+  - newNode: Node
+  - refNode: Node|null
+returns:
+  - Node
+description: >
+  //
+workflow:
+  - >
+    internals.nodesIndices.get(newNode).parent = this;
+  - >
+    const children: Array<Node> = internals.nodesIndices.get(this).children;
+  - >
+    const newIndex: number = children.indexOf(newNode);
+  - if: newIndex >= 0
+    then:
+      - >
+        children.splice(newIndex, 1);
+  - if: refNode == null
+    then:
+      - >
+        children.push(newNode);
+    else:
+      - >
+        children.splice(children.indexOf(refNode), 0, newNode);
+  - >
+    return newNode;
+set: []
+get: []

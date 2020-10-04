@@ -1,0 +1,13 @@
+accessibility: private
+static: false
+async: false
+type:
+  - number
+import: []
+params: []
+returns: []
+description: >
+  Creation timstamp.
+workflow: []
+set: []
+get: []

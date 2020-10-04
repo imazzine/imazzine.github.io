@@ -1,0 +1,16 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Accessor
+import: []
+params: []
+returns:
+  - EventTarget
+description: >
+  Event currentTarget accessor.
+workflow: []
+set: []
+get:
+  - >
+    return this._binder.current;

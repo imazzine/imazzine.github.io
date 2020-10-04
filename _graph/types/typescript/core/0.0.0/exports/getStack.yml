@@ -1,0 +1,31 @@
+accessibility: public
+static: true
+async: false
+type:
+  - Function
+import: []
+params:
+  - action: string
+returns:
+  - string
+description: >
+  Returns stack trace string.
+workflow:
+  - >
+    let stack: string = 'disabled';
+  - if: env.npm_package_config_monitoring
+    then:
+      - >
+        const err = new Error();
+      - >
+        stack = err.stack.replace('Error', action);
+      - >
+        const stackArray: Array = stack.split('\n');
+      - >
+        stackArray.splice(1, 1);
+      - >
+        stack = stackArray.join('\n');
+  - >
+    return stack;
+set: []
+get: []

@@ -1,0 +1,6 @@
+import:
+  - Disposable: Disposable
+extends: Disposable
+implements: []
+description: >
+  EventTarget class.

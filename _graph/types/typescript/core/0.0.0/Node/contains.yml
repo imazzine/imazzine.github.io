@@ -1,0 +1,24 @@
+accessibility: public
+static: false
+async: false
+type:
+  - Function
+import:
+  - internals: internals
+params:
+  - otherNode: Node
+returns:
+  - boolean
+description: >
+  //
+workflow:
+  - >
+    const children = internals.nodesIndices.get(this).children;
+  - if: children.indexOf(otherNode) >= 0
+    then:
+      - >
+        return true;
+  - >
+    return false;
+set: []
+get: []
