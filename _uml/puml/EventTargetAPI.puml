@@ -100,18 +100,16 @@
         internal "1" o-- "0..*" Disposable
         ImazzineCorePackageExports --> Disposable : export
 
-        class EventListener extends Monitorable {
+        class EventListener {
             +callback: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function Function]]
             +capture: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +passive: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +removed: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +once: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +[[./Definition_EventListener.constructor.svg constructor]](callback: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function Function]], capture=[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean false]], passive=[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean false]], once=[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean false]]): EventListener
-            +[[./Definition_EventListener.handleEvent.svg handleEvent]](event: Event): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
         }
-        ' internal "1" o-- "0..*" EventListener
-        EventListener -- internal
-        EventListener -[hidden]- Monitorable
+        EventListener "0..*" --o "1" internal
+        Logger -[hidden]- EventListener
 
         class EventTarget extends Disposable {
             +[[./Definition_EventTarget.constructor.svg constructor]](): EventTarget
@@ -190,7 +188,6 @@
         internal "1" o-- "0..*" NodeIndex
         NodeIndex "1" o-- "0..*" Node
     }
-    ' UuidPackage <-- ImazzineCorePackage: depend on
 @enduml
 
 @startuml Definition_exports.getUuid
