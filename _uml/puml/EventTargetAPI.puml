@@ -9,6 +9,8 @@
     package "@imazzine/core" as ImazzineCorePackage {
 
         object internal #ffc7fd {
+            +LogLevel: LogLevel
+            +LoggerConstructor: { new (): T extends Logger }
             +undisposed: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], Disposable>
             +listenersMaps: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<EventTarget, [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]], [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<EventListener>>>
             +nodesIndices: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map Map]]<Node, NodeIndex>
@@ -22,10 +24,11 @@
             +[[./Definition_exports.getStack.svg getStack]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
             +[[./Definition_exports.getUndisposed.svg getUndisposed]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<Disposable>
             +[[./Definition_exports.getAncestors.svg getAncestors]](node: EventTarget): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array Array]]<EventTarget>
-            +setLogger(LoggerConstructor: { new (): T extends Logger }): void
+            +setLogLevel(level: LogLevel): void
+            +setLoggerConstructor(LoggerConstructor: { new (): T extends Logger }): void
             +Errors: Errors
             +EventPhase: EventPhase
-            +Level: Level
+            +LogLevel: LogLevel
             +Logger: { new (): Logger }
             +Monitorable: { new (): Monitorable }
             +Disposable: { new (): Disposable }
@@ -38,7 +41,8 @@
             +<b>MANUAL_CALL</b>:\nDisposable#disposeInternal() method\nshould not be explicitly called.\nUse Disposable#dispose() instead.
             +<b>BROKEN_CHAIN</b>:\nsuper.dispose() was not called in\noverridden method.
         }
-        ImazzineCorePackageErrors "1" -* "1" ImazzineCorePackageExports
+        ' ImazzineCorePackageErrors "1" -* "1" ImazzineCorePackageExports
+        ImazzineCorePackageExports "1" *-- "1" ImazzineCorePackageErrors
 
         enum EventPhase {
             +<b>NONE</b>: 0
@@ -46,9 +50,10 @@
             +<b>AT_TARGET</b>: 2
             +<b>BUBBLING_PHASE</b>: 3
         }
-        ImazzineCorePackageExports "1" *- "1" EventPhase
+        ImazzineCorePackageExports "1" *-- "1" EventPhase
 
-        enum Level {
+        enum LogLevel {
+            -<b>SYSTEM_LOG</b>: 00
             +<b>TRACE</b>: 10
             +<b>DEBUG</b>: 20
             +<b>INFO</b>: 30
@@ -56,17 +61,20 @@
             +<b>ERROR</b>: 50
             +<b>FATAL</b>: 60
         }
-        Level "1" *- "1" ImazzineCorePackageExports
+        ' LogLevel "1" -* "1" ImazzineCorePackageExports
+        ImazzineCorePackageExports "1" *-- "1" LogLevel
 
         class Logger {
             -_id: string
             -_level: string
             --
-            #logInternal(id: string, level: Level, msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
+            #logInternal(id: string, level: LogLevel, msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             ..
-            +constructor(id: string, level: Level): Logger
+            +constructor(id: string, level: LogLevel): Logger
             ..
-            +setLevel(level: Level): void
+            +setLevel(level: LogLevel): void
+            ..
+            +log(msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]])
             ..
             +trace(msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +debug(msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
@@ -75,7 +83,7 @@
             +error(msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
             +fatal(msg: [[https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown unknown]]): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
         }
-        ImazzineCorePackageExports --> Logger : export
+        ' ImazzineCorePackageExports --> Logger : export
         
         class Monitorable {
             -_uuid: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
@@ -86,7 +94,7 @@
             +[[./Definition_Monitorable.getCreationStack.svg getCreationStack]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String string]]
             +getLogger(): Logger
         }
-        ImazzineCorePackageExports --> Monitorable : export
+        ' ImazzineCorePackageExports --> Monitorable : export
         Logger "1" -* "1" Monitorable
 
         class Disposable extends Monitorable {
@@ -98,7 +106,7 @@
             +[[./Definition_Disposable.isDisposed.svg isDisposed]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
         }
         internal "1" o-- "0..*" Disposable
-        ImazzineCorePackageExports --> Disposable : export
+        ' ImazzineCorePackageExports --> Disposable : export
 
         class EventListener {
             +callback: [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function Function]]
@@ -119,7 +127,7 @@
             +[[./Definition_EventTarget.dispatchEvent.svg dispatchEvent]](event: Event): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
         }
         internal "1" o-- "0..*" EventTarget
-        ImazzineCorePackageExports --> EventTarget : export
+        ' ImazzineCorePackageExports --> EventTarget : export
 
         class EventBinder {
             +phase: EventPhase
@@ -151,7 +159,7 @@
             +[[./Definition_Event.setBinderInternal.svg setBinderInternal]](binder: EventBinder): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void void]]
         }
         Event "1" *-- "1..*" EventBinder
-        ImazzineCorePackageExports --> Event : export
+        ' ImazzineCorePackageExports --> Event : export
 
         class Node extends EventTarget {
             +[[./Definition_Node.isConnected.svg get isConnected]](): [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean boolean]]
@@ -178,7 +186,7 @@
             +[[./Definition_Node.replaceChild.svg replaceChild]](newChild: Node, oldChild: Node): Node
         }
         internal "1" o-- "0..*" Node
-        ImazzineCorePackageExports --> Node : export
+        ' ImazzineCorePackageExports --> Node : export
 
         class NodeIndex {
             +parent?: Node
